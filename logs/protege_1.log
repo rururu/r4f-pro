@@ -6,3 +6,9 @@
 2016.10.19 19:19:10.769 MSK INFO: *** SYSTEM START ***
 2016.10.19 19:19:11.563 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2016.10.19 19:21:47.841 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:19:12.206 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:19:13.176 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 21:19:45.324 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/RuleEngine.pprj: 0 sec -- ProjectChooser.loadProject()
+2016.10.19 21:19:45.698 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2016.10.19 21:22:24.523 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:24:41.902 MSK INFO: *** SYSTEM START ***
