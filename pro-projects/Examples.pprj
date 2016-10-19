@@ -1,4 +1,4 @@
-; Wed Oct 19 19:10:06 MSK 2016
+; Wed Oct 19 21:53:33 MSK 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -26,7 +26,8 @@
 		[Examples_ProjectKB_Class20394]
 		[Examples_ProjectKB_Class20395]
 		[Examples_ProjectKB_Class20396]
-		[Examples_ProjectKB_Class20397]))
+		[Examples_ProjectKB_Class20397]
+		[Examples_ProjectKB_Class20398]))
 
 ([CLSES_TAB] of  Widget
 
@@ -183,6 +184,11 @@
 
 	(name "Goal")
 	(string_value "{Goal+}action{+arg1+}argument1{+arg2+}argument2"))
+
+([Examples_ProjectKB_Class20398] of  String
+
+	(name "Disease")
+	(string_value "diagnosis"))
 
 ([Examples_ProjectKB_Class20447] of  Widget
 
@@ -1135,28 +1141,28 @@
 	(name "instances_file_name")
 	(string_value "Examples.pins"))
 
-([KB_432109_Class380] of  Map
+([KB_523273_Class380] of  Map
 
 	(entries
-		[KB_432109_Class381]
-		[KB_432109_Class382]
-		[KB_432109_Class383]))
+		[KB_523273_Class381]
+		[KB_523273_Class382]
+		[KB_523273_Class383]))
 
-([KB_432109_Class381] of  Map_Entry
+([KB_523273_Class381] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_432109_Class382] of  Map_Entry
+([KB_523273_Class382] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_432109_Class383] of  Map_Entry
+([KB_523273_Class383] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")

@@ -71,3 +71,44 @@
 2016.10.19 21:13:14.265 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
 2016.10.19 21:15:56.779 MSK INFO: *** SYSTEM START ***
 2016.10.19 21:26:29.587 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:31:12.393 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:31:13.317 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 21:31:45.032 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj: 0 sec -- ProjectChooser.loadProject()
+2016.10.19 21:31:45.069 MSK WARNING: missing bundle: standard_extensions_text -- BundleHelper.<init>()
+2016.10.19 21:31:45.069 MSK WARNING: no resource bundle: tab.queries -- BundleHelper.internalGetText()
+2016.10.19 21:31:45.656 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2016.10.19 21:35:27.172 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:38:43.084 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:38:43.856 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 21:39:15.507 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj: 0 sec -- ProjectChooser.loadProject()
+2016.10.19 21:39:15.533 MSK WARNING: missing bundle: standard_extensions_text -- BundleHelper.<init>()
+2016.10.19 21:39:15.534 MSK WARNING: no resource bundle: tab.queries -- BundleHelper.internalGetText()
+2016.10.19 21:39:16.033 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2016.10.19 21:47:59.361 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:48:00.099 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 21:48:03.117 MSK WARNING: missing bundle: standard_extensions_text -- BundleHelper.<init>()
+2016.10.19 21:48:03.117 MSK WARNING: no resource bundle: tab.queries -- BundleHelper.internalGetText()
+2016.10.19 21:48:03.721 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2016.10.19 21:49:36.382 MSK INFO: Project load time for file:/Users/ru/clojure/rete4frames%20copy/pro-projects/Examples.pprj: 0 sec -- ProjectChooser.loadProject()
+2016.10.19 21:49:36.579 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2016.10.19 21:52:13.835 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:52:14.571 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 21:52:30.484 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2016.10.19 21:53:50.837 MSK INFO: *** SYSTEM START ***
+2016.10.19 21:53:51.737 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 21:54:07.604 MSK WARNING: missing bundle: standard_extensions_text -- BundleHelper.<init>()
+2016.10.19 21:54:07.604 MSK WARNING: no resource bundle: tab.queries -- BundleHelper.internalGetText()
+2016.10.19 21:54:08.202 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2016.10.19 22:00:29.381 MSK INFO: *** SYSTEM START ***
+2016.10.19 22:00:30.177 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 22:00:42.124 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2016.10.19 22:02:46.625 MSK INFO: *** SYSTEM START ***
+2016.10.19 22:03:10.373 MSK INFO: *** SYSTEM START ***
+2016.10.19 22:03:11.215 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 22:03:36.902 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj: 0 sec -- ProjectChooser.loadProject()
+2016.10.19 22:03:36.931 MSK WARNING: missing bundle: standard_extensions_text -- BundleHelper.<init>()
+2016.10.19 22:03:36.931 MSK WARNING: no resource bundle: tab.queries -- BundleHelper.internalGetText()
+2016.10.19 22:03:37.435 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2016.10.19 22:05:01.145 MSK INFO: *** SYSTEM START ***
+2016.10.19 22:05:02.058 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 22:05:08.847 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
