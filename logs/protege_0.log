@@ -112,3 +112,10 @@
 2016.10.19 22:05:01.145 MSK INFO: *** SYSTEM START ***
 2016.10.19 22:05:02.058 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2016.10.19 22:05:08.847 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2016.10.19 22:12:44.315 MSK INFO: *** SYSTEM START ***
+2016.10.19 22:12:45.299 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 22:13:05.870 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj: 0 sec -- ProjectChooser.loadProject()
+2016.10.19 22:13:06.410 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2016.10.19 22:14:21.389 MSK INFO: *** SYSTEM START ***
+2016.10.19 22:14:22.365 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2016.10.19 22:14:25.729 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()

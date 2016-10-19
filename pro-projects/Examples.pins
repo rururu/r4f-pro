@@ -1,4 +1,4 @@
-; Wed Oct 19 21:53:33 MSK 2016
+; Wed Oct 19 22:15:42 MSK 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -380,10 +380,6 @@
 	(salience 0)
 	(title "Put-chest-on-floor"))
 
-([Examples_Class160000] of  Display
-
-	(source "<html><br><br><b>The Patient Treatment Expert System.</b> Date: Wed Oct 19 21:41:14 MSK 2016<br><br><span style='color:red'>High fever diagnosed</span><br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br>"))
-
 ([Examples_Class160001] of  RuleSet
 
 	(rules
@@ -402,47 +398,12 @@
 	(salience 0)
 	(title "Get-key-to-unlock"))
 
-([Examples_Class170001] of  Patient
-
-	(fever high)
-	(rash FALSE)
-	(sore_throat TRUE)
-	(spots FALSE)
-	(temperature 104))
-
-([Examples_Class170002] of  Disease
-
-	(diagnosis flu)
-	(treatment bed_rest))
-
-([Examples_Class170003] of  History2
-
-	(date "Wed Oct 19 14:13:46 MSK 2016")
-	(name "T"))
-
-([Examples_Class170006] of  History2
-
-	(date "Wed Oct 19 14:13:46 MSK 2016")
-	(name "T"))
-
 ([Examples_Class18] of  Rule
 
 	(lhs "(Goal action unlock \n	argument1 ?chest)\n(Monkey location ?mplace \n	holding ?key)\n(Thing name ?chest \n	location ?cplace \n	on-top-of floor\n	(not= ?cplace ?mplace))\n(Chest name ?chest \n	unlocked-by ?key)\n(not Goal action walk-to \n	argument1 ?cplace)")
 	(rhs "(asser Goal action walk-to \n	argument1 ?cplace)")
 	(salience 0)
 	(title "Move-to-chest-with-key"))
-
-([Examples_Class180002] of  History2
-
-	(date "Wed Oct 19 17:06:02 MSK 2016")
-	(name "r"))
-
-([Examples_Class180003] of  History2
-
-	(date "Wed Oct 19 21:41:13 MSK 2016")
-	(disease [Examples_Class170002])
-	(name "b")
-	(patient-data [Examples_Class170001]))
 
 ([Examples_Class180004] of  CloFuncall
 

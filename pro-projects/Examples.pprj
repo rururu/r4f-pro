@@ -1,4 +1,4 @@
-; Wed Oct 19 21:53:33 MSK 2016
+; Wed Oct 19 22:15:42 MSK 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -1141,28 +1141,28 @@
 	(name "instances_file_name")
 	(string_value "Examples.pins"))
 
-([KB_523273_Class380] of  Map
+([KB_614671_Class380] of  Map
 
 	(entries
-		[KB_523273_Class381]
-		[KB_523273_Class382]
-		[KB_523273_Class383]))
+		[KB_614671_Class381]
+		[KB_614671_Class382]
+		[KB_614671_Class383]))
 
-([KB_523273_Class381] of  Map_Entry
+([KB_614671_Class381] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_523273_Class382] of  Map_Entry
+([KB_614671_Class382] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_523273_Class383] of  Map_Entry
+([KB_614671_Class383] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
