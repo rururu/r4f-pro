@@ -20,7 +20,7 @@ $ lein repl
 rete.protege=> (-main)
 ```
 
-3.30 minute IDE [screencast] (https://www.youtube.com/watch?v=2Q9Y_jUDF8U).
+3 minute IDE [screencast] (https://www.youtube.com/watch?v=RZKKq6Pym44&feature=youtu.be).
 
 
 ## License
