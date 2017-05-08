@@ -1,4 +1,4 @@
-; Fri Oct 14 17:30:31 MSK 2016
+; Mon Mar 13 12:37:11 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -23,9 +23,17 @@
 		(type INSTANCE)
 ;+		(allowed-classes CloProgram)
 		(create-accessor read-write))
+	(single-slot asset-path
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(multislot cloFunctions
 		(type INSTANCE)
 ;+		(allowed-classes CloFunction CloMacro)
+		(create-accessor read-write))
+	(multislot css
+		(type INSTANCE)
+;+		(allowed-classes CSS)
 		(create-accessor read-write))
 	(multislot cloProtocols
 		(type INSTANCE)
@@ -35,11 +43,27 @@
 		(type INSTANCE)
 ;+		(allowed-classes CloRecord)
 		(create-accessor read-write))
+	(single-slot epilogue
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(multislot cloExtendTypes
 		(type INSTANCE)
 ;+		(allowed-classes CloExtendType)
 		(create-accessor read-write))
+	(single-slot options
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot source
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot required
+		(type INSTANCE)
+;+		(allowed-classes ClsRequired)
+		(create-accessor read-write))
+	(single-slot output-to
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
@@ -47,10 +71,18 @@
 		(type INSTANCE)
 ;+		(allowed-classes CloImplementation)
 		(create-accessor read-write))
+	(single-slot store-in
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot cloNamespace
 		(type INSTANCE)
 ;+		(allowed-classes CloNamespace)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot html
+		(type INSTANCE)
+;+		(allowed-classes HTML)
 		(create-accessor read-write))
 	(multislot fields
 		(type INSTANCE)
@@ -60,9 +92,18 @@
 		(type INSTANCE)
 ;+		(allowed-classes CloType)
 		(create-accessor read-write))
+	(single-slot output-dir
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot documentation
 		(type INSTANCE)
 ;+		(allowed-classes CloDocumentation)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot butt-build
+		(type STRING)
+		(default "Build/cljs.compile/build")
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -182,6 +223,55 @@
 ;+		(allowed-classes CloType)
 		(create-accessor read-write)))
 
+(defclass ClsMain
+	(is-a CloProgram)
+	(role concrete)
+	(single-slot store-in
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot asset-path
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot epilogue
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot html
+		(type INSTANCE)
+;+		(allowed-classes HTML)
+		(create-accessor read-write))
+	(multislot required
+		(type INSTANCE)
+;+		(allowed-classes ClsRequired)
+		(create-accessor read-write))
+	(single-slot butt-build
+		(type STRING)
+		(default "Build/cljs.compile/build")
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot output-dir
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot output-to
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot css
+		(type INSTANCE)
+;+		(allowed-classes CSS)
+		(create-accessor read-write))
+	(single-slot options
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass ClsRequired
+	(is-a CloProgram)
+	(role concrete))
+
 (defclass CloProtocol
 	(is-a ClojureOntology)
 	(role concrete)
@@ -260,4 +350,36 @@
 	(multislot cloPrograms
 		(type INSTANCE)
 ;+		(allowed-classes CloProgram)
+		(create-accessor read-write)))
+
+(defclass HTML
+	(is-a USER)
+	(role concrete)
+	(single-slot store-in
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot source
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot title
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass CSS
+	(is-a USER)
+	(role concrete)
+	(single-slot store-in
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot source
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot title
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
