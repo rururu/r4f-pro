@@ -1,0 +1,67 @@
+; Mon May 08 18:43:29 MSK 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([Algorithm_Class0] of  Algorithm
+
+	(begin [Algorithm_Class1])
+	(end [Algorithm_Class6])
+	(flow-chart
+		[Algorithm_Class1]
+		[Algorithm_Class2]
+		[Algorithm_Class3]
+		[Algorithm_Class4]
+		[Algorithm_Class5]
+		[Algorithm_Class6])
+	(title "Euclid's GCD"))
+
+([Algorithm_Class1] of  Input
+
+	(input-table
+		[Algorithm_Class7]
+		[Algorithm_Class8])
+	(next [Algorithm_Class2])
+	(title "INPUT A, B"))
+
+([Algorithm_Class2] of  Decision
+
+	(code "(if (= B 0) 2 1)")
+	(title "B = 0 ?")
+	(variants
+		[Algorithm_Class3]
+		[Algorithm_Class6]))
+
+([Algorithm_Class3] of  Decision
+
+	(code "(if (> A B) 2 1)")
+	(title "A > B ?")
+	(variants
+		[Algorithm_Class4]
+		[Algorithm_Class5]))
+
+([Algorithm_Class4] of  Process
+
+	(code "B := (- B A)")
+	(next [Algorithm_Class2])
+	(title "B <- B - A"))
+
+([Algorithm_Class5] of  Process
+
+	(code "A := A - B")
+	(next [Algorithm_Class2])
+	(title "A <- A - B"))
+
+([Algorithm_Class6] of  Process
+
+	(title "PRINT A"))
+
+([Algorithm_Class7] of  InputRow
+
+	(value "35")
+	(variable "A"))
+
+([Algorithm_Class8] of  InputRow
+
+	(value "93")
+	(variable "B"))

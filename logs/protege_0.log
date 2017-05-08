@@ -133,3 +133,33 @@
 2017.04.07 14:23:40.094 MSK INFO: *** SYSTEM START ***
 2017.04.07 14:23:40.891 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2017.04.07 14:23:44.920 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.05.08 11:09:58.868 MSK INFO: *** SYSTEM START ***
+2017.05.08 11:09:59.753 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.05.08 11:10:05.354 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.05.08 11:16:43.772 MSK INFO: *** SYSTEM START ***
+2017.05.08 11:16:45.531 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.05.08 11:16:55.935 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 4 sec (ui) -- ProjectManager$3.run()
+2017.05.08 11:34:51.505 MSK INFO: *** SYSTEM START ***
+2017.05.08 11:34:52.354 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.05.08 11:35:00.845 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 2 sec (ui) -- ProjectManager$3.run()
+2017.05.08 11:43:55.087 MSK INFO: *** SYSTEM START ***
+2017.05.08 11:43:56.012 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.05.08 11:44:01.783 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 2 sec (ui) -- ProjectManager$3.run()
+2017.05.08 13:20:06.844 MSK INFO: *** SYSTEM START ***
+2017.05.08 13:20:07.625 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.05.08 13:20:14.517 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Examples.pprj = 0 sec (project) + 2 sec (ui) -- ProjectManager$3.run()
+2017.05.08 13:42:07.801 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.05.08 14:24:25.977 MSK WARNING: Exception caught java.lang.NullPointerException -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:25.989 MSK WARNING: use fine logging for more details -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:34.717 MSK WARNING: Exception caught java.lang.NullPointerException -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:34.717 MSK WARNING: use fine logging for more details -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:40.973 MSK WARNING: Exception caught java.lang.NullPointerException -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:40.974 MSK WARNING: use fine logging for more details -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:49.650 MSK WARNING: Exception caught java.lang.NullPointerException -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:49.650 MSK WARNING: use fine logging for more details -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:56.540 MSK WARNING: Exception caught java.lang.NullPointerException -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 14:24:56.540 MSK WARNING: use fine logging for more details -- EventDispatchFrameStore.dispatchEvents()
+2017.05.08 17:57:57.725 MSK INFO: *** SYSTEM START ***
+2017.05.08 17:57:59.555 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.05.08 17:58:04.242 MSK WARNING: Unknown class: InputT -- Project.loadWidgetDescriptors()
+2017.05.08 17:58:09.388 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj = 0 sec (project) + 5 sec (ui) -- ProjectManager$3.run()

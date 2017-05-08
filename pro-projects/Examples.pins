@@ -1,126 +1,126 @@
-; Wed Oct 19 22:15:42 MSK 2016
+; Mon May 08 13:33:08 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([Examples_Class0] of  Rule
 
-	(lhs "?goal (Goal action hold \n	argument1 ?name)\n?thing (Thing name ?name \n	location ?place \n	on-top-of ceiling \n	weight light)\n(Thing name ladder \n	location ?place)\n?monkey (Monkey location ?place \n	on-top-of ladder \n	holding blank)")
-	(rhs "(ru.rules/display (str \"Monkey grabs the \" ?name \".\" ))\n(modify ?thing location held \n	on-top-of held)\n(modify ?monkey holding ?name)\n(retract ?goal)")
+	(lhs "?goal (Goal action hold \n	argument1 ?name)\n?thing (Thing name ?name \n	location ?place \n	on-top-of \"ceiling\"\n	weight light)\n(Thing name \"ladder\" \n	location ?place)\n?monkey (Monkey location ?place \n	on-top-of \"ladder\"\n	holding \"blank\")")
+	(rhs "(ru.rules/display (str \"Monkey grabs the \" ?name \".\" ))\n(modify ?thing location \"held\"\n	on-top-of \"held\")\n(modify ?monkey holding ?name)\n(retract ?goal)")
 	(salience 0)
-	(title "Grab-object-from-ladder"))
+	(title "m:Grab-object-from-ladder"))
 
 ([Examples_Class1] of  Rule
 
-	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?on \n	weight light\n	(not= ?on ceiling))\n(Monkey location ?place \n	on-top-of ?surf\n	(not= ?surf ?on))\n(not Goal action on \n	argument1 ?on)")
+	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?on \n	weight light\n	(not= ?on \"ceiling\"))\n(Monkey location ?place \n	on-top-of ?surf\n	(not= ?surf ?on))\n(not Goal action on \n	argument1 ?on)")
 	(rhs "(asser Goal action on argument1 ?on)")
 	(salience 0)
-	(title "Climb-to-hold"))
+	(title "m:Climb-to-hold"))
 
 ([Examples_Class10] of  Rule
 
-	(lhs "?goal (Goal action move \n	argument1 ?obj \n	argument2 ?place)\n(Thing name ?obj location ?place)")
+	(lhs "?goal (Goal action move\n	argument1 ?obj \n	argument2 ?place)\n(Thing name ?obj location ?place)")
 	(rhs "(retract ?goal)")
 	(salience 0)
-	(title "Already-moved-object"))
+	(title "m:Already-moved-object"))
 
 ([Examples_Class10000] of  Rule
 
-	(lhs "(Goal action unlock \n	argument1 ?chest)\n(Thing name ?chest \n	on-top-of ?surf \n	weight light\n	(not= ?surf floor))\n(Monkey holding ?thing\n	(not= ?thing ?chest))\n(not Goal action hold argument1 ?chest)")
+	(lhs "(Goal action unlock \n	argument1 ?chest)\n(Thing name ?chest \n	on-top-of ?surf \n	weight light\n	(not= ?surf \"floor\"))\n(Monkey holding ?thing\n	(not= ?thing ?chest))\n(not Goal action hold argument1 ?chest)")
 	(rhs "(asser Goal action hold \n	argument1 ?chest)")
 	(salience 0)
-	(title "Hold-chest-to-put-on-floor"))
+	(title "m:Hold-chest-to-put-on-floor"))
 
 ([Examples_Class100000] of  Rule
 
 	(lhs "(Patient spots true)\n(not Disease diagnosis measles)")
 	(rhs "(asser Disease diagnosis allergy)\n(ru.rules/display \"Allergy diagnosed from spots and lack of measles<br>\")")
 	(salience -1)
-	(title "Allergy1"))
+	(title "d:Allergy1"))
 
 ([Examples_Class100001] of  Rule
 
 	(lhs "(Patient rash true)")
 	(rhs "(asser Disease diagnosis allergy)\n(ru.rules/display \"Allergy diagnosed from rash<br>\")")
 	(salience 0)
-	(title "Allergy2"))
+	(title "d:Allergy2"))
 
 ([Examples_Class100002] of  Rule
 
 	(lhs "(Patient sore_throat true \n	fever ?f\n	[(= ?f mild)\n	 (= ?f high)])")
 	(rhs "(asser Disease diagnosis flu)\n(ru.rules/display \"Flu diagnosed<br>\")")
 	(salience 0)
-	(title "Flu"))
+	(title "d:Flu"))
 
 ([Examples_Class10015] of  Rule
 
-	(lhs "?goal (Goal action walk-to \n	argument1 ?place)\n?monkey (Monkey location ?loc \n	on-top-of floor \n	holding blank\n	(not= ?loc ?place))")
+	(lhs "?goal (Goal action walk-to \n	argument1 ?place)\n?monkey (Monkey location ?loc \n	on-top-of \"floor\"\n	holding \"blank\"\n	(not= ?loc ?place))")
 	(rhs "(ru.rules/display (str \"Monkey walks to \" ?place \".\" ))\n(modify ?monkey location ?place)\n(retract ?goal)")
 	(salience 0)
-	(title "Walk-holding-nothing"))
+	(title "m:Walk-holding-nothing"))
 
 ([Examples_Class10016] of  Rule
 
-	(lhs "?goal (Goal action walk-to \n	argument1 ?place)\n?monkey (Monkey location ?loc \n	on-top-of floor \n	holding ?obj\n	((not= ?loc ?place)\n	 (not= ?obj blank)))")
+	(lhs "?goal (Goal action walk-to \n	argument1 ?place)\n?monkey (Monkey location ?loc \n	on-top-of \"floor\" \n	holding ?obj\n	((not= ?loc ?place)\n	 (not= ?obj \"blank\")))")
 	(rhs "(ru.rules/display (str \"Monkey walks to \" ?place \" holding the \" ?obj \".\" ))\n(modify ?monkey location ?place)\n(retract ?goal)")
 	(salience 0)
-	(title "Walk-holding-object"))
+	(title "m:Walk-holding-object"))
 
 ([Examples_Class10017] of  Rule
 
-	(lhs "?goal (Goal action on \n	argument1 floor)\n?monkey (Monkey on-top-of ?on\n	(not= ?on floor))")
-	(rhs "(ru.rules/display (str \"Monkey jumps off the \" ?on \" onto the floor.\" ))\n(modify ?monkey on-top-of floor)\n(retract ?goal)")
+	(lhs "?goal (Goal action on \n	argument1 \"floor\")\n?monkey (Monkey on-top-of ?on\n	(not= ?on \"floor\"))")
+	(rhs "(ru.rules/display (str \"Monkey jumps off the \" ?on \" onto the floor.\" ))\n(modify ?monkey on-top-of \"floor\")\n(retract ?goal)")
 	(salience 0)
-	(title "Jump-onto-floor"))
+	(title "m:Jump-onto-floor"))
 
 ([Examples_Class10018] of  Rule
 
-	(lhs "(Goal action on argument1 ?obj)\n(Thing name ?obj \n	location ?place)\n(Monkey location ?loc\n	(not= ?loc ?place))\n(not Goal action walk-to argument1 ?place)")
+	(lhs "(Goal action on \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place)\n(Monkey location ?loc\n	(not= ?loc ?place))\n(not Goal action walk-to argument1 ?place)")
 	(rhs "(asser Goal action walk-to \n	argument1 ?place)")
 	(salience 0)
-	(title "Walk-to-place-to-climb"))
+	(title "m:Walk-to-place-to-climb"))
 
 ([Examples_Class10019] of  Rule
 
-	(lhs "(Goal action on \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place)\n(Monkey location ?place \n	holding ?hold\n	(not= ?hold blank))\n(not Goal action hold \n	argument1 blank)")
-	(rhs "(asser Goal action hold \n	argument1 blank)")
+	(lhs "(Goal action on \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place)\n(Monkey location ?place \n	holding ?hold\n	(not= ?hold \"blank\"))\n(not Goal action hold \n	argument1 \"blank\")")
+	(rhs "(asser Goal action hold \n	argument1 \"blank\")")
 	(salience 0)
-	(title "Drop-to-climb"))
+	(title "m:Drop-to-climb"))
 
 ([Examples_Class10020] of  Rule
 
-	(lhs "(Goal action on \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?on)\n(Monkey location ?place \n	on-top-of ?on2 \n	holding blank\n	((not= ?on2 ?on)\n	 (not= ?on2 ?obj)))\n(not Goal action on \n	argument1 ?on)")
+	(lhs "(Goal action on \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?on)\n(Monkey location ?place \n	on-top-of ?on2 \n	holding \"blank\"\n	((not= ?on2 ?on)\n	 (not= ?on2 ?obj)))\n(not Goal action on \n	argument1 ?on)")
 	(rhs "(asser Goal action on \n	argument1 ?on)")
 	(salience 0)
-	(title "Climb-indirectly"))
+	(title "m:Climb-indirectly"))
 
 ([Examples_Class10021] of  Rule
 
-	(lhs "?goal (Goal action on \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?on)\n?monkey (Monkey location ?place \n	on-top-of ?on \n	holding blank)")
+	(lhs "?goal (Goal action on \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?on)\n?monkey (Monkey location ?place \n	on-top-of ?on \n	holding \"blank\")")
 	(rhs "(ru.rules/display (str \"Monkey climbs onto the \" ?obj \".\" ))\n(modify ?monkey on-top-of ?obj)\n(retract ?goal)")
 	(salience 0)
-	(title "Climb-directly"))
+	(title "m:Climb-directly"))
 
 ([Examples_Class10022] of  Rule
 
 	(lhs "?goal (Goal action on \n	argument1 ?obj)\n(Monkey on-top-of ?obj)")
 	(rhs "(retract ?goal)")
 	(salience 0)
-	(title "Already-on-object"))
+	(title "m:Already-on-object"))
 
 ([Examples_Class10023] of  Rule
 
 	(lhs "(Goal action eat \n	argument1 ?obj)\n(Monkey holding ?h\n	(not= ?h ?obj))\n(not Goal action hold \n	argument1 ?obj)")
 	(rhs "(asser Goal action hold \n	argument1 ?obj)")
 	(salience 0)
-	(title "Hold-to-eat"))
+	(title "m:Hold-to-eat"))
 
 ([Examples_Class10024] of  Rule
 
 	(lhs "?goal (Goal action eat \n	argument1 ?name)\n?monkey (Monkey holding ?name)\n?thing (Thing name ?name)")
-	(rhs "(ru.rules/display (str \"Monkey eats the \" ?name \".\" ))\n(modify ?monkey holding blank)\n(retract ?goal ?thing)")
+	(rhs "(ru.rules/display (str \"Monkey eats the \" ?name \".\" ))\n(modify ?monkey holding \"blank\")\n(retract ?goal ?thing)")
 	(salience 0)
-	(title "Satisfy-hunger"))
+	(title "m:Satisfy-hunger"))
 
 ([Examples_Class10025] of  Monkey
 
@@ -133,11 +133,11 @@
 	(location "t5-7")
 	(name "green-couch")
 	(on-top-of "floor")
-	(weight "heavy"))
+	(weight heavy))
 
 ([Examples_Class10027] of  Goal
 
-	(action "eat")
+	(action eat)
 	(argument1 "bananas"))
 
 ([Examples_Class10028] of  Thing
@@ -145,49 +145,49 @@
 	(location "t2-2")
 	(name "red-couch")
 	(on-top-of "floor")
-	(weight "heavy"))
+	(weight heavy))
 
 ([Examples_Class10029] of  Thing
 
 	(location "t2-2")
 	(name "big-pillow")
 	(on-top-of "red-couch")
-	(weight "light"))
+	(weight light))
 
 ([Examples_Class10030] of  Thing
 
 	(location "t2-2")
 	(name "red-chest")
 	(on-top-of "big-pillow")
-	(weight "light"))
+	(weight light))
 
 ([Examples_Class10031] of  Thing
 
 	(location "t7-7")
 	(name "blue-chest")
 	(on-top-of "ceiling")
-	(weight "light"))
+	(weight light))
 
 ([Examples_Class10032] of  Thing
 
 	(location "t8-8")
 	(name "blue-couch")
 	(on-top-of "floor")
-	(weight "heavy"))
+	(weight heavy))
 
 ([Examples_Class10033] of  Thing
 
 	(location "t8-8")
 	(name "green-chest")
 	(on-top-of "ceiling")
-	(weight "light"))
+	(weight light))
 
 ([Examples_Class10034] of  Thing
 
 	(location "t1-3")
 	(name "red-key")
 	(on-top-of "floor")
-	(weight "light"))
+	(weight light))
 
 ([Examples_Class10035] of  Chest
 
@@ -213,10 +213,10 @@
 
 ([Examples_Class11] of  Rule
 
-	(lhs "?goal (Goal action walk-to argument1 ?place)\n(Monkey location ?place)")
+	(lhs "?goal (Goal action walk-to \n	argument1 ?place)\n(Monkey location ?place)")
 	(rhs "(retract ?goal)")
 	(salience 0)
-	(title "Already-at-place"))
+	(title "m:Already-at-place"))
 
 ([Examples_Class110000] of  RuleSet
 
@@ -232,35 +232,35 @@
 	(lhs "?d (Disease diagnosis measles\n	treatment ?t\n	(nil? ?t))")
 	(rhs "(modify ?d treatment pennicillin)\n(ru.rules/display \"Penicillin prescribed<br>\")")
 	(salience 0)
-	(title "Penicillin"))
+	(title "t:Penicillin"))
 
 ([Examples_Class110002] of  Rule
 
 	(lhs "?d (Disease diagnosis allergy\n	treatment ?t\n	(nil? ?t))")
 	(rhs "(modify ?d treatment allergy_shot)\n(ru.rules/display \"Allergy shot prescribed<br>\")")
 	(salience 0)
-	(title "Allergy_pills"))
+	(title "t:Allergy_pills"))
 
 ([Examples_Class110003] of  Rule
 
 	(lhs "?d (Disease diagnosis flu\n	treatment ?t\n	(nil? ?t))")
 	(rhs "(modify ?d treatment bed_rest)\n(ru.rules/display \"Bed rest prescribed<br>\")")
 	(salience 0)
-	(title "Bed_rest"))
+	(title "t:Bed_rest"))
 
 ([Examples_Class120000] of  Rule
 
 	(lhs "(Patient)\n(not Disease)")
 	(rhs "(ru.rules/display \"No diagnosis\")\n(ru.rules/display \"<span style='color:green'>Healthy lifestyle prescribed</span><br>\")")
 	(salience -2)
-	(title "Healthy"))
+	(title "s:Healthy"))
 
 ([Examples_Class13] of  Rule
 
-	(lhs "(Goal action walk-to \n	argument1 ?place)\n(Monkey location ?loc \n	on-top-of ?surf\n	((not= ?loc ?place)\n	 (not= ?surf floor)))\n(not Goal action on \n	argument1 floor)")
-	(rhs "(asser Goal action on \n	argument1 floor)")
+	(lhs "(Goal action walk-to \n	argument1 ?place)\n(Monkey location ?loc \n	on-top-of ?surf\n	((not= ?loc ?place)\n	 (not= ?surf \"floor\")))\n(not Goal action on \n	argument1 \"floor\")")
+	(rhs "(asser Goal action on \n	argument1 \"floor\")")
 	(salience 0)
-	(title "Get-on-floor-to-walk"))
+	(title "m:Get-on-floor-to-walk"))
 
 ([Examples_Class130000] of  Run
 
@@ -290,18 +290,6 @@
 
 ([Examples_Class140000] of  Visit
 )
-
-([Examples_Class140001] of  Run
-
-	(butt-ass-inss "Assert Instances/ru.rules/ass-inss")
-	(butt-fire "Fire/ru.rules/fire-all-rules")
-	(butt-run "Run/ru.rules/run-engine")
-	(butt-step "Step/ru.rules/step-engine")
-	(facts [Examples_Class30023])
-	(mode run)
-	(rule-sets [Examples_Class20001])
-	(steps 1)
-	(title "Auto Run"))
 
 ([Examples_Class15] of  RuleSet
 
@@ -364,21 +352,34 @@
 	(lhs "?v (Visit name ?n\n	(nil? ?n))")
 	(rhs "(let [n (ru.rules/input \"What is a name of a next patient?\" \"\" nil)\n       d (str (java.util.Date.))]\n  (modify ?v name n\n	date d)\n  (asser Patient))")
 	(salience 3)
-	(title "StartVisit"))
+	(title "v:StartVisit"))
 
 ([Examples_Class150002] of  Rule
 
 	(lhs "(Visit name ?n date ?d)\n(Patient fever ?f\n	innoculated ?i\n	rash ?r\n	sore_throat ?st\n	spots ?s\n	temperature ?t)\n(Disease diagnosis ?ds\n	treatment ?tr)")
 	(rhs "(let [mp {:DIRTYP \"History\"\n	\"name\" ?n\n	\"date\" ?d\n	\"fever\" ?f\n	\"innoculated\" ?i\n	\"rash\" ?r\n	\"sore_throat\" ?st\n	\"spots\" ?s\n	\"temperature\" ?t\n	\"diagnosis\" ?ds\n	\"treatment\" ?tr\n	:DEPTH 0}\n       _ (println [:MP mp])\n       ins (protege.core/mti mp)]\n  (ru.rules/assert-instances [ins])\n  (.show protege.core/*prj* ins))")
 	(salience -3)
-	(title "WriteHistory"))
+	(title "v:WriteHistory"))
 
 ([Examples_Class16] of  Rule
 
 	(lhs "(Goal action unlock \n	argument1 ?chest)\n?monkey (Monkey location ?place \n	on-top-of ?on \n	holding ?chest)\n?thing (Thing name ?chest)")
-	(rhs "(ru.rules/display (str \"Monkey throws the \" ?chest \" off the \" ?on \" onto the floor.\" ))\n(modify ?monkey holding blank)\n(modify ?thing location ?place \n	on-top-of floor)")
+	(rhs "(ru.rules/display (str \"Monkey throws the \" ?chest \" off the \" ?on \" onto the floor.\" ))\n(modify ?monkey holding \"blank\")\n(modify ?thing location ?place \n	on-top-of \"floor\")")
 	(salience 0)
-	(title "Put-chest-on-floor"))
+	(title "m:Put-chest-on-floor"))
+
+([Examples_Class160000] of  Run
+
+	(butt-ass-inss "Assert Instances/ru.rules/ass-inss")
+	(butt-fire "Fire/ru.rules/fire-all-rules")
+	(butt-retr-inss "Retract Instances/ru.rules/retr-inss")
+	(butt-run "Run/ru.rules/run-engine")
+	(butt-step "Step/ru.rules/step-engine")
+	(facts [Examples_Class30023])
+	(mode run)
+	(rule-sets [Examples_Class20001])
+	(steps 1)
+	(title "Auto Run"))
 
 ([Examples_Class160001] of  RuleSet
 
@@ -393,47 +394,16 @@
 
 ([Examples_Class17] of  Rule
 
-	(lhs "(Goal action unlock \n	argument1 ?obj)\n(Thing name ?obj \n	on-top-of floor)\n(Chest name ?obj \n	unlocked-by ?key)\n(Monkey holding ?thing\n      (not= ?thing ?key))\n(not Goal action hold argument1 ?key)")
+	(lhs "(Goal action unlock \n	argument1 ?obj)\n(Thing name ?obj \n	on-top-of \"floor\")\n(Chest name ?obj \n	unlocked-by ?key)\n(Monkey holding ?thing\n      (not= ?thing ?key))\n(not Goal action hold argument1 ?key)")
 	(rhs "(asser Goal action hold \n	argument1 ?key)")
 	(salience 0)
-	(title "Get-key-to-unlock"))
+	(title "m:Get-key-to-unlock"))
 
-([Examples_Class18] of  Rule
-
-	(lhs "(Goal action unlock \n	argument1 ?chest)\n(Monkey location ?mplace \n	holding ?key)\n(Thing name ?chest \n	location ?cplace \n	on-top-of floor\n	(not= ?cplace ?mplace))\n(Chest name ?chest \n	unlocked-by ?key)\n(not Goal action walk-to \n	argument1 ?cplace)")
-	(rhs "(asser Goal action walk-to \n	argument1 ?cplace)")
-	(salience 0)
-	(title "Move-to-chest-with-key"))
-
-([Examples_Class180004] of  CloFuncall
-
-	(source "(ru.rules/f 9)"))
-
-([Examples_Class19] of  Rule
-
-	(lhs "?goal (Goal action unlock \n	argument1 ?name)\n?chest (Chest name ?name \n	contents ?contents \n	unlocked-by ?key)\n(Thing name ?name \n	location ?place \n	on-top-of ?on)\n(Monkey location ?place \n	on-top-of ?on \n	holding ?key)")
-	(rhs "(ru.rules/display (str \"Monkey opens the \" ?name \" with the \" ?key \" revealing the \" ?contents \".\" ))\n(modify ?chest contents nothing)\n(asser Thing name ?contents \n	location ?place \n	on-top-of ?name \n	weight light)\n(retract ?goal)")
-	(salience 0)
-	(title "Unlock-chest-with-key"))
-
-([Examples_Class2] of  Rule
-
-	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?surf \n	weight light\n	(not= ?surf ceiling))\n(Monkey location ?loc\n	(not= ?loc ?place))\n(not Goal action walk-to argument1 ?place)")
-	(rhs "(asser Goal action walk-to argument1 ?place)")
-	(salience 0)
-	(title "Walk-to-hold"))
-
-([Examples_Class20] of  Rule
-
-	(lhs "(Goal action hold \n	argument1 ?obj)\n(Chest name ?chest \n	contents ?obj)\n(not Goal action unlock \n	argument1 ?chest)")
-	(rhs "(asser Goal action unlock argument1 ?chest)")
-	(salience 0)
-	(title "Unlock-chest-to-hold-object"))
-
-([Examples_Class20000] of  Run
+([Examples_Class170001] of  Run
 
 	(butt-ass-inss "Assert Instances/ru.rules/ass-inss")
 	(butt-fire "Fire/ru.rules/fire-all-rules")
+	(butt-retr-inss "Retract Instances/ru.rules/retr-inss")
 	(butt-run "Run/ru.rules/run-engine")
 	(butt-step "Step/ru.rules/step-engine")
 	(facts
@@ -450,10 +420,46 @@
 		[Examples_Class10037]
 		[Examples_Class10034]
 		[Examples_Class10027])
-	(mode step)
+	(mode run)
 	(rule-sets [Examples_Class15])
 	(steps 1)
 	(title "Mab Run"))
+
+([Examples_Class18] of  Rule
+
+	(lhs "(Goal action unlock \n	argument1 ?chest)\n(Monkey location ?mplace \n	holding ?key)\n(Thing name ?chest \n	location ?cplace \n	on-top-of \"floor\"\n	(not= ?cplace ?mplace))\n(Chest name ?chest \n	unlocked-by ?key)\n(not Goal action walk-to \n	argument1 ?cplace)")
+	(rhs "(asser Goal action walk-to \n	argument1 ?cplace)")
+	(salience 0)
+	(title "m:Move-to-chest-with-key"))
+
+([Examples_Class180004] of  CloFuncall
+
+	(source "(ru.rules/f 9)"))
+
+([Examples_Class19] of  Rule
+
+	(lhs "?goal (Goal action unlock \n	argument1 ?name)\n?chest (Chest name ?name \n	contents ?contents \n	unlocked-by ?key)\n(Thing name ?name \n	location ?place \n	on-top-of ?on)\n(Monkey location ?place \n	on-top-of ?on \n	holding ?key)")
+	(rhs "(ru.rules/display (str \"Monkey opens the \" ?name \" with the \" ?key \" revealing the \" ?contents \".\" ))\n(modify ?chest contents \"nothing\")\n(asser Thing name ?contents \n	location ?place \n	on-top-of ?name \n	weight light)\n(retract ?goal)")
+	(salience 0)
+	(title "m:Unlock-chest-with-key"))
+
+([Examples_Class2] of  Rule
+
+	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?surf \n	weight light\n	(not= ?surf \"ceiling\"))\n(Monkey location ?loc\n	(not= ?loc ?place))\n(not Goal action walk-to argument1 ?place)")
+	(rhs "(asser Goal action walk-to argument1 ?place)")
+	(salience 0)
+	(title "m:Walk-to-hold"))
+
+([Examples_Class20] of  Rule
+
+	(lhs "(Goal action hold \n	argument1 ?obj)\n(Chest name ?chest \n	contents ?obj)\n(not Goal action unlock \n	argument1 ?chest)")
+	(rhs "(asser Goal action unlock argument1 ?chest)")
+	(salience 0)
+	(title "m:Unlock-chest-to-hold-object"))
+
+([Examples_Class20000] of  Display
+
+	(source "<html><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:45:00 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br><span style='color:red'>High fever diagnosed</span><br><br>Measles diagnosed<br><br>Penicillin prescribed<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:45:47 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br><span style='color:red'>High fever diagnosed</span><br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:46:36 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:47:54 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br><span style='color:red'>High fever diagnosed</span><br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:56:14 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br>The Engine Diagnosis Expert System. Date: Mon May 08 13:20:26 MSK 2017<br><br>Suggested Repair: <b>Replace the points.</b><br><br><br>The Engine Diagnosis Expert System. Date: Mon May 08 13:20:48 MSK 2017<br><br>Suggested Repair: <b>Clean the fuel line.</b><br><br><br>The Engine Diagnosis Expert System. Date: Mon May 08 13:21:04 MSK 2017<br><br>Suggested Repair: <b>Repair the distributor lead wire.</b><br>Monkey jumps off the green-couch onto the floor.<br>Monkey walks to t2-2.<br>Monkey climbs onto the red-couch.<br>Monkey climbs onto the big-pillow.<br>Monkey grabs the red-chest.<br>Monkey throws the red-chest off the big-pillow onto the floor.<br>Monkey jumps off the big-pillow onto the floor.<br>Monkey walks to t1-3.<br>Monkey grabs the red-key.<br>Monkey walks to t2-2 holding the red-key.<br>Monkey opens the red-chest with the red-key revealing the ladder.<br>Monkey drops the red-key.<br>Monkey climbs onto the red-chest.<br>Monkey grabs the ladder.<br>Monkey jumps off the red-chest onto the floor.<br>Monkey walks to t7-7 holding the ladder.<br>Monkey drops the ladder.<br>Monkey jumps off the green-couch onto the floor.<br>Monkey walks to t2-2.<br>Monkey climbs onto the red-couch.<br>Monkey climbs onto the big-pillow.<br>Monkey grabs the red-chest.<br>Monkey throws the red-chest off the big-pillow onto the floor.<br>Monkey jumps off the big-pillow onto the floor.<br>Monkey walks to t1-3.<br>Monkey grabs the red-key.<br>Monkey walks to t2-2 holding the red-key.<br>Monkey opens the red-chest with the red-key revealing the ladder.<br>Monkey drops the red-key.<br>Monkey climbs onto the red-chest.<br>Monkey grabs the ladder.<br>Monkey jumps off the red-chest onto the floor.<br>Monkey walks to t7-7 holding the ladder.<br>Monkey drops the ladder.<br>Monkey climbs onto the ladder.<br>Monkey grabs the blue-chest.<br>Monkey throws the blue-chest off the ladder onto the floor.<br>Monkey jumps off the ladder onto the floor.<br>Monkey grabs the ladder.<br>Monkey walks to t8-8 holding the ladder.<br>Monkey drops the ladder.<br>Monkey climbs onto the ladder.<br>Monkey grabs the green-chest.<br>Monkey throws the green-chest off the ladder onto the floor.<br>Monkey jumps off the ladder onto the floor.<br>Monkey walks to t2-2.<br>Monkey grabs the red-key.<br>Monkey walks to t8-8 holding the red-key.<br>Monkey opens the green-chest with the red-key revealing the blue-key.<br>Monkey drops the red-key.<br>Monkey climbs onto the green-chest.<br>Monkey grabs the blue-key.<br>Monkey jumps off the green-chest onto the floor.<br>Monkey walks to t7-7 holding the blue-key.<br>Monkey opens the blue-chest with the blue-key revealing the bananas.<br>Monkey drops the blue-key.<br>Monkey climbs onto the blue-chest.<br>Monkey grabs the bananas.<br>Monkey eats the bananas.<br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 13:31:14 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br><span style='color:red'>High fever diagnosed</span><br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 13:31:46 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br>"))
 
 ([Examples_Class20001] of  RuleSet
 
@@ -489,28 +495,28 @@
 	(lhs "(Working-state engine normal)")
 	(rhs "(asser Repair advice \"No repair needed.\")\n(asser Spark-state engine normal)\n(asser Charge-state battery charged)\n(asser Rotation-state engine rotates)")
 	(salience 8)
-	(title "Normal-engine-state-conclusions"))
+	(title "a:Normal-engine-state-conclusions"))
 
 ([Examples_Class21] of  Rule
 
-	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ceiling \n	weight light)\n(not Thing name ladder \n	location ?place)\n(not Goal action move \n	argument1 ladder \n	argument2 ?place)")
-	(rhs "(asser Goal action move \n	argument1 ladder \n	argument2 ?place)")
+	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of \"ceiling\"\n	weight light)\n(not Thing name \"ladder\" \n	location ?place)\n(not Goal action move \n	argument1 \"ladder\" \n	argument2 ?place)")
+	(rhs "(asser Goal action move \n	argument1 \"ladder\" \n	argument2 ?place)")
 	(salience 0)
-	(title "Use-ladder-to-hold"))
+	(title "m:Use-ladder-to-hold"))
 
 ([Examples_Class22] of  Rule
 
-	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ceiling \n	weight light)\n(Thing name ladder \n	location ?place \n	on-top-of floor)\n(Monkey on-top-of ?s\n      (not= ?s ladder))\n(not Goal action on argument1 ladder)")
-	(rhs "(asser Goal action on \n	argument1 ladder)")
+	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of \"ceiling\"\n	weight light)\n(Thing name \"ladder\" \n	location ?place \n	on-top-of \"floor\")\n(Monkey on-top-of ?s\n      (not= ?s \"ladder\"))\n(not Goal action on argument1 \"ladder\")")
+	(rhs "(asser Goal action on \n	argument1 \"ladder\")")
 	(salience 0)
-	(title "Climb-ladder-to-hold"))
+	(title "m:Climb-ladder-to-hold"))
 
 ([Examples_Class3] of  Rule
 
-	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?on \n	weight light)\n(Monkey location ?place \n	on-top-of ?on \n	holding ?hold\n	(not= ?hold blank))\n(not Goal action hold argument1 blank)")
-	(rhs "(asser Goal action hold argument1 blank)")
+	(lhs "(Goal action hold \n	argument1 ?obj)\n(Thing name ?obj \n	location ?place \n	on-top-of ?on \n	weight light)\n(Monkey location ?place \n	on-top-of ?on \n	holding ?hold\n	(not= ?hold \"blank\"))\n(not Goal action hold argument1 blank)")
+	(rhs "(asser Goal action hold argument1\"blank\")")
 	(salience 0)
-	(title "Drop-to-hold"))
+	(title "m:Drop-to-hold"))
 
 ([Examples_Class30000] of  Document
 
@@ -524,130 +530,130 @@
 	(lhs "(Visit name ?n date ?d)\n?p (Patient)\n?d (Disease)")
 	(rhs "(let [pins (ru.rules/mk-instance (fact-id ?p))\n        dins (ru.rules/mk-instance (fact-id ?d))\n        ins (ru.rules/mk-instance \n	\"History2\"\n	{\"name\" ?n\n	 \"date\" ?d\n	 \"patient-data\" pins\n	 \"disease\" dins}\n	0)]\n  (ru.rules/assert-instances [ins])\n  (.show protege.core/*prj* ins))")
 	(salience -3)
-	(title "WriteHistory2"))
+	(title "v:WriteHistory2"))
 
 ([Examples_Class30009] of  Rule
 
 	(lhs "(Working-state engine unsatisfactory)")
 	(rhs "(asser Charge-state battery charged)\n(asser Rotation-state engine rotates)")
 	(salience 8)
-	(title "Unsatisfactory-engine-state-conclusions"))
+	(title "a:Unsatisfactory-engine-state-conclusions"))
 
 ([Examples_Class30010] of  Rule
 
 	(lhs "(Stage value diagnose)\n(not Working-state engine ?ws)\n(not Repair advice ?a)")
 	(rhs "(if (ru.rules/confirm \"Does the engine start?\")\n    (if (ru.rules/confirm \"Does the engine run normally?\")\n       (asser Working-state engine normal)\n       (asser Working-state engine unsatisfactory))\n    (asser Working-state engine does-not-start))")
 	(salience 8)
-	(title "Determine-engine-state"))
+	(title "a:Determine-engine-state"))
 
 ([Examples_Class30011] of  Rule
 
 	(lhs "(Working-state engine does-not-start)\n(not Rotation-state engine ?rs)\n(not Repair advice ?a)")
 	(rhs "(if (ru.rules/confirm \"Does the engine rotate?\")\n     (do\n       (asser Rotation-state engine rotates)\n       (asser Spark-state engine irregular-spark))\n     (do\n       (asser Rotation-state engine does-not-rotate)\n       (asser Spark-state engine does-not-spark)))")
 	(salience 0)
-	(title "Determine-rotation-state"))
+	(title "a:Determine-rotation-state"))
 
 ([Examples_Class30012] of  Rule
 
 	(lhs "(Working-state engine unsatisfactory)\n(not Repair advice ?a)")
 	(rhs "(if (ru.rules/confirm \"Is the engine sluggish?\")\n     (asser Repair advice \"Clean the fuel line.\"))")
 	(salience 3)
-	(title "Determine-sluggishness"))
+	(title "a:Determine-sluggishness"))
 
 ([Examples_Class30013] of  Rule
 
 	(lhs "(Working-state engine unsatisfactory)\n(not Repair advice ?a)")
 	(rhs "(if (ru.rules/confirm \"Does the engine misfire?\")\n     (do\n       (asser Repair advice \"Point gap adjustment.\")\n       (asser Spark-state engine irregular-spark)))")
 	(salience 2)
-	(title "Determine-misfiring"))
+	(title "a:Determine-misfiring"))
 
 ([Examples_Class30014] of  Rule
 
 	(lhs "(Working-state engine unsatisfactory)\n(not Repair advice ?a)")
 	(rhs "(if (ru.rules/confirm \"Does the engine knock?\")\n     (asser Repair advice \"Timing adjustment.\"))")
 	(salience 1)
-	(title "Determine-knocking"))
+	(title "a:Determine-knocking"))
 
 ([Examples_Class30015] of  Rule
 
 	(lhs "(Working-state engine unsatisfactory)\n(not Symptom engine ?se)\n(not Repair advice ?a)")
 	(rhs "(if (ru.rules/confirm \"Is the output of the engine low?\")\n     (asser Symptom engine low-output)\n     (asser Symptom engine not-low-output))")
 	(salience 0)
-	(title "Determine-low-output"))
+	(title "a:Determine-low-output"))
 
 ([Examples_Class30016] of  Rule
 
 	(lhs "(Working-state engine does-not-start)\n(Rotation-state engine rotates)\n(not Repair advice ?a)")
 	(rhs "(if (not (ru.rules/confirm \"Does the tank have any gas in it?\"))\n     (asser Repair advice \"Add gas.\"))")
 	(salience 0)
-	(title "Determine-gas-level"))
+	(title "a:Determine-gas-level"))
 
 ([Examples_Class30017] of  Rule
 
 	(lhs "(Rotation-state engine does-not-rotate)\n(not Charge-state battery ?cs)\n(not Repair advice ?a)")
 	(rhs "(if (ru.rules/confirm \"Is the battery charged?\")\n     (asser Charge-state battery charged)\n     (do\n       (asser Repair advice \"Charge the battery.\")\n       (asser Charge-state battery dead)))")
 	(salience 0)
-	(title "Determine-battery-state"))
+	(title "a:Determine-battery-state"))
 
 ([Examples_Class30018] of  Rule
 
 	(lhs "(Working-state engine does-not-start)\n(Spark-state engine irregular-spark)\n(not Repair advice ?a)")
 	(rhs "(condp = (ru.rules/select \"What is the surface state of the points?\" \n	'[normal burned contaminated])\n     'burned (asser Repair advice \"Replace the points.\")\n     'contaminated (asser Repair advice \"Clean the points.\")\n     'normal)")
 	(salience 8)
-	(title "Determine-point-surface-state-1"))
+	(title "a:Determine-point-surface-state-1"))
 
 ([Examples_Class30019] of  Rule
 
 	(lhs "(Symptom engine low-output)\n(not Repair advice ?a)")
 	(rhs "(condp = (ru.rules/select \"What is the surface state of the points?\" \n	'[normal burned contaminated])\n     'burned (asser Repair advice \"Replace the points.\")\n     'contaminated (asser Repair advice \"Clean the points.\")\n     'normal)")
 	(salience 0)
-	(title "Determine-point-surface-state-2"))
+	(title "a:Determine-point-surface-state-2"))
 
 ([Examples_Class30020] of  Rule
 
 	(lhs "(Working-state engine does-not-start)\n(Spark-state engine does-not-spark)\n(Charge-state battery charged)\n(not Repair advice ?a)")
 	(rhs "(if (ru.rules/confirm \"Is the conductivity test for the ignition coil positive?\")\n     (asser Repair advice \"Repair the distributor lead wire.\")\n     (asser Repair advice \"Replace the ignition coil.\"))")
 	(salience 0)
-	(title "Determine-conductivity-test"))
+	(title "a:Determine-conductivity-test"))
 
 ([Examples_Class30021] of  Rule
 
 	(lhs "(Stage value diagnose)\n(not Repair advice ?a)")
 	(rhs "(asser Repair advice \"Take your car to a mechanic.\")")
 	(salience -8)
-	(title "No-repairs"))
+	(title "a:No-repairs"))
 
 ([Examples_Class30022] of  Rule
 
 	(lhs "(Repair advice ?a)")
 	(rhs "(ru.rules/display (str \"Suggested Repair: <b>\" ?a \"</b>\"))")
 	(salience -8)
-	(title "Print-repair"))
+	(title "a:Print-repair"))
 
 ([Examples_Class30023] of  Stage
 
-	(value "start"))
+	(value start))
 
 ([Examples_Class30024] of  Rule
 
 	(lhs "?s (Stage value start)")
 	(rhs "(ru.rules/display (str \"<br><br>The Engine Diagnosis Expert System. Date: \" (java.util.Date.) \"<br>\"))\n(modify ?s value diagnose)")
 	(salience 0)
-	(title "System-banner"))
+	(title "a:System-banner"))
 
 ([Examples_Class4] of  Rule
 
-	(lhs "?goal (Goal action hold \n	argument1 ?name)\n?thing (Thing name ?name \n	location ?place \n	on-top-of ?on \n	weight light)\n?monkey (Monkey location ?place \n	on-top-of ?on \n	holding blank)")
-	(rhs "(ru.rules/display (str \"Monkey grabs the \" ?name \".\" ))\n(modify ?thing location held \n	on-top-of held)\n(modify ?monkey holding ?name)\n(retract ?goal)")
+	(lhs "?goal (Goal action hold \n	argument1 ?name)\n?thing (Thing name ?name \n	location ?place \n	on-top-of ?on \n	weight light)\n?monkey (Monkey location ?place \n	on-top-of ?on \n	holding \"blank\")")
+	(rhs "(ru.rules/display (str \"Monkey grabs the \" ?name \".\" ))\n(modify ?thing location \"held\" \n	on-top-of \"held\")\n(modify ?monkey holding ?name)\n(retract ?goal)")
 	(salience 0)
-	(title "Grab-object"))
+	(title "m:Grab-object"))
 
 ([Examples_Class40000] of  Rule
 
 	(lhs "?p (Patient temperature ?t\n	(nil? ?t))")
 	(rhs "(modify ?p temperature (ru.rules/input \n	\"Enter patient temperature (Fahrenheit)\" \n	0 \n	#(and (number? %) (< 86 % 119))))")
 	(salience 2)
-	(title "GetTemperature"))
+	(title "s:GetTemperature"))
 
 ([Examples_Class40011] of  Run
 
@@ -655,7 +661,7 @@
 	(butt-fire "Fire/ru.rules/fire-all-rules")
 	(butt-run "Run/ru.rules/run-engine")
 	(facts [Examples_Class140000])
-	(mode run)
+	(mode trace-long)
 	(rule-sets
 		[Examples_Class40012]
 		[Examples_Class70000]
@@ -677,56 +683,76 @@
 
 ([Examples_Class5] of  Rule
 
-	(lhs "?goal (Goal action hold argument1 blank)\n?monkey (Monkey location ?place \n	on-top-of ?on \n	holding ?name\n	(not= ?name blank))\n?thing (Thing name ?name)")
-	(rhs "(ru.rules/display (str \"Monkey drops the \" ?name \".\" ))\n(modify ?monkey holding blank)\n(modify ?thing location ?place \n	on-top-of ?on)\n(retract ?goal)")
+	(lhs "?goal (Goal action hold \n	argument1 \"blank\")\n?monkey (Monkey location ?place \n	on-top-of ?on \n	holding ?name\n	(not= ?name \"blank\"))\n?thing (Thing name ?name)")
+	(rhs "(ru.rules/display (str \"Monkey drops the \" ?name \".\" ))\n(modify ?monkey holding \"blank\")\n(modify ?thing location ?place \n	on-top-of ?on)\n(retract ?goal)")
 	(salience 0)
-	(title "Drop-object"))
+	(title "m:Drop-object"))
 
 ([Examples_Class50000] of  CloFuncall
 
 	(source "(ru.rules/pp :all)"))
+
+([Examples_Class50012] of  CloFuncall
+
+	(source "(rete.core/fact-list)"))
+
+([Examples_Class50013] of  CloFuncall
+
+	(source "(first (rete.core/fact-list))"))
+
+([Examples_Class50014] of  CloFuncall
+
+	(source "(nth (first (rete.core/fact-list)) 2)"))
+
+([Examples_Class50015] of  CloFuncall
+
+	(source "(nth (first (rete.core/fact-list)) 3)"))
+
+([Examples_Class50016] of  CloFuncall
+
+	(source "(type (nth (first (rete.core/fact-list)) 3))"))
 
 ([Examples_Class6] of  Rule
 
 	(lhs "(Goal action move \n	argument1 ?obj \n	argument2 ?place)\n(Chest name ?chest \n	contents ?obj)\n(not Goal action unlock argument1 ?chest)")
 	(rhs "(asser Goal action unlock \n	argument1 ?chest)")
 	(salience 0)
-	(title "Unlock-chest-to-move-object"))
+	(title "m:Unlock-chest-to-move-object"))
 
 ([Examples_Class60000] of  Rule
 
 	(lhs "?p (Patient spots ?v\n	(nil? ?v))")
 	(rhs "(modify ?p spots (ru.rules/confirm \"Does the patient have spots?\"))")
 	(salience 2)
-	(title "GetSpots"))
+	(title "s:GetSpots"))
 
 ([Examples_Class60001] of  Rule
 
 	(lhs "?p (Patient rash ?v\n	(nil? ?v))")
 	(rhs "(modify ?p rash (ru.rules/confirm \"Does the patient have a rash?\"))")
 	(salience 2)
-	(title "GetRash"))
+	(title "s:GetRash"))
 
 ([Examples_Class60002] of  Rule
 
 	(lhs "?p (Patient sore_throat ?v\n	(nil? ?v))")
 	(rhs "(modify ?p sore_throat (ru.rules/confirm \"Does the patient have a sore throat?\"))\n(ru.rules/display (str \"<br><br><b>The Patient Treatment Expert System.</b> Date: \" (java.util.Date.) \"<br>\"))")
 	(salience 2)
-	(title "GetSoreThroat"))
+	(title "s:GetSoreThroat"))
 
 ([Examples_Class60003] of  Rule
 
 	(lhs "?p (Patient fever high \n	spots true\n	innoculated ?v\n	(nil? ?v))")
 	(rhs "(modify ?p innoculated (ru.rules/confirm \"Has the patient been innoculated for measles?\"))")
 	(salience 2)
-	(title "GetInnoculated"))
+	(title "s:GetInnoculated"))
 
 ([Examples_Class7] of  Rule
 
 	(lhs "(Goal action move \n	argument1 ?obj \n	argument2 ?place)\n(Thing name ?obj \n	location ?loc \n	weight light\n	(not= ?loc ?place))\n(Monkey holding ?hold\n	(not= ?hold ?obj))\n(not Goal action hold \n	argument1 ?obj)")
 	(rhs "(asser Goal action hold \n	argument1 ?obj)")
 	(salience 0)
-	(title "Hold-object-to-move"))
+	(title "m:Hold-object-to-move"))
 
 ([Examples_Class70000] of  RuleSet
 
@@ -747,32 +773,32 @@
 	(lhs "?p (Patient fever ?v\n	temperature ?t\n	((number? ?t)\n	 (>= ?t 101)\n	 (nil? ?v)))")
 	(rhs "(modify ?p fever high)\n(ru.rules/display \"<span style='color:red'>High fever diagnosed</span><br>\")")
 	(salience 0)
-	(title "FeverHigh"))
+	(title "d:FeverHigh"))
 
 ([Examples_Class8] of  Rule
 
 	(lhs "(Goal action move \n	argument1 ?obj \n	argument2 ?place)\n(Monkey location ?loc \n	holding ?obj\n	(not= ?loc ?place))\n(not Goal action walk-to \n	argument1 ?place)")
 	(rhs "(asser Goal action walk-to \n	argument1 ?place)")
 	(salience 0)
-	(title "Move-object-to-place"))
+	(title "m:Move-object-to-place"))
 
 ([Examples_Class80000] of  Rule
 
 	(lhs "?p (Patient fever ?v\n	temperature ?t\n	((number? ?t)\n	 (< 98.6 ?t 101)\n	 (nil? ?v)))")
 	(rhs "(modify ?p fever mild)\n(ru.rules/display \"Mild fever diagnosed<br>\")")
 	(salience 0)
-	(title "FeverMild"))
+	(title "d:FeverMild"))
 
 ([Examples_Class9] of  Rule
 
 	(lhs "?goal (Goal action move \n	argument1 ?name \n	argument2 ?place)\n?monkey (Monkey location ?place \n	holding ?obj)\n?thing (Thing name ?name \n	weight light)")
-	(rhs "(ru.rules/display (str \"Monkey drops the \" ?name \".\" ))\n(modify ?monkey holding blank)\n(modify ?thing location ?place \n	on-top-of floor)\n(retract ?goal)")
+	(rhs "(ru.rules/display (str \"Monkey drops the \" ?name \".\" ))\n(modify ?monkey holding \"blank\")\n(modify ?thing location ?place \n	on-top-of \"floor\")\n(retract ?goal)")
 	(salience 0)
-	(title "Drop-object-once-moved"))
+	(title "m:Drop-object-once-moved"))
 
 ([Examples_Class90000] of  Rule
 
 	(lhs "(Patient fever high\n	spots true \n	innoculated false)")
 	(rhs "(asser Disease diagnosis measles)\n(ru.rules/display \"Measles diagnosed<br>\")")
 	(salience 1)
-	(title "Measles"))
+	(title "d:Measles"))

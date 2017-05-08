@@ -1,4 +1,4 @@
-; Wed Oct 19 22:15:42 MSK 2016
+; Mon May 08 13:33:08 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -9,6 +9,68 @@
 	(role abstract)
 	(single-slot on-top-of
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot advice
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot innoculated
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot value
+		(type SYMBOL)
+		(allowed-values diagnose)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot disease
+		(type INSTANCE)
+;+		(allowed-classes Disease)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot diagnosis
+		(type SYMBOL)
+		(allowed-values flu measles allergy)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sore_throat
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot action
+		(type SYMBOL)
+		(allowed-values walk-to move on hold unlock eat)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot spots
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot unlocked-by
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot fever
+		(type SYMBOL)
+		(allowed-values high mild)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot contents
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot weight
+		(type SYMBOL)
+		(allowed-values light heavy)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot battery
+		(type SYMBOL)
+		(allowed-values charged dead)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot patient-data
@@ -37,71 +99,13 @@
 		(allowed-values pennicillin allergy_shot bed_rest no)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot advice
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot innoculated
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot temperature
 		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot value
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot disease
-		(type INSTANCE)
-;+		(allowed-classes Disease)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot diagnosis
-		(type SYMBOL)
-		(allowed-values flu measles allergy)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot sore_throat
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot action
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot spots
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot unlocked-by
-		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot rash
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot fever
-		(type SYMBOL)
-		(allowed-values high mild)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot contents
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot weight
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot battery
-		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot date
@@ -112,7 +116,8 @@
 ;+		(type ANY)
 		(create-accessor read-write))
 	(single-slot engine
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values does-not-rotate does-not-start does-not-spark normal unsatisfactory rotates low-output not-low-output irregular-spark)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot holding
@@ -152,7 +157,8 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot weight
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values light heavy)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot name_
@@ -188,7 +194,8 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot action
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values walk-to move on hold unlock eat)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -200,7 +207,8 @@
 	(is-a Auto)
 	(role concrete)
 	(single-slot engine
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values does-not-rotate does-not-start does-not-spark normal unsatisfactory rotates low-output not-low-output irregular-spark)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -208,7 +216,8 @@
 	(is-a Auto)
 	(role concrete)
 	(single-slot engine
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values does-not-rotate does-not-start does-not-spark normal unsatisfactory rotates low-output not-low-output irregular-spark)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -216,7 +225,8 @@
 	(is-a Auto)
 	(role concrete)
 	(single-slot battery
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values charged dead)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -224,7 +234,8 @@
 	(is-a Auto)
 	(role concrete)
 	(single-slot engine
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values does-not-rotate does-not-start does-not-spark normal unsatisfactory rotates low-output not-low-output irregular-spark)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -232,7 +243,8 @@
 	(is-a Auto)
 	(role concrete)
 	(single-slot engine
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values does-not-rotate does-not-start does-not-spark normal unsatisfactory rotates low-output not-low-output irregular-spark)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -248,7 +260,8 @@
 	(is-a Auto)
 	(role concrete)
 	(single-slot value
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values diagnose)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 

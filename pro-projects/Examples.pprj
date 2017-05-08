@@ -1,4 +1,4 @@
-; Wed Oct 19 22:15:42 MSK 2016
+; Mon May 08 13:33:08 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Examples_ProjectKB_Class20391]
-		[Examples_ProjectKB_Class20392]
-		[Examples_ProjectKB_Class20393]
-		[Examples_ProjectKB_Class20394]
-		[Examples_ProjectKB_Class20395]
-		[Examples_ProjectKB_Class20396]
-		[Examples_ProjectKB_Class20397]
-		[Examples_ProjectKB_Class20398]))
+		[Examples_ProjectKB_Class538]
+		[Examples_ProjectKB_Class539]
+		[Examples_ProjectKB_Class540]
+		[Examples_ProjectKB_Class541]
+		[Examples_ProjectKB_Class542]
+		[Examples_ProjectKB_Class543]
+		[Examples_ProjectKB_Class544]
+		[Examples_ProjectKB_Class545]))
 
 ([CLSES_TAB] of  Widget
 
@@ -149,46 +149,6 @@
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
-
-([Examples_ProjectKB_Class20391] of  String
-
-	(name "Thing")
-	(string_value "{Thing+}name{+location+}location{+weight+}weight{+on-top-of+}on-top-of"))
-
-([Examples_ProjectKB_Class20392] of  String
-
-	(name "Monkey")
-	(string_value "{Monkey+location+}location{+on-top-of+}on-top-of{+holding++}holding"))
-
-([Examples_ProjectKB_Class20393] of  String
-
-	(name "Chest")
-	(string_value "{Chest+}name{+contents+}contents{+unlocked-by+}unlocked-by"))
-
-([Examples_ProjectKB_Class20394] of  String
-
-	(name "Stage")
-	(string_value "value"))
-
-([Examples_ProjectKB_Class20395] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([Examples_ProjectKB_Class20396] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([Examples_ProjectKB_Class20397] of  String
-
-	(name "Goal")
-	(string_value "{Goal+}action{+arg1+}argument1{+arg2+}argument2"))
-
-([Examples_ProjectKB_Class20398] of  String
-
-	(name "Disease")
-	(string_value "diagnosis"))
 
 ([Examples_ProjectKB_Class20447] of  Widget
 
@@ -1011,6 +971,46 @@
 ([Examples_ProjectKB_Class462] of  Property_List
 )
 
+([Examples_ProjectKB_Class538] of  String
+
+	(name "Stage")
+	(string_value "value"))
+
+([Examples_ProjectKB_Class539] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([Examples_ProjectKB_Class540] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([Examples_ProjectKB_Class541] of  String
+
+	(name "Disease")
+	(string_value "diagnosis"))
+
+([Examples_ProjectKB_Class542] of  String
+
+	(name "Thing")
+	(string_value "{Thing+}name{+location+}location{+weight+}weight{+on-top-of+}on-top-of"))
+
+([Examples_ProjectKB_Class543] of  String
+
+	(name "Monkey")
+	(string_value "{Monkey+location+}location{+on-top-of+}on-top-of{+holding++}holding"))
+
+([Examples_ProjectKB_Class544] of  String
+
+	(name "Chest")
+	(string_value "{Chest+}name{+contents+}contents{+unlocked-by+}unlocked-by"))
+
+([Examples_ProjectKB_Class545] of  String
+
+	(name "Goal")
+	(string_value "{Goal+}action{+arg1+}argument1{+arg2+}argument2"))
+
 ([FORMS_TAB] of  Widget
 
 	(is_hidden FALSE)
@@ -1141,28 +1141,28 @@
 	(name "instances_file_name")
 	(string_value "Examples.pins"))
 
-([KB_614671_Class380] of  Map
+([KB_449428_Class526] of  Map
 
 	(entries
-		[KB_614671_Class381]
-		[KB_614671_Class382]
-		[KB_614671_Class383]))
+		[KB_449428_Class527]
+		[KB_449428_Class528]
+		[KB_449428_Class529]))
 
-([KB_614671_Class381] of  Map_Entry
+([KB_449428_Class527] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_614671_Class382] of  Map_Entry
+([KB_449428_Class528] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_614671_Class383] of  Map_Entry
+([KB_449428_Class529] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
