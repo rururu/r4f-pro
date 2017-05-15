@@ -163,3 +163,12 @@
 2017.05.08 17:57:59.555 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2017.05.08 17:58:04.242 MSK WARNING: Unknown class: InputT -- Project.loadWidgetDescriptors()
 2017.05.08 17:58:09.388 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj = 0 sec (project) + 5 sec (ui) -- ProjectManager$3.run()
+2017.05.15 21:02:57.829 MSK INFO: *** SYSTEM START ***
+2017.05.15 21:02:58.966 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.05.15 21:03:07.368 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj = 0 sec (project) + 3 sec (ui) -- ProjectManager$3.run()
+2017.05.15 21:18:11.280 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Clojure.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.05.15 21:18:11.837 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.05.15 21:20:29.889 MSK INFO: Project load time for file:/Users/ru/clojure/fligts-pro/pro-projects/Clojure.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.05.15 21:20:30.135 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.05.15 21:21:47.438 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.05.15 21:21:47.549 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()

@@ -1,4 +1,4 @@
-; Mon May 08 18:43:29 MSK 2017
+; Mon May 15 21:45:34 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -23,6 +23,46 @@
 		[Algorithm_Class8])
 	(next [Algorithm_Class2])
 	(title "INPUT A, B"))
+
+([Algorithm_Class10000] of  CloProgram
+
+	(cloFunctions
+		[Algorithm_Class10003]
+		[Algorithm_Class10004]
+		[Algorithm_Class10006]
+		[Algorithm_Class10005]
+		[Algorithm_Class10002])
+	(cloNamespace [Algorithm_Class10001])
+	(title "Algorithm Execution"))
+
+([Algorithm_Class10001] of  CloNamespace
+
+	(source "(:use protege.core)\n(:require\n  [rete.core :as rete])")
+	(title "algo.exe"))
+
+([Algorithm_Class10002] of  CloFunction
+
+	(title "do-process [proc bnd]"))
+
+([Algorithm_Class10003] of  CloFunction
+
+	(source "(rete.core/slurp-with-comments (java.io.StringReader. src))")
+	(title "uncomment [src]"))
+
+([Algorithm_Class10004] of  CloFunction
+
+	(source "(try\n  (Integer/parseInt s)\n  (catch NumberFormatException e\n    (try\n      (Double/parseDouble s)\n      (catch NumberFormatException e\n        s))))")
+	(title "val-from-str [s]"))
+
+([Algorithm_Class10005] of  CloFunction
+
+	(source "(trans-obs (map val-from-str vals))")
+	(title "trans-values [vals]"))
+
+([Algorithm_Class10006] of  CloFunction
+
+	(source "(if (= (count obs) 1)\n  (first obs)\n  (vec obs))")
+	(title "trans-obs [obs]"))
 
 ([Algorithm_Class2] of  Decision
 
@@ -58,10 +98,10 @@
 
 ([Algorithm_Class7] of  InputRow
 
-	(value "35")
+	(values "35")
 	(variable "A"))
 
 ([Algorithm_Class8] of  InputRow
 
-	(value "93")
+	(values "93")
 	(variable "B"))
