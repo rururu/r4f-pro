@@ -172,3 +172,20 @@
 2017.05.15 21:20:30.135 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
 2017.05.15 21:21:47.438 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
 2017.05.15 21:21:47.549 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.07 19:07:28.682 MSK INFO: *** SYSTEM START ***
+2017.06.07 19:07:28.715 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.06.07 19:07:29.461 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.07 19:07:54.783 MSK INFO: Project load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj: 1 sec -- ProjectChooser.loadProject()
+2017.06.07 19:07:56.126 MSK INFO: UI display time = 1 sec -- ProjectManager$2.run()
+2017.06.08 17:17:40.242 MSK INFO: *** SYSTEM START ***
+2017.06.08 17:17:40.277 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.06.08 17:17:40.808 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.08 17:17:50.381 MSK INFO: Load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()
+2017.06.08 22:57:23.506 MSK INFO: *** SYSTEM START ***
+2017.06.08 22:57:23.534 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.06.08 22:57:24.051 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.08 22:57:32.341 MSK INFO: Load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj = 0 sec (project) + 1 sec (ui) -- ProjectManager$3.run()
+2017.06.08 23:46:54.189 MSK INFO: *** SYSTEM START ***
+2017.06.08 23:46:54.214 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.06.08 23:46:54.614 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.08 23:47:04.455 MSK INFO: Load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()

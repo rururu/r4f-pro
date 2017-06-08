@@ -1,4 +1,4 @@
-; Mon May 15 21:45:34 MSK 2017
+; Fri Jun 09 00:25:21 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -32,7 +32,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class10363]
-		[Algorithm_ProjectKB_Class10364]))
+		[Algorithm_ProjectKB_Class10364]
+		[Algorithm_ProjectKB_Class10393]))
 
 ([Algorithm_ProjectKB_Class10363] of  Boolean
 
@@ -44,131 +45,161 @@
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Delete Instance"))
 
-([Algorithm_ProjectKB_Class10411] of  String
+([Algorithm_ProjectKB_Class10392] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class10393] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class10454] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class10455] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class20471] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class20472] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class30471] of  String
 
 	(name "Input")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class10412] of  String
+([Algorithm_ProjectKB_Class30472] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([Algorithm_ProjectKB_Class10413] of  String
+([Algorithm_ProjectKB_Class30473] of  String
 
 	(name "Decision")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class10414] of  String
+([Algorithm_ProjectKB_Class30474] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([Algorithm_ProjectKB_Class10415] of  String
+([Algorithm_ProjectKB_Class30475] of  String
 
 	(name "Algorithm")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class10416] of  String
+([Algorithm_ProjectKB_Class30476] of  String
 
 	(name "Process")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class10417] of  Map
+([Algorithm_ProjectKB_Class30477] of  Map
 
 	(entries
-		[Algorithm_ProjectKB_Class10420]
-		[Algorithm_ProjectKB_Class10423]
-		[Algorithm_ProjectKB_Class10424]
-		[Algorithm_ProjectKB_Class10425]
-		[Algorithm_ProjectKB_Class10426]
-		[Algorithm_ProjectKB_Class10427]
-		[Algorithm_ProjectKB_Class10428]
-		[Algorithm_ProjectKB_Class10429]))
+		[Algorithm_ProjectKB_Class30480]
+		[Algorithm_ProjectKB_Class30483]
+		[Algorithm_ProjectKB_Class30484]
+		[Algorithm_ProjectKB_Class30485]
+		[Algorithm_ProjectKB_Class30486]
+		[Algorithm_ProjectKB_Class30487]
+		[Algorithm_ProjectKB_Class30488]
+		[Algorithm_ProjectKB_Class30489]))
 
-([Algorithm_ProjectKB_Class10418] of  Map
+([Algorithm_ProjectKB_Class30478] of  Map
 
-	(entries [Algorithm_ProjectKB_Class10419]))
+	(entries [Algorithm_ProjectKB_Class30479]))
 
-([Algorithm_ProjectKB_Class10419] of  Map_Entry
+([Algorithm_ProjectKB_Class30479] of  Map_Entry
 
 	(key "1")
 	(key_class "java.lang.String")
 	(value "100,400")
 	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
 
-([Algorithm_ProjectKB_Class10420] of  Map_Entry
+([Algorithm_ProjectKB_Class30480] of  Map_Entry
 
 	(key "Algorithm_Class4+Algorithm_Class2")
 	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class10418")
+	(value "Algorithm_ProjectKB_Class30478")
 	(value_class "java.util.Map"))
 
-([Algorithm_ProjectKB_Class10421] of  Map
+([Algorithm_ProjectKB_Class30481] of  Map
 
-	(entries [Algorithm_ProjectKB_Class10422]))
+	(entries [Algorithm_ProjectKB_Class30482]))
 
-([Algorithm_ProjectKB_Class10422] of  Map_Entry
+([Algorithm_ProjectKB_Class30482] of  Map_Entry
 
 	(key "1")
 	(key_class "java.lang.String")
 	(value "450,400")
 	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
 
-([Algorithm_ProjectKB_Class10423] of  Map_Entry
+([Algorithm_ProjectKB_Class30483] of  Map_Entry
 
 	(key "Algorithm_Class5+Algorithm_Class2")
 	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class10421")
+	(value "Algorithm_ProjectKB_Class30481")
 	(value_class "java.util.Map"))
 
-([Algorithm_ProjectKB_Class10424] of  Map_Entry
+([Algorithm_ProjectKB_Class30484] of  Map_Entry
 
 	(key "Algorithm_Class6")
 	(key_class "java.lang.String")
 	(value "309 370 83 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class10425] of  Map_Entry
+([Algorithm_ProjectKB_Class30485] of  Map_Entry
 
 	(key "Algorithm_Class5")
 	(key_class "java.lang.String")
 	(value "405 520 91 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class10426] of  Map_Entry
+([Algorithm_ProjectKB_Class30486] of  Map_Entry
 
 	(key "Algorithm_Class4")
 	(key_class "java.lang.String")
 	(value "55 520 90 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class10427] of  Map_Entry
+([Algorithm_ProjectKB_Class30487] of  Map_Entry
 
 	(key "Algorithm_Class3")
 	(key_class "java.lang.String")
 	(value "159 370 82 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class10428] of  Map_Entry
+([Algorithm_ProjectKB_Class30488] of  Map_Entry
 
 	(key "Algorithm_Class2")
 	(key_class "java.lang.String")
 	(value "202 220 97 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class10429] of  Map_Entry
+([Algorithm_ProjectKB_Class30489] of  Map_Entry
 
 	(key "Algorithm_Class1")
 	(key_class "java.lang.String")
 	(value "202 70 96 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class10430] of  Map_Entry
+([Algorithm_ProjectKB_Class30490] of  Map_Entry
 
 	(key "InstanceGraphWidget.Algorithm_Class0.flow-chart")
 	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class10417")
+	(value "Algorithm_ProjectKB_Class30477")
 	(value_class "java.util.Map"))
 
 ([Algorithm_ProjectKB_Class35] of  String
@@ -211,6 +242,11 @@
 ([Algorithm_ProjectKB_Class364] of  Property_List
 )
 
+([Algorithm_ProjectKB_Class371] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
 ([Algorithm_ProjectKB_Class381] of  Widget
 
 	(height 120)
@@ -240,7 +276,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class385]
-		[Algorithm_ProjectKB_Class386]))
+		[Algorithm_ProjectKB_Class386]
+		[Algorithm_ProjectKB_Class10392]))
 
 ([Algorithm_ProjectKB_Class385] of  Boolean
 
@@ -521,7 +558,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class472]
-		[Algorithm_ProjectKB_Class473]))
+		[Algorithm_ProjectKB_Class473]
+		[Algorithm_ProjectKB_Class20471]))
 
 ([Algorithm_ProjectKB_Class472] of  Boolean
 
@@ -548,7 +586,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class482]
-		[Algorithm_ProjectKB_Class483]))
+		[Algorithm_ProjectKB_Class483]
+		[Algorithm_ProjectKB_Class20472]))
 
 ([Algorithm_ProjectKB_Class482] of  Boolean
 
@@ -589,7 +628,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class492]
-		[Algorithm_ProjectKB_Class493]))
+		[Algorithm_ProjectKB_Class493]
+		[Algorithm_ProjectKB_Class10454]))
 
 ([Algorithm_ProjectKB_Class492] of  Boolean
 
@@ -630,7 +670,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class504]
-		[Algorithm_ProjectKB_Class505]))
+		[Algorithm_ProjectKB_Class505]
+		[Algorithm_ProjectKB_Class10455]))
 
 ([Algorithm_ProjectKB_Class504] of  Boolean
 
@@ -1228,12 +1269,12 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Algorithm_ProjectKB_Class10411]
-		[Algorithm_ProjectKB_Class10412]
-		[Algorithm_ProjectKB_Class10413]
-		[Algorithm_ProjectKB_Class10414]
-		[Algorithm_ProjectKB_Class10415]
-		[Algorithm_ProjectKB_Class10416]))
+		[Algorithm_ProjectKB_Class30471]
+		[Algorithm_ProjectKB_Class30472]
+		[Algorithm_ProjectKB_Class30473]
+		[Algorithm_ProjectKB_Class30474]
+		[Algorithm_ProjectKB_Class30475]
+		[Algorithm_ProjectKB_Class30476]))
 
 ([CLSES_TAB] of  Widget
 
@@ -1284,17 +1325,18 @@
 
 ([KB_084192_Class1] of  Map
 
-	(entries [Algorithm_ProjectKB_Class10430])
+	(entries [Algorithm_ProjectKB_Class30490])
 	(referenced_maps
-		[Algorithm_ProjectKB_Class10421]
-		[Algorithm_ProjectKB_Class10418]
-		[Algorithm_ProjectKB_Class10417]))
+		[Algorithm_ProjectKB_Class30481]
+		[Algorithm_ProjectKB_Class30478]
+		[Algorithm_ProjectKB_Class30477]))
 
 ([KB_084192_Class11] of  Property_List
 
 	(properties
 		[KB_084192_Class12]
-		[KB_084192_Class13]))
+		[KB_084192_Class13]
+		[Algorithm_ProjectKB_Class371]))
 
 ([KB_084192_Class12] of  Boolean
 
@@ -1382,28 +1424,28 @@
 	(name "instances_file_name")
 	(string_value "Algorithm.pins"))
 
-([KB_574850_Class367] of  Map
+([KB_513503_Class367] of  Map
 
 	(entries
-		[KB_574850_Class368]
-		[KB_574850_Class369]
-		[KB_574850_Class370]))
+		[KB_513503_Class368]
+		[KB_513503_Class369]
+		[KB_513503_Class370]))
 
-([KB_574850_Class368] of  Map_Entry
+([KB_513503_Class368] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_574850_Class369] of  Map_Entry
+([KB_513503_Class369] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_574850_Class370] of  Map_Entry
+([KB_513503_Class370] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")

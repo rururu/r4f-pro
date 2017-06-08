@@ -20,7 +20,7 @@ $ lein repl
 rete.protege=> (-main)
 ```
 
-3 minute IDE [screencast] (https://www.youtube.com/watch?v=RZKKq6Pym44&feature=youtu.be).
+3 minute IDE [screencast](https://www.youtube.com/watch?v=RZKKq6Pym44&feature=youtu.be).
 
 
 ## License
@@ -29,4 +29,4 @@ Copyright © 2016 Ruslan Sorokin.
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
-[License of Protege-3.5] (https://github.com/rururu/r4f-pro/blob/master/LICENSE_PROTEGE)
+[License of Protege-3.5](https://github.com/rururu/r4f-pro/blob/master/LICENSE_PROTEGE)

@@ -1,4 +1,4 @@
-; Mon May 15 21:45:34 MSK 2017
+; Fri Jun 09 00:25:21 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -31,8 +31,20 @@
 		[Algorithm_Class10004]
 		[Algorithm_Class10006]
 		[Algorithm_Class10005]
-		[Algorithm_Class10002])
+		[Algorithm_Class20024]
+		[Algorithm_Class30000]
+		[Algorithm_Class40002]
+		[Algorithm_Class40000]
+		[Algorithm_Class20001]
+		[Algorithm_Class50001]
+		[Algorithm_Class10002]
+		[Algorithm_Class40004]
+		[Algorithm_Class20013]
+		[Algorithm_Class20011])
 	(cloNamespace [Algorithm_Class10001])
+	(cloVars
+		[Algorithm_Class20023]
+		[Algorithm_Class40001])
 	(title "Algorithm Execution"))
 
 ([Algorithm_Class10001] of  CloNamespace
@@ -42,6 +54,7 @@
 
 ([Algorithm_Class10002] of  CloFunction
 
+	(source "(do-trace proc bnd)\n(do-next (sv proc \"next\") (do-code proc bnd))")
 	(title "do-process [proc bnd]"))
 
 ([Algorithm_Class10003] of  CloFunction
@@ -57,7 +70,7 @@
 ([Algorithm_Class10005] of  CloFunction
 
 	(source "(trans-obs (map val-from-str vals))")
-	(title "trans-values [vals]"))
+	(title "trans-vals [vals]"))
 
 ([Algorithm_Class10006] of  CloFunction
 
@@ -66,42 +79,114 @@
 
 ([Algorithm_Class2] of  Decision
 
-	(code "(if (= B 0) 2 1)")
+	(code "variant (if (= B 0) 2 1)")
 	(title "B = 0 ?")
 	(variants
 		[Algorithm_Class3]
 		[Algorithm_Class6]))
 
+([Algorithm_Class20000] of  CloFuncall
+
+	(source "(in-ns 'protege.core)"))
+
+([Algorithm_Class20001] of  CloFunction
+
+	(source "(do-trace inp bnd)\n(do-next \n  (sv inp \"next\")\n  (vec (reduce #(concat %1 \n	 [(symbol (sv %2 \"variable\")) \n	  (if-let [vals (seq (svs %2 \"values\"))]\n	    (trans-vals vals)\n	    (trans-obs (svs %2 \"objects\")))])\n                         bnd \n                         (svs inp \"input-table\"))))")
+	(title "do-input [inp bnd]"))
+
+([Algorithm_Class20005] of  CloFuncall
+
+	(source "(def inp (first (cls-instances \"Input\")))"))
+
+([Algorithm_Class20011] of  CloFunction
+
+	(source "(if (some? inst)\n  (condp = (typ inst)\n    \"Process\" (do-process inst bnd)\n    \"Decision\" (do-decision inst bnd)\n    \"Input\" (do-input inst bnd)\n    (println (str \"Unknown type: \" typ))))")
+	(title "do-next [inst bnd]"))
+
+([Algorithm_Class20013] of  CloFunction
+
+	(source "(do-trace dec bnd)\n(let [bnd2 (do-code dec bnd)]\n  (do-variant (last bnd2) \n	(vec (svs dec \"variants\")) \n	(vec (butlast (butlast bnd2)))))")
+	(title "do-decision [dec bnd]"))
+
+([Algorithm_Class20023] of  CloVar
+
+	(source "nil")
+	(title "do-next"))
+
+([Algorithm_Class20024] of  CloFunction
+
+	(source "(let [p2 (partition 2 bnd)\n      vars (map first p2)\n      nams (map name vars)]\n  (zipmap nams vars))")
+	(title "var-val-map [bnd]"))
+
 ([Algorithm_Class3] of  Decision
 
-	(code "(if (> A B) 2 1)")
+	(code "variant (if (> A B) 2 1)")
 	(title "A > B ?")
 	(variants
 		[Algorithm_Class4]
 		[Algorithm_Class5]))
 
+([Algorithm_Class30000] of  CloFunction
+
+	(source "(vec (reduce-kv #(concat %1[(symbol %2) %3]) [] vvm))")
+	(title "to-bnd [vvm]"))
+
+([Algorithm_Class30001] of  CloFuncall
+
+	(source "(algo.exe/do-next inp [])"))
+
 ([Algorithm_Class4] of  Process
 
-	(code "B := (- B A)")
+	(code "B (- B A)")
 	(next [Algorithm_Class2])
 	(title "B <- B - A"))
 
+([Algorithm_Class40000] of  CloFunction
+
+	(source "(when TRACE\n  (println :binding bnd)\n  (println (typ inst) (sv inst \"title\")))")
+	(title "do-trace [inst bnd]"))
+
+([Algorithm_Class40001] of  CloVar
+
+	(source "nil")
+	(title "TRACE"))
+
+([Algorithm_Class40002] of  CloFunction
+
+	(source "(def TRACE bool)")
+	(title "trace [bool]"))
+
+([Algorithm_Class40003] of  CloFuncall
+
+	(source "(algo.exe/trace true)"))
+
+([Algorithm_Class40004] of  CloFunction
+
+	(source "(if (<= 1 vrt (count vrts))\n  (do-next (nth vrts (dec vrt)) bnd))")
+	(title "do-variant [vrt vrts bnd]"))
+
 ([Algorithm_Class5] of  Process
 
-	(code "A := A - B")
+	(code "A (- A B)")
 	(next [Algorithm_Class2])
 	(title "A <- A - B"))
 
+([Algorithm_Class50001] of  CloFunction
+
+	(source "(let [code (sv pord \"code\")\n       bnd2 (read-string (str \"[\" (uncomment  code) \"]\"))\n       bnd3 (vec (concat bnd bnd2))\n       vvm1 (var-val-map bnd3)\n       expr `(let ~bnd3 ~vvm1)\n       vvm2  (eval expr)]\n  (to-bnd vvm2))")
+	(title "do-code [pord bnd]"))
+
 ([Algorithm_Class6] of  Process
 
+	(code "_ (println A)")
 	(title "PRINT A"))
 
 ([Algorithm_Class7] of  InputRow
 
-	(values "35")
+	(values "54")
 	(variable "A"))
 
 ([Algorithm_Class8] of  InputRow
 
-	(values "93")
+	(values "36")
 	(variable "B"))
