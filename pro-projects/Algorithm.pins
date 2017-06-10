@@ -1,4 +1,4 @@
-; Fri Jun 09 00:25:21 MSK 2017
+; Sat Jun 10 18:40:15 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -18,20 +18,21 @@
 
 ([Algorithm_Class1] of  Input
 
-	(input-table
+	(code "A 54\nB 36")
+	(next [Algorithm_Class2])
+	(object-rows
 		[Algorithm_Class7]
 		[Algorithm_Class8])
-	(next [Algorithm_Class2])
 	(title "INPUT A, B"))
 
 ([Algorithm_Class10000] of  CloProgram
 
 	(cloFunctions
 		[Algorithm_Class10003]
-		[Algorithm_Class10004]
+		[Algorithm_Class70005]
 		[Algorithm_Class10006]
-		[Algorithm_Class10005]
 		[Algorithm_Class20024]
+		[Algorithm_Class70009]
 		[Algorithm_Class30000]
 		[Algorithm_Class40002]
 		[Algorithm_Class40000]
@@ -40,6 +41,7 @@
 		[Algorithm_Class10002]
 		[Algorithm_Class40004]
 		[Algorithm_Class20013]
+		[Algorithm_Class50000]
 		[Algorithm_Class20011])
 	(cloNamespace [Algorithm_Class10001])
 	(cloVars
@@ -49,7 +51,7 @@
 
 ([Algorithm_Class10001] of  CloNamespace
 
-	(source "(:use protege.core)\n(:require\n  [rete.core :as rete])")
+	(source "(:use protege.core)\n(:require\n  [rete.core :as rete])\n(:import\n  edu.stanford.smi.protege.model.Instance)")
 	(title "algo.exe"))
 
 ([Algorithm_Class10002] of  CloFunction
@@ -62,19 +64,9 @@
 	(source "(rete.core/slurp-with-comments (java.io.StringReader. src))")
 	(title "uncomment [src]"))
 
-([Algorithm_Class10004] of  CloFunction
-
-	(source "(try\n  (Integer/parseInt s)\n  (catch NumberFormatException e\n    (try\n      (Double/parseDouble s)\n      (catch NumberFormatException e\n        s))))")
-	(title "val-from-str [s]"))
-
-([Algorithm_Class10005] of  CloFunction
-
-	(source "(trans-obs (map val-from-str vals))")
-	(title "trans-vals [vals]"))
-
 ([Algorithm_Class10006] of  CloFunction
 
-	(source "(if (= (count obs) 1)\n  (first obs)\n  (vec obs))")
+	(source "(if (= (count obs) 1)\n  (ob-to-code (first obs))\n  (vec (map ob-to-code obs)))")
 	(title "trans-obs [obs]"))
 
 ([Algorithm_Class2] of  Decision
@@ -91,7 +83,7 @@
 
 ([Algorithm_Class20001] of  CloFunction
 
-	(source "(do-trace inp bnd)\n(do-next \n  (sv inp \"next\")\n  (vec (reduce #(concat %1 \n	 [(symbol (sv %2 \"variable\")) \n	  (if-let [vals (seq (svs %2 \"values\"))]\n	    (trans-vals vals)\n	    (trans-obs (svs %2 \"objects\")))])\n                         bnd \n                         (svs inp \"input-table\"))))")
+	(source "(do-trace inp bnd)\n(do-next \n  (sv inp \"next\")\n  (let [code (sv inp \"code\")\n          vprs (map #(list (symbol (first %)) (second %))\n	(partition 2 (read-string (str \"[\" (uncomment  code) \"]\"))))\n          oprs (map #(list (symbol (sv % \"variable\")) (trans-obs (svs % \"objects\")))\n	(svs inp \"object-rows\"))\n          uprs (filter #(not (some #{(first %)} bnd))\n	(concat vprs oprs))\n          ubnd (apply concat uprs)]\n    (concat bnd ubnd)))")
 	(title "do-input [inp bnd]"))
 
 ([Algorithm_Class20005] of  CloFuncall
@@ -100,7 +92,7 @@
 
 ([Algorithm_Class20011] of  CloFunction
 
-	(source "(if (some? inst)\n  (condp = (typ inst)\n    \"Process\" (do-process inst bnd)\n    \"Decision\" (do-decision inst bnd)\n    \"Input\" (do-input inst bnd)\n    (println (str \"Unknown type: \" typ))))")
+	(source "(if (some? inst)\n  (condp = (typ inst)\n    \"Process\" (do-process inst bnd)\n    \"Decision\" (do-decision inst bnd)\n    \"PredefinedProcess\" (do-preproc inst bnd)\n    \"Input\" (do-input inst bnd)\n    (println (str \"Unknown type: \" typ)))\n  bnd)")
 	(title "do-next [inst bnd]"))
 
 ([Algorithm_Class20013] of  CloFunction
@@ -128,7 +120,7 @@
 
 ([Algorithm_Class30000] of  CloFunction
 
-	(source "(vec (reduce-kv #(concat %1[(symbol %2) %3]) [] vvm))")
+	(source "(vec (reduce-kv #(concat %1[(symbol %2) (val-to-code %3)]) [] vvm))")
 	(title "to-bnd [vvm]"))
 
 ([Algorithm_Class30001] of  CloFuncall
@@ -171,9 +163,14 @@
 	(next [Algorithm_Class2])
 	(title "A <- A - B"))
 
+([Algorithm_Class50000] of  CloFunction
+
+	(source "(do-trace prep bnd)\n(do-next (sv prep \"next\") (do-code prep bnd))")
+	(title "do-preproc [prep bnd]"))
+
 ([Algorithm_Class50001] of  CloFunction
 
-	(source "(let [code (sv pord \"code\")\n       bnd2 (read-string (str \"[\" (uncomment  code) \"]\"))\n       bnd3 (vec (concat bnd bnd2))\n       vvm1 (var-val-map bnd3)\n       expr `(let ~bnd3 ~vvm1)\n       vvm2  (eval expr)]\n  (to-bnd vvm2))")
+	(source "(let [code (sv pord \"code\")\n       bnd2 (read-string (str \"[\" (uncomment  code) \"]\"))\n       bnd3 (vec (concat bnd bnd2))\n       vvm1 (var-val-map bnd3)\n       expr `(let ~bnd3 ~vvm1)\n       ;;_ (println :expr expr)\n       vvm2  (eval expr)]\n  (to-bnd vvm2))")
 	(title "do-code [pord bnd]"))
 
 ([Algorithm_Class6] of  Process
@@ -181,12 +178,68 @@
 	(code "_ (println A)")
 	(title "PRINT A"))
 
-([Algorithm_Class7] of  InputRow
+([Algorithm_Class60000] of  CloFuncall
 
-	(values "54")
-	(variable "A"))
+	(source "(algo.exe/do-next inp '[B 7 O2 444])"))
 
-([Algorithm_Class8] of  InputRow
+([Algorithm_Class60001] of  CloFuncall
 
-	(values "36")
-	(variable "B"))
+	(source "(algo.exe/do-next inp [O1 0 O2 0])"))
+
+([Algorithm_Class60002] of  CloFuncall
+
+	(source "(def res (algo.exe/do-next inp []))"))
+
+([Algorithm_Class60003] of  CloFuncall
+
+	(source "res"))
+
+([Algorithm_Class60004] of  CloFuncall
+
+	(source "(first res)"))
+
+([Algorithm_Class7] of  ObjectRow
+
+	(objects [Clojure_Class60000])
+	(variable "O1"))
+
+([Algorithm_Class70002] of  CloFuncall
+
+	(source "(algo.exe/do-next inp '[O1 0 O2 0])"))
+
+([Algorithm_Class70003] of  CloFuncall
+
+	(source "(algo.exe/do-next inp '[O2 0])"))
+
+([Algorithm_Class70004] of  CloFuncall
+
+	(source "(algo.exe/do-next inp '[])"))
+
+([Algorithm_Class70005] of  CloFunction
+
+	(source "`(.getInstance *kb*  ~(.getName ob))")
+	(title "ob-to-code [ob]"))
+
+([Algorithm_Class70006] of  CloFuncall
+
+	(source "(seq? '[a b])"))
+
+([Algorithm_Class70007] of  CloFuncall
+
+	(source "(seq? '(a b))"))
+
+([Algorithm_Class70008] of  CloFuncall
+
+	(source "(vector? '[a b])"))
+
+([Algorithm_Class70009] of  CloFunction
+
+	(source "(cond\n  (vector? val) (vec (map val-to-code val))\n  (seq? val) (map val-to-code val)\n  (instance? Instance val) (ob-to-code val)\n  true val)")
+	(title "val-to-code [val]"))
+
+([Algorithm_Class8] of  ObjectRow
+
+	(objects
+		[Clojure_Class70009]
+		[Clojure_Class60002])
+	(variable "O2"))

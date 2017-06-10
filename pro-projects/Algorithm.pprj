@@ -1,4 +1,4 @@
-; Fri Jun 09 00:25:21 MSK 2017
+; Sat Jun 10 18:40:15 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,12 +7,12 @@
 
 	(height 120)
 	(is_hidden FALSE)
-	(name "input-table")
+	(name "object-rows")
 	(property_list [Algorithm_ProjectKB_Class10358])
 	(widget_class_name "edu.stanford.smi.protegex.widget.instancetable.InstanceTableWidget")
 	(width 200)
 	(x 0)
-	(y 60))
+	(y 180))
 
 ([Algorithm_ProjectKB_Class10358] of  Property_List
 )
@@ -26,7 +26,7 @@
 	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
 	(width 200)
 	(x 0)
-	(y 180))
+	(y 300))
 
 ([Algorithm_ProjectKB_Class10362] of  Property_List
 
@@ -44,6 +44,21 @@
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Delete Instance"))
+
+([Algorithm_ProjectKB_Class10371] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class10372] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class10373] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
 
 ([Algorithm_ProjectKB_Class10392] of  Boolean
 
@@ -64,6 +79,20 @@
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class20371] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "code")
+	(property_list [Algorithm_ProjectKB_Class20372])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextAreaWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([Algorithm_ProjectKB_Class20372] of  Property_List
+)
 
 ([Algorithm_ProjectKB_Class20471] of  Boolean
 
@@ -247,20 +276,6 @@
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
 
-([Algorithm_ProjectKB_Class381] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "values")
-	(property_list [Algorithm_ProjectKB_Class382])
-	(widget_class_name "edu.stanford.smi.protege.widget.StringListWidget")
-	(width 200)
-	(x 0)
-	(y 60))
-
-([Algorithm_ProjectKB_Class382] of  Property_List
-)
-
 ([Algorithm_ProjectKB_Class383] of  Widget
 
 	(height 120)
@@ -302,7 +317,8 @@
 		[Algorithm_ProjectKB_Class390]
 		[Algorithm_ProjectKB_Class393]
 		[Algorithm_ProjectKB_Class10357]
-		[Algorithm_ProjectKB_Class10361]))
+		[Algorithm_ProjectKB_Class10361]
+		[Algorithm_ProjectKB_Class20371]))
 
 ([Algorithm_ProjectKB_Class390] of  Property_List
 
@@ -405,7 +421,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class435]
-		[Algorithm_ProjectKB_Class436]))
+		[Algorithm_ProjectKB_Class436]
+		[Algorithm_ProjectKB_Class10371]))
 
 ([Algorithm_ProjectKB_Class435] of  Boolean
 
@@ -432,7 +449,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class443]
-		[Algorithm_ProjectKB_Class444]))
+		[Algorithm_ProjectKB_Class444]
+		[Algorithm_ProjectKB_Class10372]))
 
 ([Algorithm_ProjectKB_Class443] of  Boolean
 
@@ -447,7 +465,7 @@
 ([Algorithm_ProjectKB_Class445] of  Widget
 
 	(is_hidden FALSE)
-	(name "InputRow")
+	(name "ObjectRow")
 	(property_list [Algorithm_ProjectKB_Class446])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
 
@@ -456,7 +474,6 @@
 	(properties
 		[Algorithm_ProjectKB_Class447]
 		[Algorithm_ProjectKB_Class448]
-		[Algorithm_ProjectKB_Class381]
 		[Algorithm_ProjectKB_Class383]))
 
 ([Algorithm_ProjectKB_Class447] of  Property_List
@@ -1240,7 +1257,8 @@
 
 	(properties
 		[Algorithm_ProjectKB_Class606]
-		[Algorithm_ProjectKB_Class607]))
+		[Algorithm_ProjectKB_Class607]
+		[Algorithm_ProjectKB_Class10373]))
 
 ([Algorithm_ProjectKB_Class606] of  Boolean
 
@@ -1424,28 +1442,28 @@
 	(name "instances_file_name")
 	(string_value "Algorithm.pins"))
 
-([KB_513503_Class367] of  Map
+([KB_859448_Class367] of  Map
 
 	(entries
-		[KB_513503_Class368]
-		[KB_513503_Class369]
-		[KB_513503_Class370]))
+		[KB_859448_Class368]
+		[KB_859448_Class369]
+		[KB_859448_Class370]))
 
-([KB_513503_Class368] of  Map_Entry
+([KB_859448_Class368] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_513503_Class369] of  Map_Entry
+([KB_859448_Class369] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_513503_Class370] of  Map_Entry
+([KB_859448_Class370] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
@@ -1537,8 +1555,8 @@
 	(customized_instance_widgets
 		[STANDARD_CLASS_FORM_WIDGET]
 		[STANDARD_SLOT_FORM_WIDGET]
-		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[Algorithm_ProjectKB_Class445]
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
 		[Algorithm_ProjectKB_Class423]
 		[Algorithm_ProjectKB_Class428]

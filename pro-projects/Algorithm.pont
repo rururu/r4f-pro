@@ -1,4 +1,4 @@
-; Fri Jun 09 00:25:21 MSK 2017
+; Sat Jun 10 18:40:15 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -28,7 +28,7 @@
 		(create-accessor read-write))
 	(single-slot next
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input)
+;+		(allowed-classes Process Decision Input PredefinedProcess)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot code
@@ -41,12 +41,12 @@
 		(create-accessor read-write))
 	(single-slot begin
 		(type INSTANCE)
-;+		(allowed-classes Input Process)
+;+		(allowed-classes Input Process Decision PredefinedProcess)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot input-table
+	(multislot object-rows
 		(type INSTANCE)
-;+		(allowed-classes InputRow)
+;+		(allowed-classes ObjectRow)
 		(create-accessor read-write))
 	(single-slot algorithm
 		(type INSTANCE)
@@ -71,7 +71,7 @@
 		(create-accessor read-write))
 	(single-slot begin
 		(type INSTANCE)
-;+		(allowed-classes Input Process)
+;+		(allowed-classes Input Process Decision PredefinedProcess)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot flow-chart
@@ -92,7 +92,7 @@
 		(create-accessor read-write))
 	(single-slot next
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input)
+;+		(allowed-classes Process Decision Input PredefinedProcess)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -115,18 +115,22 @@
 (defclass Input
 	(is-a Algorithm+Ontology)
 	(role concrete)
-	(multislot input-table
-		(type INSTANCE)
-;+		(allowed-classes InputRow)
-		(create-accessor read-write))
 	(single-slot title
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot code
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot next
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input)
+;+		(allowed-classes Process Decision Input PredefinedProcess)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot object-rows
+		(type INSTANCE)
+;+		(allowed-classes ObjectRow)
 		(create-accessor read-write)))
 
 (defclass PredefinedProcess
@@ -136,10 +140,6 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot input-table
-		(type INSTANCE)
-;+		(allowed-classes InputRow)
-		(create-accessor read-write))
 	(single-slot algorithm
 		(type INSTANCE)
 ;+		(allowed-classes Algorithm)
@@ -147,19 +147,20 @@
 		(create-accessor read-write))
 	(single-slot next
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input)
+;+		(allowed-classes Process Decision Input PredefinedProcess)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot object-rows
+		(type INSTANCE)
+;+		(allowed-classes ObjectRow)
 		(create-accessor read-write)))
 
-(defclass InputRow
+(defclass ObjectRow
 	(is-a Algorithm+Ontology)
 	(role concrete)
 	(single-slot variable
 		(type STRING)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(multislot values
-		(type STRING)
 		(create-accessor read-write))
 	(multislot objects
 		(type INSTANCE)
