@@ -1,4 +1,4 @@
-; Mon Jun 12 19:26:48 MSK 2017
+; Mon Jun 12 22:58:29 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -50,11 +50,6 @@
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
 
-([Algorithm_ProjectKB_Class10372] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
-
 ([Algorithm_ProjectKB_Class10373] of  Boolean
 
 	(boolean_value FALSE)
@@ -94,181 +89,490 @@
 ([Algorithm_ProjectKB_Class20372] of  Property_List
 )
 
+([Algorithm_ProjectKB_Class20428] of  Widget
+
+	(is_hidden FALSE)
+	(name "Concurrent")
+	(property_list [Algorithm_ProjectKB_Class20429])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([Algorithm_ProjectKB_Class20429] of  Property_List
+
+	(properties
+		[Algorithm_ProjectKB_Class20430]
+		[Algorithm_ProjectKB_Class20431]
+		[Algorithm_ProjectKB_Class20433]
+		[Algorithm_ProjectKB_Class20437]))
+
+([Algorithm_ProjectKB_Class20430] of  Property_List
+
+	(name "layout properties"))
+
+([Algorithm_ProjectKB_Class20431] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "title")
+	(property_list [Algorithm_ProjectKB_Class20432])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([Algorithm_ProjectKB_Class20432] of  Property_List
+)
+
+([Algorithm_ProjectKB_Class20433] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "wait")
+	(property_list [Algorithm_ProjectKB_Class20434])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([Algorithm_ProjectKB_Class20434] of  Property_List
+
+	(properties
+		[Algorithm_ProjectKB_Class20435]
+		[Algorithm_ProjectKB_Class20436]))
+
+([Algorithm_ProjectKB_Class20435] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Algorithm_ProjectKB_Class20436] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class20437] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "currents")
+	(property_list [Algorithm_ProjectKB_Class20438])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([Algorithm_ProjectKB_Class20438] of  Property_List
+
+	(properties
+		[Algorithm_ProjectKB_Class20439]
+		[Algorithm_ProjectKB_Class20440]))
+
+([Algorithm_ProjectKB_Class20439] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Algorithm_ProjectKB_Class20440] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class20441] of  Widget
+
+	(is_hidden FALSE)
+	(name "Wait")
+	(property_list [Algorithm_ProjectKB_Class20442])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([Algorithm_ProjectKB_Class20442] of  Property_List
+
+	(properties
+		[Algorithm_ProjectKB_Class20443]
+		[Algorithm_ProjectKB_Class20444]
+		[Algorithm_ProjectKB_Class20446]
+		[Algorithm_ProjectKB_Class20450]))
+
+([Algorithm_ProjectKB_Class20443] of  Property_List
+
+	(name "layout properties"))
+
+([Algorithm_ProjectKB_Class20444] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "title")
+	(property_list [Algorithm_ProjectKB_Class20445])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([Algorithm_ProjectKB_Class20445] of  Property_List
+)
+
+([Algorithm_ProjectKB_Class20446] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "next")
+	(property_list [Algorithm_ProjectKB_Class20447])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([Algorithm_ProjectKB_Class20447] of  Property_List
+
+	(properties
+		[Algorithm_ProjectKB_Class20448]
+		[Algorithm_ProjectKB_Class20449]))
+
+([Algorithm_ProjectKB_Class20448] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Algorithm_ProjectKB_Class20449] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class20450] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "waiting")
+	(property_list [Algorithm_ProjectKB_Class20451])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([Algorithm_ProjectKB_Class20451] of  Property_List
+
+	(properties
+		[Algorithm_ProjectKB_Class20452]
+		[Algorithm_ProjectKB_Class20453]))
+
+([Algorithm_ProjectKB_Class20452] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Algorithm_ProjectKB_Class20453] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
 ([Algorithm_ProjectKB_Class20471] of  Boolean
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
 
-([Algorithm_ProjectKB_Class20472] of  Boolean
+([Algorithm_ProjectKB_Class30480] of  String
+
+	(name "Concurrent_customDisplayName")
+	(string_value "Concurrent"))
+
+([Algorithm_ProjectKB_Class30481] of  String
+
+	(name "Concurrent_shape")
+	(string_value "Triangle"))
+
+([Algorithm_ProjectKB_Class30482] of  Integer
+
+	(integer_value 102)
+	(name "Concurrent_shapeColorRed"))
+
+([Algorithm_ProjectKB_Class30483] of  Integer
+
+	(integer_value 255)
+	(name "Concurrent_shapeColorGreen"))
+
+([Algorithm_ProjectKB_Class30484] of  Integer
+
+	(integer_value 51)
+	(name "Concurrent_shapeColorBlue"))
+
+([Algorithm_ProjectKB_Class30485] of  Integer
+
+	(integer_value 0)
+	(name "Concurrent_textColorRed"))
+
+([Algorithm_ProjectKB_Class30486] of  Integer
+
+	(integer_value 0)
+	(name "Concurrent_textColorGreen"))
+
+([Algorithm_ProjectKB_Class30487] of  Integer
+
+	(integer_value 0)
+	(name "Concurrent_textColorBlue"))
+
+([Algorithm_ProjectKB_Class30488] of  Boolean
 
 	(boolean_value FALSE)
-	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+	(name "Concurrent_bold"))
 
-([Algorithm_ProjectKB_Class30618] of  String
+([Algorithm_ProjectKB_Class30489] of  Boolean
+
+	(boolean_value FALSE)
+	(name "Concurrent_italic"))
+
+([Algorithm_ProjectKB_Class30490] of  String
+
+	(name "Concurrent_connectorSlot")
+	(string_value "currents"))
+
+([Algorithm_ProjectKB_Class30491] of  String
+
+	(name "Concurrent_lineType")
+	(string_value "Solid"))
+
+([Algorithm_ProjectKB_Class30492] of  String
+
+	(name "Concurrent_arrowheadType")
+	(string_value "Arrowhead"))
+
+([Algorithm_ProjectKB_Class30493] of  Boolean
+
+	(boolean_value TRUE)
+	(name "Concurrent_displayText"))
+
+([Algorithm_ProjectKB_Class30494] of  String
+
+	(name "Wait_customDisplayName")
+	(string_value "Wait"))
+
+([Algorithm_ProjectKB_Class30495] of  String
+
+	(name "Wait_shape")
+	(string_value "Inverted Triangle"))
+
+([Algorithm_ProjectKB_Class30496] of  Integer
+
+	(integer_value 102)
+	(name "Wait_shapeColorRed"))
+
+([Algorithm_ProjectKB_Class30497] of  Integer
+
+	(integer_value 255)
+	(name "Wait_shapeColorGreen"))
+
+([Algorithm_ProjectKB_Class30498] of  Integer
+
+	(integer_value 51)
+	(name "Wait_shapeColorBlue"))
+
+([Algorithm_ProjectKB_Class30499] of  Integer
+
+	(integer_value 0)
+	(name "Wait_textColorRed"))
+
+([Algorithm_ProjectKB_Class30500] of  Integer
+
+	(integer_value 0)
+	(name "Wait_textColorGreen"))
+
+([Algorithm_ProjectKB_Class30501] of  Integer
+
+	(integer_value 0)
+	(name "Wait_textColorBlue"))
+
+([Algorithm_ProjectKB_Class30502] of  Boolean
+
+	(boolean_value FALSE)
+	(name "Wait_bold"))
+
+([Algorithm_ProjectKB_Class30503] of  Boolean
+
+	(boolean_value FALSE)
+	(name "Wait_italic"))
+
+([Algorithm_ProjectKB_Class30504] of  String
+
+	(name "Wait_connectorSlot")
+	(string_value "next"))
+
+([Algorithm_ProjectKB_Class30505] of  String
+
+	(name "Wait_lineType")
+	(string_value "Solid"))
+
+([Algorithm_ProjectKB_Class30506] of  String
+
+	(name "Wait_arrowheadType")
+	(string_value "Arrowhead"))
+
+([Algorithm_ProjectKB_Class30507] of  Boolean
+
+	(boolean_value TRUE)
+	(name "Wait_displayText"))
+
+([Algorithm_ProjectKB_Class30508] of  String
 
 	(name "Input")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class30619] of  String
+([Algorithm_ProjectKB_Class30509] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([Algorithm_ProjectKB_Class30620] of  String
+([Algorithm_ProjectKB_Class30510] of  String
 
 	(name "Decision")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class30621] of  String
+([Algorithm_ProjectKB_Class30511] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([Algorithm_ProjectKB_Class30622] of  String
+([Algorithm_ProjectKB_Class30512] of  String
 
 	(name "Algorithm")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class30623] of  String
+([Algorithm_ProjectKB_Class30513] of  String
 
 	(name "Process")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class30624] of  String
+([Algorithm_ProjectKB_Class30514] of  String
 
 	(name "PredefinedProcess")
 	(string_value "title"))
 
-([Algorithm_ProjectKB_Class30625] of  Map
+([Algorithm_ProjectKB_Class30515] of  Map
 
 	(entries
-		[Algorithm_ProjectKB_Class30628]
-		[Algorithm_ProjectKB_Class30631]
-		[Algorithm_ProjectKB_Class30632]
-		[Algorithm_ProjectKB_Class30633]
-		[Algorithm_ProjectKB_Class30634]
-		[Algorithm_ProjectKB_Class30635]
-		[Algorithm_ProjectKB_Class30636]
-		[Algorithm_ProjectKB_Class30637]))
+		[Algorithm_ProjectKB_Class30518]
+		[Algorithm_ProjectKB_Class30521]
+		[Algorithm_ProjectKB_Class30522]
+		[Algorithm_ProjectKB_Class30523]
+		[Algorithm_ProjectKB_Class30524]
+		[Algorithm_ProjectKB_Class30525]
+		[Algorithm_ProjectKB_Class30526]
+		[Algorithm_ProjectKB_Class30527]))
 
-([Algorithm_ProjectKB_Class30626] of  Map
+([Algorithm_ProjectKB_Class30516] of  Map
 
-	(entries [Algorithm_ProjectKB_Class30627]))
+	(entries [Algorithm_ProjectKB_Class30517]))
 
-([Algorithm_ProjectKB_Class30627] of  Map_Entry
+([Algorithm_ProjectKB_Class30517] of  Map_Entry
 
 	(key "1")
 	(key_class "java.lang.String")
 	(value "100,400")
 	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
 
-([Algorithm_ProjectKB_Class30628] of  Map_Entry
+([Algorithm_ProjectKB_Class30518] of  Map_Entry
 
 	(key "Algorithm_Class4+Algorithm_Class2")
 	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class30626")
+	(value "Algorithm_ProjectKB_Class30516")
 	(value_class "java.util.Map"))
 
-([Algorithm_ProjectKB_Class30629] of  Map
+([Algorithm_ProjectKB_Class30519] of  Map
 
-	(entries [Algorithm_ProjectKB_Class30630]))
+	(entries [Algorithm_ProjectKB_Class30520]))
 
-([Algorithm_ProjectKB_Class30630] of  Map_Entry
+([Algorithm_ProjectKB_Class30520] of  Map_Entry
 
 	(key "1")
 	(key_class "java.lang.String")
 	(value "450,400")
 	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
 
-([Algorithm_ProjectKB_Class30631] of  Map_Entry
+([Algorithm_ProjectKB_Class30521] of  Map_Entry
 
 	(key "Algorithm_Class5+Algorithm_Class2")
 	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class30629")
+	(value "Algorithm_ProjectKB_Class30519")
 	(value_class "java.util.Map"))
 
-([Algorithm_ProjectKB_Class30632] of  Map_Entry
+([Algorithm_ProjectKB_Class30522] of  Map_Entry
 
 	(key "Algorithm_Class6")
 	(key_class "java.lang.String")
 	(value "309 370 83 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30633] of  Map_Entry
+([Algorithm_ProjectKB_Class30523] of  Map_Entry
 
 	(key "Algorithm_Class5")
 	(key_class "java.lang.String")
 	(value "405 520 91 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30634] of  Map_Entry
+([Algorithm_ProjectKB_Class30524] of  Map_Entry
 
 	(key "Algorithm_Class4")
 	(key_class "java.lang.String")
 	(value "55 520 90 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30635] of  Map_Entry
+([Algorithm_ProjectKB_Class30525] of  Map_Entry
 
 	(key "Algorithm_Class3")
 	(key_class "java.lang.String")
 	(value "159 370 82 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30636] of  Map_Entry
+([Algorithm_ProjectKB_Class30526] of  Map_Entry
 
 	(key "Algorithm_Class2")
 	(key_class "java.lang.String")
 	(value "202 220 97 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30637] of  Map_Entry
+([Algorithm_ProjectKB_Class30527] of  Map_Entry
 
 	(key "Algorithm_Class1")
 	(key_class "java.lang.String")
 	(value "202 70 96 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30638] of  Map_Entry
+([Algorithm_ProjectKB_Class30528] of  Map_Entry
 
 	(key "InstanceGraphWidget.Algorithm_Class0.flow-chart")
 	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class30625")
+	(value "Algorithm_ProjectKB_Class30515")
 	(value_class "java.util.Map"))
 
-([Algorithm_ProjectKB_Class30639] of  Map
+([Algorithm_ProjectKB_Class30529] of  Map
 
 	(entries
-		[Algorithm_ProjectKB_Class30640]
-		[Algorithm_ProjectKB_Class30641]
-		[Algorithm_ProjectKB_Class30642]))
+		[Algorithm_ProjectKB_Class30530]
+		[Algorithm_ProjectKB_Class30531]
+		[Algorithm_ProjectKB_Class30532]))
 
-([Algorithm_ProjectKB_Class30640] of  Map_Entry
+([Algorithm_ProjectKB_Class30530] of  Map_Entry
 
 	(key "Algorithm_Class80011")
 	(key_class "java.lang.String")
 	(value "70 220 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30641] of  Map_Entry
+([Algorithm_ProjectKB_Class30531] of  Map_Entry
 
 	(key "Algorithm_Class80012")
 	(key_class "java.lang.String")
 	(value "70 370 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30642] of  Map_Entry
+([Algorithm_ProjectKB_Class30532] of  Map_Entry
 
 	(key "Algorithm_Class80004")
 	(key_class "java.lang.String")
 	(value "70 70 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([Algorithm_ProjectKB_Class30643] of  Map_Entry
+([Algorithm_ProjectKB_Class30533] of  Map_Entry
 
 	(key "InstanceGraphWidget.Algorithm_Class80003.flow-chart")
 	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class30639")
+	(value "Algorithm_ProjectKB_Class30529")
 	(value_class "java.util.Map"))
 
 ([Algorithm_ProjectKB_Class35] of  String
@@ -472,34 +776,6 @@
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Delete Instance"))
 
-([Algorithm_ProjectKB_Class441] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "input-table")
-	(property_list [Algorithm_ProjectKB_Class442])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 0)
-	(y 60))
-
-([Algorithm_ProjectKB_Class442] of  Property_List
-
-	(properties
-		[Algorithm_ProjectKB_Class443]
-		[Algorithm_ProjectKB_Class444]
-		[Algorithm_ProjectKB_Class10372]))
-
-([Algorithm_ProjectKB_Class443] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([Algorithm_ProjectKB_Class444] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
 ([Algorithm_ProjectKB_Class445] of  Widget
 
 	(is_hidden FALSE)
@@ -622,34 +898,6 @@
 	(name "ButtonDisplayed-View References to Value"))
 
 ([Algorithm_ProjectKB_Class473] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([Algorithm_ProjectKB_Class480] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "end")
-	(property_list [Algorithm_ProjectKB_Class481])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 650)
-	(y 120))
-
-([Algorithm_ProjectKB_Class481] of  Property_List
-
-	(properties
-		[Algorithm_ProjectKB_Class482]
-		[Algorithm_ProjectKB_Class483]
-		[Algorithm_ProjectKB_Class20472]))
-
-([Algorithm_ProjectKB_Class482] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([Algorithm_ProjectKB_Class483] of  Boolean
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Delete Instance"))
@@ -840,7 +1088,35 @@
 		[Algorithm_ProjectKB_Class600]
 		[Algorithm_ProjectKB_Class601]
 		[Algorithm_ProjectKB_Class602]
-		[Algorithm_ProjectKB_Class603]))
+		[Algorithm_ProjectKB_Class603]
+		[Algorithm_ProjectKB_Class30480]
+		[Algorithm_ProjectKB_Class30481]
+		[Algorithm_ProjectKB_Class30482]
+		[Algorithm_ProjectKB_Class30483]
+		[Algorithm_ProjectKB_Class30484]
+		[Algorithm_ProjectKB_Class30485]
+		[Algorithm_ProjectKB_Class30486]
+		[Algorithm_ProjectKB_Class30487]
+		[Algorithm_ProjectKB_Class30488]
+		[Algorithm_ProjectKB_Class30489]
+		[Algorithm_ProjectKB_Class30490]
+		[Algorithm_ProjectKB_Class30491]
+		[Algorithm_ProjectKB_Class30492]
+		[Algorithm_ProjectKB_Class30493]
+		[Algorithm_ProjectKB_Class30494]
+		[Algorithm_ProjectKB_Class30495]
+		[Algorithm_ProjectKB_Class30496]
+		[Algorithm_ProjectKB_Class30497]
+		[Algorithm_ProjectKB_Class30498]
+		[Algorithm_ProjectKB_Class30499]
+		[Algorithm_ProjectKB_Class30500]
+		[Algorithm_ProjectKB_Class30501]
+		[Algorithm_ProjectKB_Class30502]
+		[Algorithm_ProjectKB_Class30503]
+		[Algorithm_ProjectKB_Class30504]
+		[Algorithm_ProjectKB_Class30505]
+		[Algorithm_ProjectKB_Class30506]
+		[Algorithm_ProjectKB_Class30507]))
 
 ([Algorithm_ProjectKB_Class516] of  String
 
@@ -928,12 +1204,12 @@
 
 ([Algorithm_ProjectKB_Class533] of  Integer
 
-	(integer_value 204)
+	(integer_value 153)
 	(name "Decision_shapeColorRed"))
 
 ([Algorithm_ProjectKB_Class534] of  Integer
 
-	(integer_value 204)
+	(integer_value 153)
 	(name "Decision_shapeColorGreen"))
 
 ([Algorithm_ProjectKB_Class535] of  Integer
@@ -1325,13 +1601,13 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Algorithm_ProjectKB_Class30618]
-		[Algorithm_ProjectKB_Class30619]
-		[Algorithm_ProjectKB_Class30620]
-		[Algorithm_ProjectKB_Class30621]
-		[Algorithm_ProjectKB_Class30622]
-		[Algorithm_ProjectKB_Class30623]
-		[Algorithm_ProjectKB_Class30624]))
+		[Algorithm_ProjectKB_Class30508]
+		[Algorithm_ProjectKB_Class30509]
+		[Algorithm_ProjectKB_Class30510]
+		[Algorithm_ProjectKB_Class30511]
+		[Algorithm_ProjectKB_Class30512]
+		[Algorithm_ProjectKB_Class30513]
+		[Algorithm_ProjectKB_Class30514]))
 
 ([CLSES_TAB] of  Widget
 
@@ -1383,13 +1659,13 @@
 ([KB_084192_Class1] of  Map
 
 	(entries
-		[Algorithm_ProjectKB_Class30638]
-		[Algorithm_ProjectKB_Class30643])
+		[Algorithm_ProjectKB_Class30528]
+		[Algorithm_ProjectKB_Class30533])
 	(referenced_maps
-		[Algorithm_ProjectKB_Class30629]
-		[Algorithm_ProjectKB_Class30639]
-		[Algorithm_ProjectKB_Class30626]
-		[Algorithm_ProjectKB_Class30625]))
+		[Algorithm_ProjectKB_Class30519]
+		[Algorithm_ProjectKB_Class30529]
+		[Algorithm_ProjectKB_Class30516]
+		[Algorithm_ProjectKB_Class30515]))
 
 ([KB_084192_Class11] of  Property_List
 
@@ -1484,28 +1760,28 @@
 	(name "instances_file_name")
 	(string_value "Algorithm.pins"))
 
-([KB_704881_Class367] of  Map
+([KB_287772_Class372] of  Map
 
 	(entries
-		[KB_704881_Class368]
-		[KB_704881_Class369]
-		[KB_704881_Class370]))
+		[KB_287772_Class373]
+		[KB_287772_Class374]
+		[KB_287772_Class375]))
 
-([KB_704881_Class368] of  Map_Entry
+([KB_287772_Class373] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_704881_Class369] of  Map_Entry
+([KB_287772_Class374] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_704881_Class370] of  Map_Entry
+([KB_287772_Class375] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
@@ -1598,7 +1874,9 @@
 		[STANDARD_CLASS_FORM_WIDGET]
 		[STANDARD_SLOT_FORM_WIDGET]
 		[Algorithm_ProjectKB_Class445]
+		[Algorithm_ProjectKB_Class20428]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
+		[Algorithm_ProjectKB_Class20441]
 		[PAL_FORM_WIDGET]
 		[Algorithm_ProjectKB_Class423]
 		[Algorithm_ProjectKB_Class428]

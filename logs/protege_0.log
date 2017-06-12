@@ -201,3 +201,9 @@
 2017.06.12 16:44:01.109 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
 2017.06.12 16:44:01.650 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2017.06.12 16:44:08.947 MSK INFO: Load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()
+2017.06.12 22:26:33.381 MSK INFO: *** SYSTEM START ***
+2017.06.12 22:26:33.432 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.06.12 22:26:34.125 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.12 22:26:44.021 MSK INFO: Load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj = 1 sec (project) + 2 sec (ui) -- ProjectManager$3.run()
+2017.06.12 22:48:34.730 MSK WARNING: Exception caught java.lang.NullPointerException -- EventDispatchFrameStore.dispatchEvents()
+2017.06.12 22:48:34.736 MSK WARNING: use fine logging for more details -- EventDispatchFrameStore.dispatchEvents()

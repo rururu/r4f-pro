@@ -1,4 +1,4 @@
-; Mon Jun 12 19:26:48 MSK 2017
+; Mon Jun 12 22:58:29 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,12 +7,22 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
-	(multislot flow-chart
+	(multislot currents
 		(type INSTANCE)
 ;+		(allowed-classes Process Decision Input PredefinedProcess)
+;+		(inverse-slot waiting)
+		(create-accessor read-write))
+	(multislot flow-chart
+		(type INSTANCE)
+;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
 		(create-accessor read-write))
 	(single-slot variable
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot wait
+		(type INSTANCE)
+;+		(allowed-classes Wait)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot values
@@ -22,10 +32,9 @@
 		(type INSTANCE)
 ;+		(allowed-classes %3ATHING)
 		(create-accessor read-write))
-	(single-slot next
+	(multislot next
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input PredefinedProcess)
-;+		(cardinality 0 1)
+;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
 		(create-accessor read-write))
 	(single-slot code
 		(type STRING)
@@ -48,6 +57,11 @@
 		(type INSTANCE)
 ;+		(allowed-classes Algorithm)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot waiting
+		(type INSTANCE)
+;+		(allowed-classes Decision Process Input PredefinedProcess)
+;+		(inverse-slot currents)
 		(create-accessor read-write)))
 
 (defclass Algorithm+Ontology
@@ -68,7 +82,7 @@
 		(create-accessor read-write))
 	(multislot flow-chart
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input PredefinedProcess)
+;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
 		(create-accessor read-write)))
 
 (defclass Process
@@ -82,10 +96,9 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot next
+	(multislot next
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input PredefinedProcess)
-;+		(cardinality 0 1)
+;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
 		(create-accessor read-write)))
 
 (defclass Decision
@@ -115,10 +128,9 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot next
+	(multislot next
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input PredefinedProcess)
-;+		(cardinality 0 1)
+;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
 		(create-accessor read-write))
 	(multislot object-rows
 		(type INSTANCE)
@@ -137,10 +149,9 @@
 ;+		(allowed-classes Algorithm)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot next
+	(multislot next
 		(type INSTANCE)
-;+		(allowed-classes Process Decision Input PredefinedProcess)
-;+		(cardinality 0 1)
+;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
 		(create-accessor read-write)))
 
 (defclass ObjectRow
@@ -153,4 +164,37 @@
 	(multislot objects
 		(type INSTANCE)
 ;+		(allowed-classes %3ATHING)
+		(create-accessor read-write)))
+
+(defclass Concurrent
+	(is-a Algorithm+Ontology)
+	(role concrete)
+	(single-slot title
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot wait
+		(type INSTANCE)
+;+		(allowed-classes Wait)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot currents
+		(type INSTANCE)
+;+		(allowed-classes Process Decision Input PredefinedProcess)
+		(create-accessor read-write)))
+
+(defclass Wait
+	(is-a Algorithm+Ontology)
+	(role concrete)
+	(single-slot title
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot next
+		(type INSTANCE)
+;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
+		(create-accessor read-write))
+	(multislot waiting
+		(type INSTANCE)
+;+		(allowed-classes Decision Process Input PredefinedProcess)
 		(create-accessor read-write)))
