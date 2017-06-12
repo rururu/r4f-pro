@@ -1,4 +1,4 @@
-; Mon Jun 12 22:58:29 MSK 2017
+; Tue Jun 13 01:11:29 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -26,10 +26,10 @@
 	(cloFunctions
 		[Algorithm_Class10003]
 		[Algorithm_Class70005]
-		[Algorithm_Class30000]
 		[Algorithm_Class10006]
 		[Algorithm_Class20024]
 		[Algorithm_Class70009]
+		[Algorithm_Class30000]
 		[Algorithm_Class40002]
 		[Algorithm_Class40000]
 		[Algorithm_Class20001]
@@ -37,8 +37,9 @@
 		[Algorithm_Class10002]
 		[Algorithm_Class40004]
 		[Algorithm_Class20013]
-		[Algorithm_Class50000]
 		[Algorithm_Class70000]
+		[Algorithm_Class50000]
+		[Algorithm_Class90005]
 		[Algorithm_Class20011])
 	(cloNamespace [Algorithm_Class10001])
 	(cloVars
@@ -89,7 +90,7 @@
 
 ([Algorithm_Class20011] of  CloFunction
 
-	(source "(if (some? inst)\n  (condp = (typ inst)\n    \"Process\" (do-process inst bnd)\n    \"Decision\" (do-decision inst bnd)\n    \"PredefinedProcess\" (do-preproc inst bnd)\n    \"Input\" (do-input inst bnd)\n    (println (str \"Unknown type: \" typ)))\n  bnd)")
+	(source "(if (some? inst)\n  (condp = (typ inst)\n    \"Process\" (do-process inst bnd)\n    \"Decision\" (do-decision inst bnd)\n    \"PredefinedProcess\" (do-preproc inst bnd)\n    \"Input\" (do-input inst bnd)\n    \"Concurrent\" (do-concurrent inst bnd)\n    \"Wait\" nil\n    (println (str \"Unknown type: \" typ)))\n  bnd)")
 	(title "do-next [inst bnd]"))
 
 ([Algorithm_Class20013] of  CloFunction
@@ -238,6 +239,22 @@
 	(source "(cond\n  (vector? val) (vec (map val-to-code val))\n  (seq? val) (map val-to-code val)\n  (instance? Instance val) (ob-to-code val)\n  true val)")
 	(title "val-to-code [val]"))
 
+([Algorithm_Class80000] of  Algorithm
+
+	(flow-chart
+		[Algorithm_Class80001]
+		[Algorithm_Class90002]
+		[Algorithm_Class90003]
+		[Algorithm_Class90004])
+	(title "Paralgo1"))
+
+([Algorithm_Class80001] of  Concurrent
+
+	(currents
+		[Algorithm_Class90002]
+		[Algorithm_Class90003])
+	(title "C1"))
+
 ([Algorithm_Class80002] of  CloFuncall
 
 	(source "(algo.exe/do-algorithm algo [])"))
@@ -311,3 +328,22 @@
 ([Algorithm_Class80018] of  CloFuncall
 
 	(source "(algo.exe/do-algorithm algo '[C 37])"))
+
+([Algorithm_Class90002] of  Process
+
+	(next [Algorithm_Class90004])
+	(title "P1"))
+
+([Algorithm_Class90003] of  Process
+
+	(next [Algorithm_Class90004])
+	(title "P2"))
+
+([Algorithm_Class90004] of  Wait
+
+	(title "W1"))
+
+([Algorithm_Class90005] of  CloFunction
+
+	(source "(do-trace conc bnd)\n(let [wait (sv conc \"wait\")\n       futs (map #(future (do-next % bnd)) (svs conc \"currents\"))]\n  (do-next (sv wait \"next\") (map concat futs)))")
+	(title "do-concurrent [conc bnd]"))

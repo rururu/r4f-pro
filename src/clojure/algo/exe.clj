@@ -81,13 +81,19 @@
 	(vec (svs dec "variants")) 
 	(vec (butlast (butlast bnd2))))))
 
+(defn do-algorithm [algo bnd]
+  (do-trace algo bnd)
+(do-next (sv algo "begin") bnd))
+
 (defn do-preproc [prep bnd]
   (do-trace prep bnd)
 (do-next (sv prep "next") (do-algorithm (sv prep "algorithm") bnd)))
 
-(defn do-algorithm [algo bnd]
-  (do-trace algo bnd)
-(do-next (sv algo "begin") bnd))
+(defn do-concurrent [conc bnd]
+  (do-trace conc bnd)
+(let [wait (sv conc "wait")
+       futs (map #(future (do-next % bnd)) (svs conc "currents"))]
+  (do-next (sv wait "next") (map concat futs))))
 
 (defn do-next [inst bnd]
   (if (some? inst)
@@ -96,6 +102,8 @@
     "Decision" (do-decision inst bnd)
     "PredefinedProcess" (do-preproc inst bnd)
     "Input" (do-input inst bnd)
+    "Concurrent" (do-concurrent inst bnd)
+    "Wait" nil
     (println (str "Unknown type: " typ)))
   bnd))
 
