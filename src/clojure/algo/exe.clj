@@ -83,7 +83,11 @@
 
 (defn do-preproc [prep bnd]
   (do-trace prep bnd)
-(do-next (sv prep "next") (do-code prep bnd)))
+(do-next (sv prep "next") (do-algorithm (sv prep "algorithm") bnd)))
+
+(defn do-algorithm [algo bnd]
+  (do-trace algo bnd)
+(do-next (sv algo "begin") bnd))
 
 (defn do-next [inst bnd]
   (if (some? inst)

@@ -1,4 +1,4 @@
-; Sat Jun 10 18:40:15 MSK 2017
+; Mon Jun 12 19:26:48 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,7 +6,6 @@
 ([Algorithm_Class0] of  Algorithm
 
 	(begin [Algorithm_Class1])
-	(end [Algorithm_Class6])
 	(flow-chart
 		[Algorithm_Class1]
 		[Algorithm_Class2]
@@ -20,9 +19,6 @@
 
 	(code "A 54\nB 36")
 	(next [Algorithm_Class2])
-	(object-rows
-		[Algorithm_Class7]
-		[Algorithm_Class8])
 	(title "INPUT A, B"))
 
 ([Algorithm_Class10000] of  CloProgram
@@ -30,10 +26,10 @@
 	(cloFunctions
 		[Algorithm_Class10003]
 		[Algorithm_Class70005]
+		[Algorithm_Class30000]
 		[Algorithm_Class10006]
 		[Algorithm_Class20024]
 		[Algorithm_Class70009]
-		[Algorithm_Class30000]
 		[Algorithm_Class40002]
 		[Algorithm_Class40000]
 		[Algorithm_Class20001]
@@ -42,6 +38,7 @@
 		[Algorithm_Class40004]
 		[Algorithm_Class20013]
 		[Algorithm_Class50000]
+		[Algorithm_Class70000]
 		[Algorithm_Class20011])
 	(cloNamespace [Algorithm_Class10001])
 	(cloVars
@@ -165,7 +162,7 @@
 
 ([Algorithm_Class50000] of  CloFunction
 
-	(source "(do-trace prep bnd)\n(do-next (sv prep \"next\") (do-code prep bnd))")
+	(source "(do-trace prep bnd)\n(do-next (sv prep \"next\") (do-algorithm (sv prep \"algorithm\") bnd))")
 	(title "do-preproc [prep bnd]"))
 
 ([Algorithm_Class50001] of  CloFunction
@@ -198,10 +195,14 @@
 
 	(source "(first res)"))
 
-([Algorithm_Class7] of  ObjectRow
+([Algorithm_Class70000] of  CloFunction
 
-	(objects [Clojure_Class60000])
-	(variable "O1"))
+	(source "(do-trace algo bnd)\n(do-next (sv algo \"begin\") bnd)")
+	(title "do-algorithm [algo bnd]"))
+
+([Algorithm_Class70001] of  CloFuncall
+
+	(source "(def algo (first (cls-instances \"Algorithm\")))"))
 
 ([Algorithm_Class70002] of  CloFuncall
 
@@ -237,9 +238,76 @@
 	(source "(cond\n  (vector? val) (vec (map val-to-code val))\n  (seq? val) (map val-to-code val)\n  (instance? Instance val) (ob-to-code val)\n  true val)")
 	(title "val-to-code [val]"))
 
-([Algorithm_Class8] of  ObjectRow
+([Algorithm_Class80002] of  CloFuncall
 
-	(objects
-		[Clojure_Class70009]
-		[Clojure_Class60002])
-	(variable "O2"))
+	(source "(algo.exe/do-algorithm algo [])"))
+
+([Algorithm_Class80003] of  Algorithm
+
+	(begin [Algorithm_Class80004])
+	(flow-chart
+		[Algorithm_Class80004]
+		[Algorithm_Class80012]
+		[Algorithm_Class80011])
+	(title "A2"))
+
+([Algorithm_Class80004] of  PredefinedProcess
+
+	(algorithm [Algorithm_Class0])
+	(next [Algorithm_Class80011])
+	(title "E1"))
+
+([Algorithm_Class80005] of  CloFuncall
+
+	(source "(def algo (fifos \"Algorithm\" \"title\" \"A2\"))"))
+
+([Algorithm_Class80006] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo [A ])"))
+
+([Algorithm_Class80007] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo [A 18 B 27])"))
+
+([Algorithm_Class80008] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo '[A 18 B 27])"))
+
+([Algorithm_Class80009] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo '[A 19 B 27])"))
+
+([Algorithm_Class80010] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo '[A 21 B 27])"))
+
+([Algorithm_Class80011] of  Input
+
+	(code "B C")
+	(next [Algorithm_Class80012])
+	(title "INPUT B"))
+
+([Algorithm_Class80012] of  PredefinedProcess
+
+	(algorithm [Algorithm_Class0])
+	(title "E2"))
+
+([Algorithm_Class80013] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo '[C 45])"))
+
+([Algorithm_Class80015] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo '[C 36])"))
+
+([Algorithm_Class80016] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo '[C 38])"))
+
+([Algorithm_Class80017] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo '[C 35])"))
+
+([Algorithm_Class80018] of  CloFuncall
+
+	(source "(algo.exe/do-algorithm algo '[C 37])"))
