@@ -211,3 +211,7 @@
 2017.06.13 00:45:00.471 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
 2017.06.13 00:45:00.986 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2017.06.13 00:45:11.532 MSK INFO: Load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()
+2017.06.13 12:04:05.477 MSK INFO: *** SYSTEM START ***
+2017.06.13 12:04:05.505 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.06.13 12:04:06.033 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.13 12:04:14.051 MSK INFO: Load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()

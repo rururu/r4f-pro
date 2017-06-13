@@ -31,9 +31,6 @@
   (instance? Instance val) (ob-to-code val)
   true val))
 
-(defn to-bnd [vvm]
-  (vec (reduce-kv #(concat %1[(symbol %2) (val-to-code %3)]) [] vvm)))
-
 (defn trace [bool]
   (def TRACE bool))
 
@@ -66,6 +63,9 @@
        vvm2  (eval expr)]
   (to-bnd vvm2)))
 
+(defn to-bnd [vvm]
+  (vec (reduce-kv #(concat %1[(symbol %2) (val-to-code %3)]) [] vvm)))
+
 (defn do-process [proc bnd]
   (do-trace proc bnd)
 (do-next (sv proc "next") (do-code proc bnd)))
@@ -91,9 +91,10 @@
 
 (defn do-concurrent [conc bnd]
   (do-trace conc bnd)
-(let [wait (sv conc "wait")
-       futs (map #(future (do-next % bnd)) (svs conc "currents"))]
-  (do-next (sv wait "next") (map concat futs))))
+(do-next (sv (sv conc "wait") "next")
+              (mapcat #(deref %) 
+	      (map #(future (do-next % bnd)) 
+		(svs conc "currents")))))
 
 (defn do-next [inst bnd]
   (if (some? inst)
@@ -103,7 +104,7 @@
     "PredefinedProcess" (do-preproc inst bnd)
     "Input" (do-input inst bnd)
     "Concurrent" (do-concurrent inst bnd)
-    "Wait" nil
+    "Wait" bnd
     (println (str "Unknown type: " typ)))
   bnd))
 
