@@ -1,25 +1,12 @@
-; Tue Jun 13 14:10:52 MSK 2017
+; Thu Jun 15 20:56:56 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
-([Algorithm_Class0] of  Algorithm
+([Algorithm_Class1] of  CloFunction
 
-	(begin [Algorithm_Class1])
-	(flow-chart
-		[Algorithm_Class1]
-		[Algorithm_Class2]
-		[Algorithm_Class3]
-		[Algorithm_Class4]
-		[Algorithm_Class5]
-		[Algorithm_Class6])
-	(title "Euclid's GCD"))
-
-([Algorithm_Class1] of  Input
-
-	(code "A 54\nB 36")
-	(next [Algorithm_Class2])
-	(title "INPUT A, B"))
+	(source "(let [mp (into {} hm)]\n  (trace (is? (mp \"trace\")))\n  (future (do-algorithm inst [])))")
+	(title "start-algorithm [hm inst]"))
 
 ([Algorithm_Class10000] of  CloProgram
 
@@ -32,15 +19,16 @@
 		[Algorithm_Class40002]
 		[Algorithm_Class40000]
 		[Algorithm_Class20001]
-		[Algorithm_Class50001]
 		[Algorithm_Class30000]
+		[Algorithm_Class50001]
 		[Algorithm_Class10002]
 		[Algorithm_Class40004]
 		[Algorithm_Class20013]
 		[Algorithm_Class70000]
 		[Algorithm_Class50000]
 		[Algorithm_Class90005]
-		[Algorithm_Class20011])
+		[Algorithm_Class20011]
+		[Algorithm_Class1])
 	(cloNamespace [Algorithm_Class10001])
 	(cloVars
 		[Algorithm_Class20023]
@@ -67,26 +55,10 @@
 	(source "(if (= (count obs) 1)\n  (ob-to-code (first obs))\n  (vec (map ob-to-code obs)))")
 	(title "trans-obs [obs]"))
 
-([Algorithm_Class2] of  Decision
-
-	(code "variant (if (= B 0) 2 1)")
-	(title "B = 0 ?")
-	(variants
-		[Algorithm_Class3]
-		[Algorithm_Class6]))
-
-([Algorithm_Class20000] of  CloFuncall
-
-	(source "(in-ns 'protege.core)"))
-
 ([Algorithm_Class20001] of  CloFunction
 
 	(source "(do-trace inp bnd)\n(do-next \n  (sv inp \"next\")\n  (let [code (sv inp \"code\")\n          vprs (map #(list (symbol (first %)) (second %))\n	(partition 2 (read-string (str \"[\" (uncomment  code) \"]\"))))\n          oprs (map #(list (symbol (sv % \"variable\")) (trans-obs (svs % \"objects\")))\n	(svs inp \"object-rows\"))\n          uprs (filter #(not (some #{(first %)} bnd))\n	(concat vprs oprs))\n          ubnd (apply concat uprs)]\n    (concat bnd ubnd)))")
 	(title "do-input [inp bnd]"))
-
-([Algorithm_Class20005] of  CloFuncall
-
-	(source "(def inp (first (cls-instances \"Input\")))"))
 
 ([Algorithm_Class20011] of  CloFunction
 
@@ -108,28 +80,10 @@
 	(source "(let [p2 (partition 2 bnd)\n      vars (map first p2)\n      nams (map name vars)]\n  (zipmap nams vars))")
 	(title "var-val-map [bnd]"))
 
-([Algorithm_Class3] of  Decision
-
-	(code "variant (if (> A B) 2 1)")
-	(title "A > B ?")
-	(variants
-		[Algorithm_Class4]
-		[Algorithm_Class5]))
-
 ([Algorithm_Class30000] of  CloFunction
 
 	(source "(vec (reduce-kv #(concat %1[(symbol %2) (val-to-code %3)]) [] vvm))")
 	(title "to-bnd [vvm]"))
-
-([Algorithm_Class30001] of  CloFuncall
-
-	(source "(algo.exe/do-next inp [])"))
-
-([Algorithm_Class4] of  Process
-
-	(code "B (- B A)")
-	(next [Algorithm_Class2])
-	(title "B <- B - A"))
 
 ([Algorithm_Class40000] of  CloFunction
 
@@ -146,20 +100,10 @@
 	(source "(def TRACE bool)")
 	(title "trace [bool]"))
 
-([Algorithm_Class40003] of  CloFuncall
-
-	(source "(algo.exe/trace true)"))
-
 ([Algorithm_Class40004] of  CloFunction
 
 	(source "(if (<= 1 vrt (count vrts))\n  (do-next (nth vrts (dec vrt)) bnd))")
 	(title "do-variant [vrt vrts bnd]"))
-
-([Algorithm_Class5] of  Process
-
-	(code "A (- A B)")
-	(next [Algorithm_Class2])
-	(title "A <- A - B"))
 
 ([Algorithm_Class50000] of  CloFunction
 
@@ -171,187 +115,22 @@
 	(source "(let [code (sv pord \"code\")\n       bnd2 (read-string (str \"[\" (uncomment  code) \"]\"))\n       bnd3 (vec (concat bnd bnd2))\n       vvm1 (var-val-map bnd3)\n       expr `(let ~bnd3 ~vvm1)\n       ;;_ (println :expr expr)\n       vvm2  (eval expr)]\n  (to-bnd vvm2))")
 	(title "do-code [pord bnd]"))
 
-([Algorithm_Class6] of  Process
-
-	(code "_ (println A)")
-	(title "PRINT A"))
-
-([Algorithm_Class60000] of  CloFuncall
-
-	(source "(algo.exe/do-next inp '[B 7 O2 444])"))
-
-([Algorithm_Class60001] of  CloFuncall
-
-	(source "(algo.exe/do-next inp [O1 0 O2 0])"))
-
-([Algorithm_Class60002] of  CloFuncall
-
-	(source "(def res (algo.exe/do-next inp []))"))
-
-([Algorithm_Class60003] of  CloFuncall
-
-	(source "res"))
-
-([Algorithm_Class60004] of  CloFuncall
-
-	(source "(first res)"))
-
 ([Algorithm_Class70000] of  CloFunction
 
 	(source "(do-trace algo bnd)\n(do-next (sv algo \"begin\") bnd)")
 	(title "do-algorithm [algo bnd]"))
-
-([Algorithm_Class70001] of  CloFuncall
-
-	(source "(def algo (first (cls-instances \"Algorithm\")))"))
-
-([Algorithm_Class70002] of  CloFuncall
-
-	(source "(algo.exe/do-next inp '[O1 0 O2 0])"))
-
-([Algorithm_Class70003] of  CloFuncall
-
-	(source "(algo.exe/do-next inp '[O2 0])"))
-
-([Algorithm_Class70004] of  CloFuncall
-
-	(source "(algo.exe/do-next inp '[])"))
 
 ([Algorithm_Class70005] of  CloFunction
 
 	(source "`(.getInstance *kb*  ~(.getName ob))")
 	(title "ob-to-code [ob]"))
 
-([Algorithm_Class70006] of  CloFuncall
-
-	(source "(seq? '[a b])"))
-
-([Algorithm_Class70007] of  CloFuncall
-
-	(source "(seq? '(a b))"))
-
-([Algorithm_Class70008] of  CloFuncall
-
-	(source "(vector? '[a b])"))
-
 ([Algorithm_Class70009] of  CloFunction
 
 	(source "(cond\n  (vector? val) (vec (map val-to-code val))\n  (seq? val) (map val-to-code val)\n  (instance? Instance val) (ob-to-code val)\n  true val)")
 	(title "val-to-code [val]"))
 
-([Algorithm_Class80000] of  Algorithm
-
-	(begin [Algorithm_Class80001])
-	(flow-chart
-		[Algorithm_Class80001]
-		[Algorithm_Class90002]
-		[Algorithm_Class90003]
-		[Algorithm_Class90004])
-	(title "Paralgo1"))
-
-([Algorithm_Class80001] of  Concurrent
-
-	(currents
-		[Algorithm_Class90002]
-		[Algorithm_Class90003])
-	(title "C1")
-	(wait [Algorithm_Class90004]))
-
-([Algorithm_Class80002] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo [])"))
-
-([Algorithm_Class80003] of  Algorithm
-
-	(begin [Algorithm_Class80004])
-	(flow-chart
-		[Algorithm_Class80004]
-		[Algorithm_Class80012]
-		[Algorithm_Class80011])
-	(title "A2"))
-
-([Algorithm_Class80004] of  PredefinedProcess
-
-	(algorithm [Algorithm_Class0])
-	(next [Algorithm_Class80011])
-	(title "E1"))
-
-([Algorithm_Class80005] of  CloFuncall
-
-	(source "(def algo (fifos \"Algorithm\" \"title\" \"A2\"))"))
-
-([Algorithm_Class80006] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo [A ])"))
-
-([Algorithm_Class80007] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo [A 18 B 27])"))
-
-([Algorithm_Class80008] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo '[A 18 B 27])"))
-
-([Algorithm_Class80009] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo '[A 19 B 27])"))
-
-([Algorithm_Class80010] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo '[A 21 B 27])"))
-
-([Algorithm_Class80011] of  Input
-
-	(code "B C")
-	(next [Algorithm_Class80012])
-	(title "INPUT B"))
-
-([Algorithm_Class80012] of  PredefinedProcess
-
-	(algorithm [Algorithm_Class0])
-	(title "E2"))
-
-([Algorithm_Class80013] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo '[C 45])"))
-
-([Algorithm_Class80015] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo '[C 36])"))
-
-([Algorithm_Class80016] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo '[C 38])"))
-
-([Algorithm_Class80017] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo '[C 35])"))
-
-([Algorithm_Class80018] of  CloFuncall
-
-	(source "(algo.exe/do-algorithm algo '[C 37])"))
-
-([Algorithm_Class90000] of  CloFuncall
-
-	(source "(def algo (fifos \"Algorithm\" \"title\" \"Paralgo1\"))"))
-
-([Algorithm_Class90002] of  Process
-
-	(code "_ (Thread/sleep 12000)\n_ (println :P1)\nA 1")
-	(next [Algorithm_Class90004])
-	(title "P1"))
-
-([Algorithm_Class90003] of  Process
-
-	(code "_ (Thread/sleep 6000)\n_ (println :P2)\nB 2")
-	(next [Algorithm_Class90004])
-	(title "P2"))
-
-([Algorithm_Class90004] of  Wait
-
-	(title "W1"))
-
 ([Algorithm_Class90005] of  CloFunction
 
-	(source "(do-trace conc bnd)\n(do-next (sv (sv conc \"wait\") \"next\")\n              (mapcat #(deref %) \n	      (map #(future (do-next % bnd)) \n		(svs conc \"currents\"))))")
+	(source "(do-trace conc bnd)\n(do-next (sv (sv conc \"wait\") \"next\")\n              (mapcat #(deref %) \n	    (loop [curs (svs conc \"currents\") futs []]\n	      (if (seq curs)\n	        (recur (rest curs) (conj futs (future (do-next (first curs) bnd))))\n	        futs))))")
 	(title "do-concurrent [conc bnd]"))

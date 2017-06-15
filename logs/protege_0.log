@@ -215,3 +215,42 @@
 2017.06.13 12:04:05.505 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
 2017.06.13 12:04:06.033 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2017.06.13 12:04:14.051 MSK INFO: Load time for file:/home/ta/clojure/r4f-pro/pro-projects/Algorithm.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()
+2017.06.15 18:25:49.524 MSK INFO: *** SYSTEM START ***
+2017.06.15 18:25:54.202 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 18:26:42.866 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.15 18:26:43.894 MSK INFO: UI display time = 1 sec -- ProjectManager$2.run()
+2017.06.15 19:12:38.489 MSK INFO: *** SYSTEM START ***
+2017.06.15 19:12:39.792 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 19:13:40.875 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 19:59:49.398 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 20:01:57.720 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.15 20:01:57.861 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.15 20:05:28.851 MSK INFO: *** SYSTEM START ***
+2017.06.15 20:05:29.955 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 20:05:35.055 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 20:09:59.813 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.15 20:10:00.036 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.15 20:18:06.092 MSK INFO: *** SYSTEM START ***
+2017.06.15 20:18:07.151 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 20:18:11.648 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 20:32:02.720 MSK INFO: *** SYSTEM START ***
+2017.06.15 20:32:03.968 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 20:32:10.106 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 20:34:02.543 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.15 20:34:02.787 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.15 20:35:50.965 MSK INFO: *** SYSTEM START ***
+2017.06.15 20:35:51.807 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 20:35:57.139 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 20:36:45.168 MSK INFO: *** SYSTEM START ***
+2017.06.15 20:36:45.998 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 20:36:49.538 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 20:39:09.936 MSK INFO: *** SYSTEM START ***
+2017.06.15 20:39:10.781 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 20:39:14.129 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 20:50:25.786 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.15 20:50:25.958 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.15 20:57:06.478 MSK INFO: *** SYSTEM START ***
+2017.06.15 20:57:07.426 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.15 20:57:11.531 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.15 20:57:56.225 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.15 20:57:56.370 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()

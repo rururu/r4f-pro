@@ -1,0 +1,150 @@
+; Thu Jun 15 20:59:47 MSK 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([AlgorithmExamples_Class0] of  ShareOnto
+
+	(but-deep-copy "Deep Copy Instance/share.onto/deep-copy")
+	(but-del-fil "Delete Filtered Instances/share.onto/delfil")
+	(but-del-unref "Delete Unreferenced/share.onto/delete-unref")
+	(but-find-unref "Find Unreferenced/share.onto/find-unref")
+	(but-load-prj "Load Source Project/share.onto/load-src-prj")
+	(but-shal-copy "Shallow Copy Instances/share.onto/shal-copy")
+	(source-project "DefaultKnowledgeBase(Algorithm)"))
+
+([AlgorithmExamples_Class10] of  Process
+
+	(code "B 45")
+	(next [AlgorithmExamples_Class11])
+	(title "B <- 45"))
+
+([AlgorithmExamples_Class10000] of  CloProgram
+
+	(cloFunctions [Clojure_Class300000])
+	(cloNamespace [Clojure_Class300001])
+	(title "Clojure Work"))
+
+([AlgorithmExamples_Class10001] of  WorkingPrograms
+
+	(cloPrograms
+		[Clojure_Class10000]
+		[Algorithm_Class10000])
+	(title "AlgoExamples Programs"))
+
+([AlgorithmExamples_Class10002] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [AlgorithmExamples_Class10001])
+	(%3ACREATION-TIMESTAMP "2017.06.15 20:09:23.760 MSK")
+	(%3ACREATOR "ru"))
+
+([AlgorithmExamples_Class11] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class20002])
+	(title "E2"))
+
+([AlgorithmExamples_Class13] of  Concurrent
+
+	(currents
+		[AlgorithmExamples_Class15]
+		[AlgorithmExamples_Class16])
+	(title "C1")
+	(wait [AlgorithmExamples_Class14]))
+
+([AlgorithmExamples_Class14] of  Wait
+
+	(title "W1"))
+
+([AlgorithmExamples_Class15] of  Process
+
+	(code "_ (Thread/sleep 12000)\n_ (println :P1)\nA 1")
+	(next [AlgorithmExamples_Class14])
+	(title "P1"))
+
+([AlgorithmExamples_Class16] of  Process
+
+	(code "_ (Thread/sleep 6000)\n_ (println :P2)\nB 2")
+	(next [AlgorithmExamples_Class14])
+	(title "P2"))
+
+([AlgorithmExamples_Class2] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class20002])
+	(next [AlgorithmExamples_Class10])
+	(title "E1"))
+
+([AlgorithmExamples_Class20000] of  Algorithm
+
+	(begin [AlgorithmExamples_Class2])
+	(but-start "Start/algo.exe/start-algorithm")
+	(flow-chart
+		[AlgorithmExamples_Class2]
+		[AlgorithmExamples_Class11]
+		[AlgorithmExamples_Class10])
+	(title "A2")
+	(trace TRUE))
+
+([AlgorithmExamples_Class20002] of  Algorithm
+
+	(begin [AlgorithmExamples_Class4])
+	(but-start "Start/algo.exe/start-algorithm")
+	(flow-chart
+		[AlgorithmExamples_Class4]
+		[AlgorithmExamples_Class6]
+		[AlgorithmExamples_Class5]
+		[AlgorithmExamples_Class8]
+		[AlgorithmExamples_Class7]
+		[AlgorithmExamples_Class9])
+	(title "Euclid's GCD")
+	(trace FALSE))
+
+([AlgorithmExamples_Class20003] of  Algorithm
+
+	(begin [AlgorithmExamples_Class13])
+	(but-start "Start/algo.exe/start-algorithm")
+	(flow-chart
+		[AlgorithmExamples_Class13]
+		[AlgorithmExamples_Class15]
+		[AlgorithmExamples_Class16]
+		[AlgorithmExamples_Class14])
+	(title "Paralgo1")
+	(trace TRUE))
+
+([AlgorithmExamples_Class4] of  Input
+
+	(code "A 54\nB 36")
+	(next [AlgorithmExamples_Class5])
+	(title "INPUT A, B"))
+
+([AlgorithmExamples_Class5] of  Decision
+
+	(code "variant (if (= B 0) 2 1)")
+	(title "B = 0 ?")
+	(variants
+		[AlgorithmExamples_Class6]
+		[AlgorithmExamples_Class9]))
+
+([AlgorithmExamples_Class6] of  Decision
+
+	(code "variant (if (> A B) 2 1)")
+	(title "A > B ?")
+	(variants
+		[AlgorithmExamples_Class7]
+		[AlgorithmExamples_Class8]))
+
+([AlgorithmExamples_Class7] of  Process
+
+	(code "B (- B A)")
+	(next [AlgorithmExamples_Class5])
+	(title "B <- B - A"))
+
+([AlgorithmExamples_Class8] of  Process
+
+	(code "A (- A B)")
+	(next [AlgorithmExamples_Class5])
+	(title "A <- A - B"))
+
+([AlgorithmExamples_Class9] of  Process
+
+	(code "_ (println A)")
+	(title "PRINT A"))

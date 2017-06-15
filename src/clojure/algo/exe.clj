@@ -53,6 +53,9 @@
           ubnd (apply concat uprs)]
     (concat bnd ubnd))))
 
+(defn to-bnd [vvm]
+  (vec (reduce-kv #(concat %1[(symbol %2) (val-to-code %3)]) [] vvm)))
+
 (defn do-code [pord bnd]
   (let [code (sv pord "code")
        bnd2 (read-string (str "[" (uncomment  code) "]"))
@@ -62,9 +65,6 @@
        ;;_ (println :expr expr)
        vvm2  (eval expr)]
   (to-bnd vvm2)))
-
-(defn to-bnd [vvm]
-  (vec (reduce-kv #(concat %1[(symbol %2) (val-to-code %3)]) [] vvm)))
 
 (defn do-process [proc bnd]
   (do-trace proc bnd)
@@ -93,8 +93,10 @@
   (do-trace conc bnd)
 (do-next (sv (sv conc "wait") "next")
               (mapcat #(deref %) 
-	      (map #(future (do-next % bnd)) 
-		(svs conc "currents")))))
+	    (loop [curs (svs conc "currents") futs []]
+	      (if (seq curs)
+	        (recur (rest curs) (conj futs (future (do-next (first curs) bnd))))
+	        futs)))))
 
 (defn do-next [inst bnd]
   (if (some? inst)
@@ -107,4 +109,9 @@
     "Wait" bnd
     (println (str "Unknown type: " typ)))
   bnd))
+
+(defn start-algorithm [hm inst]
+  (let [mp (into {} hm)]
+  (trace (is? (mp "trace")))
+  (future (do-algorithm inst []))))
 
