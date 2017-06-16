@@ -1,4 +1,4 @@
-; Thu Jun 15 20:56:56 MSK 2017
+; Fri Jun 16 22:13:21 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -82,7 +82,7 @@
 
 ([Algorithm_Class30000] of  CloFunction
 
-	(source "(vec (reduce-kv #(concat %1[(symbol %2) (val-to-code %3)]) [] vvm))")
+	(source "(vec (reduce-kv #(if (not= %2 \"_\")\n	      (concat %1 [(symbol %2) (val-to-code %3)])\n	      %1) [] vvm))")
 	(title "to-bnd [vvm]"))
 
 ([Algorithm_Class40000] of  CloFunction
@@ -112,7 +112,7 @@
 
 ([Algorithm_Class50001] of  CloFunction
 
-	(source "(let [code (sv pord \"code\")\n       bnd2 (read-string (str \"[\" (uncomment  code) \"]\"))\n       bnd3 (vec (concat bnd bnd2))\n       vvm1 (var-val-map bnd3)\n       expr `(let ~bnd3 ~vvm1)\n       ;;_ (println :expr expr)\n       vvm2  (eval expr)]\n  (to-bnd vvm2))")
+	(source "(let [code (sv pord \"code\")\n       bnd2 (read-string (str \"[\" (uncomment  code) \"]\"))\n       bnd3 (vec (concat bnd bnd2))\n       vvm1 (var-val-map bnd3)\n       expr `(let ~bnd3 ~vvm1)\n       ;;_ (println :expr expr)\n       vvm2  (try (eval expr) (catch Exception e (println e)))]\n  ;;(println :vvm2 vvm2)\n  (to-bnd vvm2))")
 	(title "do-code [pord bnd]"))
 
 ([Algorithm_Class70000] of  CloFunction

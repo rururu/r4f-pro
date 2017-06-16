@@ -1,4 +1,4 @@
-; Thu Jun 15 20:56:56 MSK 2017
+; Fri Jun 16 22:13:21 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -242,6 +242,134 @@
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
 
+([Algorithm_ProjectKB_Class30371] of  String
+
+	(name "Concurrent")
+	(string_value "title"))
+
+([Algorithm_ProjectKB_Class30372] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([Algorithm_ProjectKB_Class30373] of  String
+
+	(name "Decision")
+	(string_value "title"))
+
+([Algorithm_ProjectKB_Class30374] of  String
+
+	(name "Wait")
+	(string_value "title"))
+
+([Algorithm_ProjectKB_Class30375] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([Algorithm_ProjectKB_Class30376] of  String
+
+	(name "Algorithm")
+	(string_value "title"))
+
+([Algorithm_ProjectKB_Class30377] of  String
+
+	(name "Process")
+	(string_value "title"))
+
+([Algorithm_ProjectKB_Class30378] of  String
+
+	(name "PredefinedProcess")
+	(string_value "title"))
+
+([Algorithm_ProjectKB_Class30379] of  Map
+)
+
+([Algorithm_ProjectKB_Class30380] of  Map_Entry
+
+	(key "InstanceGraphWidget.Algorithm_Class0.flow-chart")
+	(key_class "java.lang.String")
+	(value "Algorithm_ProjectKB_Class30379")
+	(value_class "java.util.Map"))
+
+([Algorithm_ProjectKB_Class30381] of  Map
+
+	(entries
+		[Algorithm_ProjectKB_Class30382]
+		[Algorithm_ProjectKB_Class30383]
+		[Algorithm_ProjectKB_Class30384]))
+
+([Algorithm_ProjectKB_Class30382] of  Map_Entry
+
+	(key "Algorithm_Class80012")
+	(key_class "java.lang.String")
+	(value "70 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Algorithm_ProjectKB_Class30383] of  Map_Entry
+
+	(key "Algorithm_Class80004")
+	(key_class "java.lang.String")
+	(value "70 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Algorithm_ProjectKB_Class30384] of  Map_Entry
+
+	(key "Algorithm_Class100003")
+	(key_class "java.lang.String")
+	(value "70 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Algorithm_ProjectKB_Class30385] of  Map_Entry
+
+	(key "InstanceGraphWidget.Algorithm_Class80003.flow-chart")
+	(key_class "java.lang.String")
+	(value "Algorithm_ProjectKB_Class30381")
+	(value_class "java.util.Map"))
+
+([Algorithm_ProjectKB_Class30386] of  Map
+
+	(entries
+		[Algorithm_ProjectKB_Class30387]
+		[Algorithm_ProjectKB_Class30388]
+		[Algorithm_ProjectKB_Class30389]
+		[Algorithm_ProjectKB_Class30390]))
+
+([Algorithm_ProjectKB_Class30387] of  Map_Entry
+
+	(key "Algorithm_Class80001")
+	(key_class "java.lang.String")
+	(value "120 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Algorithm_ProjectKB_Class30388] of  Map_Entry
+
+	(key "Algorithm_Class90003")
+	(key_class "java.lang.String")
+	(value "220 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Algorithm_ProjectKB_Class30389] of  Map_Entry
+
+	(key "Algorithm_Class90004")
+	(key_class "java.lang.String")
+	(value "120 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Algorithm_ProjectKB_Class30390] of  Map_Entry
+
+	(key "Algorithm_Class90002")
+	(key_class "java.lang.String")
+	(value "70 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Algorithm_ProjectKB_Class30391] of  Map_Entry
+
+	(key "InstanceGraphWidget.Algorithm_Class80000.flow-chart")
+	(key_class "java.lang.String")
+	(value "Algorithm_ProjectKB_Class30386")
+	(value_class "java.util.Map"))
+
 ([Algorithm_ProjectKB_Class30392] of  Widget
 
 	(height 60)
@@ -255,139 +383,6 @@
 
 ([Algorithm_ProjectKB_Class30393] of  Property_List
 )
-
-([Algorithm_ProjectKB_Class30394] of  String
-
-	(name "Input")
-	(string_value "title"))
-
-([Algorithm_ProjectKB_Class30395] of  String
-
-	(name "Concurrent")
-	(string_value "title"))
-
-([Algorithm_ProjectKB_Class30396] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([Algorithm_ProjectKB_Class30397] of  String
-
-	(name "Decision")
-	(string_value "title"))
-
-([Algorithm_ProjectKB_Class30398] of  String
-
-	(name "Wait")
-	(string_value "title"))
-
-([Algorithm_ProjectKB_Class30399] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([Algorithm_ProjectKB_Class30400] of  String
-
-	(name "Algorithm")
-	(string_value "title"))
-
-([Algorithm_ProjectKB_Class30401] of  String
-
-	(name "Process")
-	(string_value "title"))
-
-([Algorithm_ProjectKB_Class30402] of  String
-
-	(name "PredefinedProcess")
-	(string_value "title"))
-
-([Algorithm_ProjectKB_Class30403] of  Map
-)
-
-([Algorithm_ProjectKB_Class30404] of  Map_Entry
-
-	(key "InstanceGraphWidget.Algorithm_Class0.flow-chart")
-	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class30403")
-	(value_class "java.util.Map"))
-
-([Algorithm_ProjectKB_Class30405] of  Map
-
-	(entries
-		[Algorithm_ProjectKB_Class30406]
-		[Algorithm_ProjectKB_Class30407]
-		[Algorithm_ProjectKB_Class30408]))
-
-([Algorithm_ProjectKB_Class30406] of  Map_Entry
-
-	(key "Algorithm_Class80012")
-	(key_class "java.lang.String")
-	(value "70 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([Algorithm_ProjectKB_Class30407] of  Map_Entry
-
-	(key "Algorithm_Class80004")
-	(key_class "java.lang.String")
-	(value "70 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([Algorithm_ProjectKB_Class30408] of  Map_Entry
-
-	(key "Algorithm_Class100003")
-	(key_class "java.lang.String")
-	(value "70 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([Algorithm_ProjectKB_Class30409] of  Map_Entry
-
-	(key "InstanceGraphWidget.Algorithm_Class80003.flow-chart")
-	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class30405")
-	(value_class "java.util.Map"))
-
-([Algorithm_ProjectKB_Class30410] of  Map
-
-	(entries
-		[Algorithm_ProjectKB_Class30411]
-		[Algorithm_ProjectKB_Class30412]
-		[Algorithm_ProjectKB_Class30413]
-		[Algorithm_ProjectKB_Class30414]))
-
-([Algorithm_ProjectKB_Class30411] of  Map_Entry
-
-	(key "Algorithm_Class80001")
-	(key_class "java.lang.String")
-	(value "120 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([Algorithm_ProjectKB_Class30412] of  Map_Entry
-
-	(key "Algorithm_Class90003")
-	(key_class "java.lang.String")
-	(value "220 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([Algorithm_ProjectKB_Class30413] of  Map_Entry
-
-	(key "Algorithm_Class90004")
-	(key_class "java.lang.String")
-	(value "120 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([Algorithm_ProjectKB_Class30414] of  Map_Entry
-
-	(key "Algorithm_Class90002")
-	(key_class "java.lang.String")
-	(value "70 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([Algorithm_ProjectKB_Class30415] of  Map_Entry
-
-	(key "InstanceGraphWidget.Algorithm_Class80000.flow-chart")
-	(key_class "java.lang.String")
-	(value "Algorithm_ProjectKB_Class30410")
-	(value_class "java.util.Map"))
 
 ([Algorithm_ProjectKB_Class30450] of  Widget
 
@@ -636,6 +631,11 @@
 
 ([Algorithm_ProjectKB_Class364] of  Property_List
 )
+
+([Algorithm_ProjectKB_Class370] of  String
+
+	(name "Input")
+	(string_value "title"))
 
 ([Algorithm_ProjectKB_Class371] of  Boolean
 
@@ -1597,15 +1597,15 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Algorithm_ProjectKB_Class30394]
-		[Algorithm_ProjectKB_Class30395]
-		[Algorithm_ProjectKB_Class30396]
-		[Algorithm_ProjectKB_Class30397]
-		[Algorithm_ProjectKB_Class30398]
-		[Algorithm_ProjectKB_Class30399]
-		[Algorithm_ProjectKB_Class30400]
-		[Algorithm_ProjectKB_Class30401]
-		[Algorithm_ProjectKB_Class30402]))
+		[Algorithm_ProjectKB_Class370]
+		[Algorithm_ProjectKB_Class30371]
+		[Algorithm_ProjectKB_Class30372]
+		[Algorithm_ProjectKB_Class30373]
+		[Algorithm_ProjectKB_Class30374]
+		[Algorithm_ProjectKB_Class30375]
+		[Algorithm_ProjectKB_Class30376]
+		[Algorithm_ProjectKB_Class30377]
+		[Algorithm_ProjectKB_Class30378]))
 
 ([CLSES_TAB] of  Widget
 
@@ -1657,13 +1657,13 @@
 ([KB_084192_Class1] of  Map
 
 	(entries
-		[Algorithm_ProjectKB_Class30404]
-		[Algorithm_ProjectKB_Class30409]
-		[Algorithm_ProjectKB_Class30415])
+		[Algorithm_ProjectKB_Class30380]
+		[Algorithm_ProjectKB_Class30385]
+		[Algorithm_ProjectKB_Class30391])
 	(referenced_maps
-		[Algorithm_ProjectKB_Class30405]
-		[Algorithm_ProjectKB_Class30403]
-		[Algorithm_ProjectKB_Class30410]))
+		[Algorithm_ProjectKB_Class30381]
+		[Algorithm_ProjectKB_Class30379]
+		[Algorithm_ProjectKB_Class30386]))
 
 ([KB_084192_Class11] of  Property_List
 
@@ -1758,28 +1758,28 @@
 	(name "instances_file_name")
 	(string_value "Algorithm.pins"))
 
-([KB_892334_Class366] of  Map
+([KB_755376_Class366] of  Map
 
 	(entries
-		[KB_892334_Class367]
-		[KB_892334_Class368]
-		[KB_892334_Class369]))
+		[KB_755376_Class367]
+		[KB_755376_Class368]
+		[KB_755376_Class369]))
 
-([KB_892334_Class367] of  Map_Entry
+([KB_755376_Class367] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_892334_Class368] of  Map_Entry
+([KB_755376_Class368] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_892334_Class369] of  Map_Entry
+([KB_755376_Class369] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")

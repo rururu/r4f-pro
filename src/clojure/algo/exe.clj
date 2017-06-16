@@ -54,7 +54,9 @@
     (concat bnd ubnd))))
 
 (defn to-bnd [vvm]
-  (vec (reduce-kv #(concat %1[(symbol %2) (val-to-code %3)]) [] vvm)))
+  (vec (reduce-kv #(if (not= %2 "_")
+	      (concat %1 [(symbol %2) (val-to-code %3)])
+	      %1) [] vvm)))
 
 (defn do-code [pord bnd]
   (let [code (sv pord "code")
@@ -63,7 +65,8 @@
        vvm1 (var-val-map bnd3)
        expr `(let ~bnd3 ~vvm1)
        ;;_ (println :expr expr)
-       vvm2  (eval expr)]
+       vvm2  (try (eval expr) (catch Exception e (println e)))]
+  ;;(println :vvm2 vvm2)
   (to-bnd vvm2)))
 
 (defn do-process [proc bnd]

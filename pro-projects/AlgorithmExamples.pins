@@ -1,4 +1,4 @@
-; Thu Jun 15 20:59:47 MSK 2017
+; Fri Jun 16 22:16:06 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -29,7 +29,8 @@
 
 	(cloPrograms
 		[Clojure_Class10000]
-		[Algorithm_Class10000])
+		[Algorithm_Class10000]
+		[AlgorithmExamples_Class30000])
 	(title "AlgoExamples Programs"))
 
 ([AlgorithmExamples_Class10002] of  %3AINSTANCE-ANNOTATION
@@ -96,7 +97,7 @@
 		[AlgorithmExamples_Class7]
 		[AlgorithmExamples_Class9])
 	(title "Euclid's GCD")
-	(trace FALSE))
+	(trace TRUE))
 
 ([AlgorithmExamples_Class20003] of  Algorithm
 
@@ -110,11 +111,61 @@
 	(title "Paralgo1")
 	(trace TRUE))
 
+([AlgorithmExamples_Class30000] of  CloProgram
+
+	(cloFunctions
+		[AlgorithmExamples_Class50014]
+		[AlgorithmExamples_Class50001]
+		[AlgorithmExamples_Class40002]
+		[AlgorithmExamples_Class40003]
+		[AlgorithmExamples_Class30002]
+		[AlgorithmExamples_Class30006])
+	(cloNamespace [AlgorithmExamples_Class30001])
+	(cloVars
+		[AlgorithmExamples_Class50000]
+		[AlgorithmExamples_Class40004])
+	(title "Canvas"))
+
+([AlgorithmExamples_Class30001] of  CloNamespace
+
+	(source "(:import \n  (java.awt Color Dimension)\n  (javax.swing JPanel JFrame))")
+	(title "canvas"))
+
+([AlgorithmExamples_Class30002] of  CloFunction
+
+	(source "(proxy [JPanel] []\n  (paintComponent [g]\n    (proxy-super paintComponent g)\n    (draw-picture g width height))\n  (getPreferredSize []\n    (Dimension. width height)))")
+	(title "canvas-panel [width height]"))
+
+([AlgorithmExamples_Class30006] of  CloFunction
+
+	(source "(def PANEL (canvas-panel width height))\n(doto (JFrame. title)\n  (.add PANEL)\n  (.pack)\n  (.setVisible true)\n  (.setDefaultCloseOperation JFrame/DISPOSE_ON_CLOSE))")
+	(title "canvas-frame [title width height]"))
+
 ([AlgorithmExamples_Class4] of  Input
 
 	(code "A 54\nB 36")
 	(next [AlgorithmExamples_Class5])
 	(title "INPUT A, B"))
+
+([AlgorithmExamples_Class40000] of  Process
+
+	(code "_ (canvas/redraw-figure :p (fn [g] \n	(.setColor g java.awt.Color/RED)\n	(.fillRect g 10 10 20 40)))")
+	(title "wt:Progress"))
+
+([AlgorithmExamples_Class40002] of  CloFunction
+
+	(source ";; (redraw-figure :f1 (fn [g] (.setColor g Color/RED) (.fillOval g 200 200 100 160)))\n(vswap! FIGURES assoc id func)\n(.repaint PANEL)")
+	(title "redraw-figure [id func]"))
+
+([AlgorithmExamples_Class40003] of  CloFunction
+
+	(source "(.clearRect g 0 0 width height)\n(doseq [[id func] (seq @FIGURES)]\n  (func g))")
+	(title "draw-picture [g width height]"))
+
+([AlgorithmExamples_Class40004] of  CloVar
+
+	(source "(volatile! {})")
+	(title "FIGURES"))
 
 ([AlgorithmExamples_Class5] of  Decision
 
@@ -123,6 +174,44 @@
 	(variants
 		[AlgorithmExamples_Class6]
 		[AlgorithmExamples_Class9]))
+
+([AlgorithmExamples_Class50000] of  CloVar
+
+	(source "nil")
+	(title "PANEL"))
+
+([AlgorithmExamples_Class50001] of  CloFunction
+
+	(source "(vswap! FIGURES dissoc id)\n(.repaint PANEL)")
+	(title "remove-figure [id]"))
+
+([AlgorithmExamples_Class50014] of  CloFunction
+
+	(source "(vreset! FIGURES {})\n(.repaint PANEL)")
+	(title "clear-figures []"))
+
+([AlgorithmExamples_Class50017] of  Algorithm
+
+	(begin [AlgorithmExamples_Class50018])
+	(but-start "Start/algo.exe/start-algorithm")
+	(flow-chart
+		[AlgorithmExamples_Class50018]
+		[AlgorithmExamples_Class50020]
+		[AlgorithmExamples_Class40000])
+	(title "Work Time")
+	(trace TRUE))
+
+([AlgorithmExamples_Class50018] of  Input
+
+	(code "color [0 255 0]")
+	(next [AlgorithmExamples_Class50020])
+	(title "wt:Input"))
+
+([AlgorithmExamples_Class50020] of  Process
+
+	(code "_ (canvas/canvas-frame \"Work Time\" 800 600)")
+	(next [AlgorithmExamples_Class40000])
+	(title "wt:Create Canvas"))
 
 ([AlgorithmExamples_Class6] of  Decision
 
