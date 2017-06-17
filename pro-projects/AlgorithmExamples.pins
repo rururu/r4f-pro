@@ -1,4 +1,4 @@
-; Fri Jun 16 22:16:06 MSK 2017
+; Sat Jun 17 22:40:13 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -149,7 +149,8 @@
 
 ([AlgorithmExamples_Class40000] of  Process
 
-	(code "_ (canvas/redraw-figure :p (fn [g] \n	(.setColor g java.awt.Color/RED)\n	(.fillRect g 10 10 20 40)))")
+	(code "h (int (rand K))\nrd (+ rd (int (rand 200)))\nrd (if (> rd 255) (- rd 255) rd)\n_ (canvas/redraw-figure round (fn [g] \n	(.setColor g (java.awt.Color. rd gr bl))\n	(.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep 1000)")
+	(next [AlgorithmExamples_Class60000])
 	(title "wt:Progress"))
 
 ([AlgorithmExamples_Class40002] of  CloFunction
@@ -197,20 +198,22 @@
 	(flow-chart
 		[AlgorithmExamples_Class50018]
 		[AlgorithmExamples_Class50020]
-		[AlgorithmExamples_Class40000])
+		[AlgorithmExamples_Class40000]
+		[AlgorithmExamples_Class60000]
+		[AlgorithmExamples_Class60001])
 	(title "Work Time")
-	(trace TRUE))
+	(trace FALSE))
 
 ([AlgorithmExamples_Class50018] of  Input
 
-	(code "color [0 255 0]")
+	(code "rd 255\ngr 0\nbl 0\nN 32\nK 40")
 	(next [AlgorithmExamples_Class50020])
 	(title "wt:Input"))
 
 ([AlgorithmExamples_Class50020] of  Process
 
-	(code "_ (canvas/canvas-frame \"Work Time\" 800 600)")
-	(next [AlgorithmExamples_Class40000])
+	(code "_ (canvas/canvas-frame \"Work Time\" 800 800)\n_ (canvas/clear-figures)\nround 1\nx 10\ny 10\nw 10\nh K")
+	(next [AlgorithmExamples_Class60000])
 	(title "wt:Create Canvas"))
 
 ([AlgorithmExamples_Class6] of  Decision
@@ -220,6 +223,23 @@
 	(variants
 		[AlgorithmExamples_Class7]
 		[AlgorithmExamples_Class8]))
+
+([AlgorithmExamples_Class60000] of  Decision
+
+	(code "variant (if (<= round N) 1 2)")
+	(title "round <= N?")
+	(variants
+		[AlgorithmExamples_Class40000]
+		[AlgorithmExamples_Class60001]))
+
+([AlgorithmExamples_Class60001] of  Process
+
+	(code "- (println \"Stop Work Time\")")
+	(title "wt:Stop"))
+
+([AlgorithmExamples_Class60002] of  CloFuncall
+
+	(source "(rand 40)"))
 
 ([AlgorithmExamples_Class7] of  Process
 
