@@ -7,6 +7,7 @@
 
 (def do-next nil)
 (def TRACE nil)
+(def destruct nil)
 (defn uncomment [src]
   (rete.core/slurp-with-comments (java.io.StringReader. src)))
 
@@ -18,9 +19,12 @@
   (ob-to-code (first obs))
   (vec (map ob-to-code obs))))
 
+(defn destruct [lst]
+  (mapcat #(if (symbol? %) [%] (destruct %)) lst))
+
 (defn var-val-map [bnd]
   (let [p2 (partition 2 bnd)
-      vars (map first p2)
+      vars (destruct (map first p2))
       nams (map name vars)]
   (zipmap nams vars)))
 

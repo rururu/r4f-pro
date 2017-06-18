@@ -290,3 +290,18 @@
 2017.06.17 18:24:02.877 MSK INFO: *** SYSTEM START ***
 2017.06.17 18:24:03.974 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2017.06.17 18:24:13.459 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.18 17:03:57.938 MSK INFO: *** SYSTEM START ***
+2017.06.18 17:03:59.113 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.18 17:04:04.797 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.18 17:54:26.396 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.18 17:54:26.670 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.18 17:54:53.970 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.18 17:54:54.100 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.18 17:56:10.259 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.18 17:56:10.377 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.18 18:17:09.704 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.18 18:17:09.838 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.18 18:18:24.184 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.18 18:18:24.317 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.06.18 18:18:51.522 MSK INFO: Project load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.06.18 18:18:51.637 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()

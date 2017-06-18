@@ -1,4 +1,4 @@
-; Sat Jun 17 22:40:13 MSK 2017
+; Sun Jun 18 22:03:40 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -149,7 +149,7 @@
 
 ([AlgorithmExamples_Class40000] of  Process
 
-	(code "h (int (rand K))\nrd (+ rd (int (rand 200)))\nrd (if (> rd 255) (- rd 255) rd)\n_ (canvas/redraw-figure round (fn [g] \n	(.setColor g (java.awt.Color. rd gr bl))\n	(.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep 1000)")
+	(code "h (int (rand Hm))\ncd (int (rand Cm))\n[func red green blue] \n                   (let [r (func red cd)\n                          rgb [r (+ r Kg) (+ r Kb)]\n	  mxx (apply max rgb)\n	  mnn (apply min rgb)]\n	(cond\n	  (> mxx 255) [- red green blue]\n	  (< mnn 0) [+ red green blue]\n	  true (vec (cons func rgb))))\n_ (canvas/redraw-figure (gensym)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep 1000)")
 	(next [AlgorithmExamples_Class60000])
 	(title "wt:Progress"))
 
@@ -206,13 +206,13 @@
 
 ([AlgorithmExamples_Class50018] of  Input
 
-	(code "rd 255\ngr 0\nbl 0\nN 32\nK 40")
+	(code "x 75\ny 5\nw 5\ncolor [160 80 80]\nN 32\nHm 40\nCm 80")
 	(next [AlgorithmExamples_Class50020])
 	(title "wt:Input"))
 
 ([AlgorithmExamples_Class50020] of  Process
 
-	(code "_ (canvas/canvas-frame \"Work Time\" 800 800)\n_ (canvas/clear-figures)\nround 1\nx 10\ny 10\nw 10\nh K")
+	(code "_ (canvas/canvas-frame \"Work Time\" 800 800)\nround 1\nh Hm\n[red green blue] color\nKg (- green red)\nKb (- blue red)\nfunc +")
 	(next [AlgorithmExamples_Class60000])
 	(title "wt:Create Canvas"))
 
@@ -246,6 +246,18 @@
 	(code "B (- B A)")
 	(next [AlgorithmExamples_Class5])
 	(title "B <- B - A"))
+
+([AlgorithmExamples_Class70000] of  CloFuncall
+
+	(source "[a b c]"))
+
+([AlgorithmExamples_Class70001] of  CloFuncall
+
+	(source "(read-string \"[a b c]\")"))
+
+([AlgorithmExamples_Class70002] of  CloFuncall
+
+	(source "(read-string \"[a [b c] d e]\")"))
 
 ([AlgorithmExamples_Class8] of  Process
 

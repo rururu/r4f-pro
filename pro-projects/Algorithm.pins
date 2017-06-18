@@ -1,7 +1,12 @@
-; Fri Jun 16 22:13:21 MSK 2017
+; Sun Jun 18 18:18:47 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([Algorithm_Class0] of  CloFunction
+
+	(source "(mapcat #(if (symbol? %) [%] (destruct %)) lst)")
+	(title "destruct [lst]"))
 
 ([Algorithm_Class1] of  CloFunction
 
@@ -14,6 +19,7 @@
 		[Algorithm_Class10003]
 		[Algorithm_Class70005]
 		[Algorithm_Class10006]
+		[Algorithm_Class0]
 		[Algorithm_Class20024]
 		[Algorithm_Class70009]
 		[Algorithm_Class40002]
@@ -32,7 +38,8 @@
 	(cloNamespace [Algorithm_Class10001])
 	(cloVars
 		[Algorithm_Class20023]
-		[Algorithm_Class40001])
+		[Algorithm_Class40001]
+		[Algorithm_Class30001])
 	(title "Algorithm Execution"))
 
 ([Algorithm_Class10001] of  CloNamespace
@@ -77,13 +84,18 @@
 
 ([Algorithm_Class20024] of  CloFunction
 
-	(source "(let [p2 (partition 2 bnd)\n      vars (map first p2)\n      nams (map name vars)]\n  (zipmap nams vars))")
+	(source "(let [p2 (partition 2 bnd)\n      vars (destruct (map first p2))\n      nams (map name vars)]\n  (zipmap nams vars))")
 	(title "var-val-map [bnd]"))
 
 ([Algorithm_Class30000] of  CloFunction
 
 	(source "(vec (reduce-kv #(if (not= %2 \"_\")\n	      (concat %1 [(symbol %2) (val-to-code %3)])\n	      %1) [] vvm))")
 	(title "to-bnd [vvm]"))
+
+([Algorithm_Class30001] of  CloVar
+
+	(source "nil")
+	(title "destruct"))
 
 ([Algorithm_Class40000] of  CloFunction
 

@@ -1,4 +1,4 @@
-; Fri Jun 16 22:13:21 MSK 2017
+; Sun Jun 18 18:18:47 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -1758,28 +1758,28 @@
 	(name "instances_file_name")
 	(string_value "Algorithm.pins"))
 
-([KB_755376_Class366] of  Map
+([KB_263885_Class366] of  Map
 
 	(entries
-		[KB_755376_Class367]
-		[KB_755376_Class368]
-		[KB_755376_Class369]))
+		[KB_263885_Class367]
+		[KB_263885_Class368]
+		[KB_263885_Class369]))
 
-([KB_755376_Class367] of  Map_Entry
+([KB_263885_Class367] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_755376_Class368] of  Map_Entry
+([KB_263885_Class368] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_755376_Class369] of  Map_Entry
+([KB_263885_Class369] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
