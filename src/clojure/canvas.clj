@@ -5,9 +5,14 @@
 
 (def PANEL nil)
 (def FIGURES (volatile! {}))
-(defn clear-figures []
+(defn clear-figures
+  ([]
   (vreset! FIGURES {})
-(.repaint PANEL))
+  (.repaint PANEL))
+([prefix]
+  (doseq [[k v] @FIGURES]
+    (if (.startsWith k prefix)
+      (remove-figure k)))))
 
 (defn remove-figure [id]
   (vswap! FIGURES dissoc id)

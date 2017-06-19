@@ -1,4 +1,4 @@
-; Sun Jun 18 22:03:40 MSK 2017
+; Mon Jun 19 21:32:17 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -149,7 +149,7 @@
 
 ([AlgorithmExamples_Class40000] of  Process
 
-	(code "h (int (rand Hm))\ncd (int (rand Cm))\n[func red green blue] \n                   (let [r (func red cd)\n                          rgb [r (+ r Kg) (+ r Kb)]\n	  mxx (apply max rgb)\n	  mnn (apply min rgb)]\n	(cond\n	  (> mxx 255) [- red green blue]\n	  (< mnn 0) [+ red green blue]\n	  true (vec (cons func rgb))))\n_ (canvas/redraw-figure (gensym)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep 1000)")
+	(code "h (int (rand Hm))\ncd (int (rand Cm))\n[func red green blue] \n                   (let [r (func red cd)\n                          rgb [r (+ r Kg) (+ r Kb)]\n	  mxx (apply max rgb)\n	  mnn (apply min rgb)]\n	(cond\n	  (> mxx 255) [- red green blue]\n	  (< mnn 0) [+ red green blue]\n	  true (vec (cons func rgb))))\n_ (canvas/redraw-figure (str header round)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep timeout)")
 	(next [AlgorithmExamples_Class60000])
 	(title "wt:Progress"))
 
@@ -188,8 +188,8 @@
 
 ([AlgorithmExamples_Class50014] of  CloFunction
 
-	(source "(vreset! FIGURES {})\n(.repaint PANEL)")
-	(title "clear-figures []"))
+	(source "([]\n  (vreset! FIGURES {})\n  (.repaint PANEL))\n([prefix]\n  (doseq [[k v] @FIGURES]\n    (if (.startsWith k prefix)\n      (remove-figure k))))")
+	(title "clear-figures"))
 
 ([AlgorithmExamples_Class50017] of  Algorithm
 
@@ -206,15 +206,15 @@
 
 ([AlgorithmExamples_Class50018] of  Input
 
-	(code "x 75\ny 5\nw 5\ncolor [160 80 80]\nN 32\nHm 40\nCm 80")
+	(code "title \"Work Time\"\nx 10\ny 20\nw 5\nheader \"p1\"\ncolor [160 80 80]\nN 64\nHm 20\nCm 80\ntimeout 400")
 	(next [AlgorithmExamples_Class50020])
 	(title "wt:Input"))
 
 ([AlgorithmExamples_Class50020] of  Process
 
-	(code "_ (canvas/canvas-frame \"Work Time\" 800 800)\nround 1\nh Hm\n[red green blue] color\nKg (- green red)\nKb (- blue red)\nfunc +")
+	(code "_ (if (= title \"Work Time\")\n     (canvas/canvas-frame title 800 800))\n_ (canvas/clear-figures header)\nround 1\nh Hm\n[red green blue] color\nKg (- green red)\nKb (- blue red)\nfunc +\n_ (canvas/redraw-figure (str header 0)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.drawString g header x y)))")
 	(next [AlgorithmExamples_Class60000])
-	(title "wt:Create Canvas"))
+	(title "wt:Init Canvas"))
 
 ([AlgorithmExamples_Class6] of  Decision
 
@@ -234,12 +234,8 @@
 
 ([AlgorithmExamples_Class60001] of  Process
 
-	(code "- (println \"Stop Work Time\")")
+	(code "- (println (str \"Stop Work Time: \" header))")
 	(title "wt:Stop"))
-
-([AlgorithmExamples_Class60002] of  CloFuncall
-
-	(source "(rand 40)"))
 
 ([AlgorithmExamples_Class7] of  Process
 
@@ -247,23 +243,105 @@
 	(next [AlgorithmExamples_Class5])
 	(title "B <- B - A"))
 
-([AlgorithmExamples_Class70000] of  CloFuncall
-
-	(source "[a b c]"))
-
-([AlgorithmExamples_Class70001] of  CloFuncall
-
-	(source "(read-string \"[a b c]\")"))
-
-([AlgorithmExamples_Class70002] of  CloFuncall
-
-	(source "(read-string \"[a [b c] d e]\")"))
-
 ([AlgorithmExamples_Class8] of  Process
 
 	(code "A (- A B)")
 	(next [AlgorithmExamples_Class5])
 	(title "A <- A - B"))
+
+([AlgorithmExamples_Class80007] of  Algorithm
+
+	(begin [AlgorithmExamples_Class80013])
+	(but-start "Start/algo.exe/start-algorithm")
+	(flow-chart
+		[AlgorithmExamples_Class80008]
+		[AlgorithmExamples_Class80009]
+		[AlgorithmExamples_Class80010]
+		[AlgorithmExamples_Class80011]
+		[AlgorithmExamples_Class80012]
+		[AlgorithmExamples_Class80013]
+		[AlgorithmExamples_Class80014]
+		[AlgorithmExamples_Class80015]
+		[AlgorithmExamples_Class80016]
+		[AlgorithmExamples_Class80017]
+		[AlgorithmExamples_Class80018]
+		[AlgorithmExamples_Class80019])
+	(title "Paralgo2")
+	(trace FALSE))
+
+([AlgorithmExamples_Class80008] of  Concurrent
+
+	(currents
+		[AlgorithmExamples_Class80016]
+		[AlgorithmExamples_Class80017]
+		[AlgorithmExamples_Class80018]
+		[AlgorithmExamples_Class80019])
+	(title "pa2: Spawn 4 processes")
+	(wait [AlgorithmExamples_Class80014]))
+
+([AlgorithmExamples_Class80009] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class50017])
+	(next [AlgorithmExamples_Class80014])
+	(title "pa2:Run P1"))
+
+([AlgorithmExamples_Class80010] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class50017])
+	(next [AlgorithmExamples_Class80014])
+	(title "pa2:Run P2"))
+
+([AlgorithmExamples_Class80011] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class50017])
+	(next [AlgorithmExamples_Class80014])
+	(title "pa2:Run P3"))
+
+([AlgorithmExamples_Class80012] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class50017])
+	(next [AlgorithmExamples_Class80014])
+	(title "pa2:Run P4"))
+
+([AlgorithmExamples_Class80013] of  Process
+
+	(code "title \"Parallel Algorithm 2\"\n_ (canvas/canvas-frame \"Parallel Algorithm 2\" 500 800)\n_ (canvas/clear-figures)\n_ (println (str \"Start \" title))")
+	(next [AlgorithmExamples_Class80008])
+	(title "pa2:Create canvas"))
+
+([AlgorithmExamples_Class80014] of  Wait
+
+	(next [AlgorithmExamples_Class80015])
+	(title "pa2:Wait processes"))
+
+([AlgorithmExamples_Class80015] of  Process
+
+	(code "_ (println (str \"Stop \" title))")
+	(title "pa2:End "))
+
+([AlgorithmExamples_Class80016] of  Process
+
+	(code "x 100\nheader \"p1\"\ncolor [(int (rand 255)) (int (rand 255)) (int (rand 255))]")
+	(next [AlgorithmExamples_Class80009])
+	(title "pa2:Init P1"))
+
+([AlgorithmExamples_Class80017] of  Process
+
+	(code "x 200\nheader \"p2\"\ncolor [(int (rand 255)) (int (rand 255)) (int (rand 255))]")
+	(next [AlgorithmExamples_Class80010])
+	(title "pa2:Init P2"))
+
+([AlgorithmExamples_Class80018] of  Process
+
+	(code "x 300\nheader \"p3\"\ncolor [(int (rand 255)) (int (rand 255)) (int (rand 255))]")
+	(next [AlgorithmExamples_Class80011])
+	(title "pa2:Init P3"))
+
+([AlgorithmExamples_Class80019] of  Process
+
+	(code "x 400\nheader \"p4\"\ncolor [(int (rand 255)) (int (rand 255)) (int (rand 255))]")
+	(next [AlgorithmExamples_Class80012])
+	(title "pa2:Init P4"))
 
 ([AlgorithmExamples_Class9] of  Process
 
