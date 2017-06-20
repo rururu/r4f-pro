@@ -1,4 +1,4 @@
-; Mon Jun 19 21:32:17 MSK 2017
+; Tue Jun 20 21:59:41 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -114,8 +114,8 @@
 ([AlgorithmExamples_Class30000] of  CloProgram
 
 	(cloFunctions
-		[AlgorithmExamples_Class50014]
 		[AlgorithmExamples_Class50001]
+		[AlgorithmExamples_Class50014]
 		[AlgorithmExamples_Class40002]
 		[AlgorithmExamples_Class40003]
 		[AlgorithmExamples_Class30002]
@@ -242,6 +242,44 @@
 	(code "B (- B A)")
 	(next [AlgorithmExamples_Class5])
 	(title "B <- B - A"))
+
+([AlgorithmExamples_Class70000] of  Algorithm
+
+	(begin [AlgorithmExamples_Class70001])
+	(but-start "Start/algo.exe/start-algorithm")
+	(flow-chart
+		[AlgorithmExamples_Class70001]
+		[AlgorithmExamples_Class70002]
+		[AlgorithmExamples_Class70003]
+		[AlgorithmExamples_Class70004]
+		[AlgorithmExamples_Class70005])
+	(title "Paralgo3"))
+
+([AlgorithmExamples_Class70001] of  Input
+
+	(next [AlgorithmExamples_Class70002])
+	(title "pa3:Input Number of Processes"))
+
+([AlgorithmExamples_Class70002] of  Process
+
+	(next [AlgorithmExamples_Class70003])
+	(title "pa3:Init Start Loop"))
+
+([AlgorithmExamples_Class70003] of  Decision
+
+	(title "pa3:Loop done")
+	(variants
+		[AlgorithmExamples_Class70004]
+		[AlgorithmExamples_Class70005]))
+
+([AlgorithmExamples_Class70004] of  Process
+
+	(title "pa3:Wait Completion of Processes"))
+
+([AlgorithmExamples_Class70005] of  Process
+
+	(next [AlgorithmExamples_Class70003])
+	(title "pa3:Start Single Process"))
 
 ([AlgorithmExamples_Class8] of  Process
 
