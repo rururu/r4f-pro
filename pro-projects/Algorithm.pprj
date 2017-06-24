@@ -1,4 +1,4 @@
-; Sun Jun 18 18:18:47 MSK 2017
+; Sat Jun 24 21:45:50 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -16,6 +16,17 @@
 
 ([Algorithm_ProjectKB_Class10358] of  Property_List
 )
+
+([Algorithm_ProjectKB_Class10370] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "debug")
+	(property_list [Algorithm_ProjectKB_Class40371])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 130)
+	(x 520)
+	(y 60))
 
 ([Algorithm_ProjectKB_Class10371] of  Boolean
 
@@ -377,7 +388,7 @@
 	(name "trace")
 	(property_list [Algorithm_ProjectKB_Class30393])
 	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
-	(width 200)
+	(width 110)
 	(x 400)
 	(y 60))
 
@@ -732,6 +743,9 @@
 ([Algorithm_ProjectKB_Class394] of  Property_List
 )
 
+([Algorithm_ProjectKB_Class40371] of  Property_List
+)
+
 ([Algorithm_ProjectKB_Class423] of  Widget
 
 	(is_hidden FALSE)
@@ -747,7 +761,8 @@
 		[Algorithm_ProjectKB_Class470]
 		[Algorithm_ProjectKB_Class512]
 		[Algorithm_ProjectKB_Class30450]
-		[Algorithm_ProjectKB_Class30392]))
+		[Algorithm_ProjectKB_Class30392]
+		[Algorithm_ProjectKB_Class10370]))
 
 ([Algorithm_ProjectKB_Class425] of  Property_List
 
@@ -1758,28 +1773,28 @@
 	(name "instances_file_name")
 	(string_value "Algorithm.pins"))
 
-([KB_263885_Class366] of  Map
+([KB_882759_Class366] of  Map
 
 	(entries
-		[KB_263885_Class367]
-		[KB_263885_Class368]
-		[KB_263885_Class369]))
+		[KB_882759_Class367]
+		[KB_882759_Class368]
+		[KB_882759_Class369]))
 
-([KB_263885_Class367] of  Map_Entry
+([KB_882759_Class367] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_263885_Class368] of  Map_Entry
+([KB_882759_Class368] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_263885_Class369] of  Map_Entry
+([KB_882759_Class369] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")

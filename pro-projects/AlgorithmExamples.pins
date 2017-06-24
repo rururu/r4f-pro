@@ -1,4 +1,4 @@
-; Tue Jun 20 21:59:41 MSK 2017
+; Sat Jun 24 21:07:52 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -89,6 +89,7 @@
 
 	(begin [AlgorithmExamples_Class4])
 	(but-start "Start/algo.exe/start-algorithm")
+	(debug TRUE)
 	(flow-chart
 		[AlgorithmExamples_Class4]
 		[AlgorithmExamples_Class6]
@@ -247,27 +248,35 @@
 
 	(begin [AlgorithmExamples_Class70001])
 	(but-start "Start/algo.exe/start-algorithm")
+	(debug FALSE)
 	(flow-chart
 		[AlgorithmExamples_Class70001]
 		[AlgorithmExamples_Class70002]
 		[AlgorithmExamples_Class70003]
 		[AlgorithmExamples_Class70004]
 		[AlgorithmExamples_Class70005])
-	(title "Paralgo3"))
+	(title "Paralgo3")
+	(trace TRUE))
 
 ([AlgorithmExamples_Class70001] of  Input
 
+	(code "x 4")
 	(next [AlgorithmExamples_Class70002])
+	(object-rows
+		[AlgorithmExamples_Class80000]
+		[AlgorithmExamples_Class90004])
 	(title "pa3:Input Number of Processes"))
 
 ([AlgorithmExamples_Class70002] of  Process
 
+	(code "title \"Parallel Algorithm 3\"\nNp (protege.core/sv jets \"number\")\nstep (protege.core/sv jets \"step\")\npN 1\nXi 10\nw step\nx 0\n_ (canvas/canvas-frame \"Parallel Algorithm 2\" 500 800)\n_ (canvas/clear-figures)\n_ (println (str \"Start \" title))futs []")
 	(next [AlgorithmExamples_Class70003])
 	(title "pa3:Init Start Loop"))
 
 ([AlgorithmExamples_Class70003] of  Decision
 
-	(title "pa3:Loop done")
+	(code "variant (if (> pN Np) 1 2)")
+	(title "pa3:Loop done?")
 	(variants
 		[AlgorithmExamples_Class70004]
 		[AlgorithmExamples_Class70005]))
@@ -278,6 +287,7 @@
 
 ([AlgorithmExamples_Class70005] of  Process
 
+	(code "futs (vec (protege.core/sv jets \"futures\"))\nfuts (conj futs\n                (future (algo.exe/do-algorithm algo (vector 'header (str \"A\" pN) 'x Xi))))\n_ (println :futs futs)\n_ (protege.core/ssv jets \"futures\" futs)\nXi (+ Xi step)")
 	(next [AlgorithmExamples_Class70003])
 	(title "pa3:Start Single Process"))
 
@@ -286,6 +296,11 @@
 	(code "A (- A B)")
 	(next [AlgorithmExamples_Class5])
 	(title "A <- A - B"))
+
+([AlgorithmExamples_Class80000] of  ObjectRow
+
+	(objects [AlgorithmExamples_Class50017])
+	(variable "algo"))
 
 ([AlgorithmExamples_Class80007] of  Algorithm
 
@@ -385,3 +400,14 @@
 
 	(code "_ (println A)")
 	(title "PRINT A"))
+
+([AlgorithmExamples_Class90003] of  Jets
+
+	(number 4)
+	(step 5)
+	(title "Jets1"))
+
+([AlgorithmExamples_Class90004] of  ObjectRow
+
+	(objects [AlgorithmExamples_Class90003])
+	(variable "jets"))

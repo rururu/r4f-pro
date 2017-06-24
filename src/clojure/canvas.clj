@@ -5,6 +5,10 @@
 
 (def PANEL nil)
 (def FIGURES (volatile! {}))
+(defn remove-figure [id]
+  (vswap! FIGURES dissoc id)
+(.repaint PANEL))
+
 (defn clear-figures
   ([]
   (vreset! FIGURES {})
@@ -13,10 +17,6 @@
   (doseq [[k v] @FIGURES]
     (if (.startsWith k prefix)
       (remove-figure k)))))
-
-(defn remove-figure [id]
-  (vswap! FIGURES dissoc id)
-(.repaint PANEL))
 
 (defn redraw-figure [id func]
   ;; (redraw-figure :f1 (fn [g] (.setColor g Color/RED) (.fillOval g 200 200 100 160)))

@@ -6,8 +6,15 @@
   edu.stanford.smi.protege.model.Instance))
 
 (def do-next nil)
-(def TRACE nil)
 (def destruct nil)
+(def TRACE false)
+(def DEBUG false)
+(defn set-global [key val]
+  (.setClientInformation *kb* key val))
+
+(defn get-global [key]
+  (.getClientInformation *kb* key))
+
 (defn uncomment [src]
   (rete.core/slurp-with-comments (java.io.StringReader. src)))
 
@@ -35,90 +42,112 @@
   (instance? Instance val) (ob-to-code val)
   true val))
 
+(defn only1 [lst]
+  (loop [y lst z []]
+  (if (seq y)
+    (let [[h & t] y]
+      (recur t
+        (if (or (= h '_) (some #{h} z))
+          z
+          (conj z h))))
+    z)))
+
+(defn to-bnd [id]
+  (if-let [pmap (get-global id)]
+  (reduce #(concat %1 [(symbol %2) `(get (get-global ~id) ~%2)]) [] (keys pmap))))
+
 (defn trace [bool]
   (def TRACE bool))
 
-(defn do-trace [inst bnd]
+(defn debug [bool]
+  (def DEBUG bool))
+
+(defn do-trace [inst id]
   (when TRACE
-  (println :binding bnd)
+  (println :id id :binding (get-global id))
   (println (typ inst) (sv inst "title"))))
 
-(defn do-input [inp bnd]
-  (do-trace inp bnd)
-(do-next 
-  (sv inp "next")
+(defn do-input [inp id]
+  (if-let [pmap (get-global id)]
   (let [code (sv inp "code")
-          vprs (map #(list (symbol (first %)) (second %))
-	(partition 2 (read-string (str "[" (uncomment  code) "]"))))
-          oprs (map #(list (symbol (sv % "variable")) (trans-obs (svs % "objects")))
+         vmap (reduce-kv #(assoc %1 (name %2) %3) 
+	{} 
+	(read-string (str "{" (uncomment  code) "}")))
+         _ (if DEBUG (println :vmap vmap))
+         omap (reduce #(assoc %1 (sv %2 "variable") (trans-obs (svs %2 "objects")))
+	{}
 	(svs inp "object-rows"))
-          uprs (filter #(not (some #{(first %)} bnd))
-	(concat vprs oprs))
-          ubnd (apply concat uprs)]
-    (concat bnd ubnd))))
+         _ (if DEBUG (println :omap omap))
+         vvm (merge vmap omap pmap)]
+    (if DEBUG (println :vvm vvm))
+    (set-global id vvm)
+    (do-next (sv inp "next") id))))
 
-(defn to-bnd [vvm]
-  (vec (reduce-kv #(if (not= %2 "_")
-	      (concat %1 [(symbol %2) (val-to-code %3)])
-	      %1) [] vvm)))
+(defn do-code [pord id]
+  (if-let [bnd1 (to-bnd id)]
+  (let [bnd2 (read-string (str "[" (uncomment  (sv pord "code")) "]"))
+         bnd3 (vec (concat bnd1 bnd2))
+         vvm1 (var-val-map bnd3)
+         expr `(let ~bnd3 ~vvm1)
+         _ (if DEBUG (println :expr expr))
+         vvm2  (try (eval expr) (catch Exception e (println e) nil))]
+    (if DEBUG (println :vvm2 vvm2))
+    (if vvm2 
+      (set-global id vvm2))
+    vvm2)))
 
-(defn do-code [pord bnd]
-  (let [code (sv pord "code")
-       bnd2 (read-string (str "[" (uncomment  code) "]"))
-       bnd3 (vec (concat bnd bnd2))
-       vvm1 (var-val-map bnd3)
-       expr `(let ~bnd3 ~vvm1)
-       ;;_ (println :expr expr)
-       vvm2  (try (eval expr) (catch Exception e (println e)))]
-  ;;(println :vvm2 vvm2)
-  (to-bnd vvm2)))
+(defn do-process [proc id]
+  (if (do-code proc id)
+  (do-next (sv proc "next") id)))
 
-(defn do-process [proc bnd]
-  (do-trace proc bnd)
-(do-next (sv proc "next") (do-code proc bnd)))
-
-(defn do-variant [vrt vrts bnd]
+(defn do-variant [vrt vrts id]
   (if (<= 1 vrt (count vrts))
-  (do-next (nth vrts (dec vrt)) bnd)))
+  (do-next (nth vrts (dec vrt)) id)))
 
-(defn do-decision [dec bnd]
-  (do-trace dec bnd)
-(let [bnd2 (do-code dec bnd)]
-  (do-variant (last bnd2) 
+(defn do-decision [dec id]
+  (let [vvm (do-code dec id)]
+  (do-variant (vvm "variant") 
 	(vec (svs dec "variants")) 
-	(vec (butlast (butlast bnd2))))))
+	id)))
 
-(defn do-algorithm [algo bnd]
-  (do-trace algo bnd)
-(do-next (sv algo "begin") bnd))
+(defn do-algorithm [algo pmap]
+  (let [id (name (gensym "algo"))]
+  (set-global id pmap)
+  (do-next (sv algo "begin") id)))
 
 (defn do-preproc [prep bnd]
   (do-trace prep bnd)
 (do-next (sv prep "next") (do-algorithm (sv prep "algorithm") bnd)))
 
-(defn do-concurrent [conc bnd]
+(defn do-concurrent [conc id bnd]
   (do-trace conc bnd)
 (do-next (sv (sv conc "wait") "next")
-              (mapcat #(deref %) 
+               id
+               (mapcat #(deref %) 
 	    (loop [curs (svs conc "currents") futs []]
 	      (if (seq curs)
 	        (recur (rest curs) (conj futs (future (do-next (first curs) bnd))))
 	        futs)))))
 
-(defn do-next [inst bnd]
-  (if (some? inst)
+(defn do-wait [wait id]
+)
+
+(defn do-next [inst id]
+  (do-trace inst id)
+(if (some? inst)
   (condp = (typ inst)
-    "Process" (do-process inst bnd)
-    "Decision" (do-decision inst bnd)
-    "PredefinedProcess" (do-preproc inst bnd)
-    "Input" (do-input inst bnd)
-    "Concurrent" (do-concurrent inst bnd)
-    "Wait" bnd
-    (println (str "Unknown type: " typ)))
-  bnd))
+    "Process" (do-process inst id)
+    "Decision" (do-decision inst id)
+    "PredefinedProcess" (do-preproc inst id)
+    "Input" (do-input inst id)
+    "Concurrent" (do-concurrent inst id)
+    "Wait" (do-wait inst id)
+    (do (println (str "Unknown type: " typ)) nil))
+  id))
 
 (defn start-algorithm [hm inst]
   (let [mp (into {} hm)]
   (trace (is? (mp "trace")))
-  (future (do-algorithm inst []))))
+  (debug (is? (mp "debug")))
+  (future (do-algorithm inst {}))))
 

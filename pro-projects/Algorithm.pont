@@ -1,4 +1,4 @@
-; Sun Jun 18 18:18:47 MSK 2017
+; Sat Jun 24 21:45:50 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -54,6 +54,11 @@
 ;+		(allowed-classes Input Process Decision PredefinedProcess Concurrent)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot debug
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(multislot object-rows
 		(type INSTANCE)
 ;+		(allowed-classes ObjectRow)
@@ -96,6 +101,11 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot trace
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot debug
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 0 1)
