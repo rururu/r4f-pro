@@ -1,4 +1,4 @@
-; Sat Jun 24 21:45:50 MSK 2017
+; Sun Jun 25 21:31:22 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -19,12 +19,9 @@
 		[Algorithm_Class60000]
 		[Algorithm_Class70001]
 		[Algorithm_Class10003]
-		[Algorithm_Class70005]
 		[Algorithm_Class10006]
 		[Algorithm_Class0]
 		[Algorithm_Class20024]
-		[Algorithm_Class70009]
-		[Algorithm_Class80000]
 		[Algorithm_Class30000]
 		[Algorithm_Class40002]
 		[Algorithm_Class60001]
@@ -36,8 +33,8 @@
 		[Algorithm_Class20013]
 		[Algorithm_Class70000]
 		[Algorithm_Class50000]
+		[Algorithm_Class80000]
 		[Algorithm_Class90005]
-		[Algorithm_Class90000]
 		[Algorithm_Class20011]
 		[Algorithm_Class1])
 	(cloNamespace [Algorithm_Class10001])
@@ -65,7 +62,7 @@
 
 ([Algorithm_Class10006] of  CloFunction
 
-	(source "(if (= (count obs) 1)\n  (ob-to-code (first obs))\n  (vec (map ob-to-code obs)))")
+	(source "(if (= (count obs) 1)\n  (first obs)\n  (vec obs))")
 	(title "trans-obs [obs]"))
 
 ([Algorithm_Class20000] of  CloVar
@@ -80,7 +77,7 @@
 
 ([Algorithm_Class20011] of  CloFunction
 
-	(source "(do-trace inst id)\n(if (some? inst)\n  (condp = (typ inst)\n    \"Process\" (do-process inst id)\n    \"Decision\" (do-decision inst id)\n    \"PredefinedProcess\" (do-preproc inst id)\n    \"Input\" (do-input inst id)\n    \"Concurrent\" (do-concurrent inst id)\n    \"Wait\" (do-wait inst id)\n    (do (println (str \"Unknown type: \" typ)) nil))\n  id)")
+	(source "(do-trace inst id)\n(if (some? inst)\n  (condp = (typ inst)\n    \"Process\" (do-process inst id)\n    \"Decision\" (do-decision inst id)\n    \"PredefinedProcess\" (do-preproc inst id)\n    \"Input\" (do-input inst id)\n    \"Concurrent\" (do-concurrent inst id)\n    \"Wait\" id\n    (do (println (str \"Unknown type: \" typ)) nil))\n  id)")
 	(title "do-next [inst id]"))
 
 ([Algorithm_Class20013] of  CloFunction
@@ -130,8 +127,8 @@
 
 ([Algorithm_Class50000] of  CloFunction
 
-	(source "(do-trace prep bnd)\n(do-next (sv prep \"next\") (do-algorithm (sv prep \"algorithm\") bnd))")
-	(title "do-preproc [prep bnd]"))
+	(source "(if-let [pmap (get-global id)]\n  (if-let [pmap2 (if-let [id2 (do-algorithm (sv prep \"algorithm\") pmap)]\n	   (get-global id2))]\n    (set-global id (merge pmap pmap2))))\n(do-next (sv prep \"next\") id)")
+	(title "do-preproc [prep id]"))
 
 ([Algorithm_Class50001] of  CloFunction
 
@@ -163,21 +160,12 @@
 	(source "`(.getInstance *kb*  ~(.getName ob))")
 	(title "ob-to-code [ob]"))
 
-([Algorithm_Class70009] of  CloFunction
-
-	(source "(cond\n  (vector? val) (vec (map val-to-code val))\n  (seq? val) (map val-to-code val)\n  (instance? Instance val) (ob-to-code val)\n  true val)")
-	(title "val-to-code [val]"))
-
 ([Algorithm_Class80000] of  CloFunction
 
-	(source "(loop [y lst z []]\n  (if (seq y)\n    (let [[h & t] y]\n      (recur t\n        (if (or (= h '_) (some #{h} z))\n          z\n          (conj z h))))\n    z))")
-	(title "only1 [lst]"))
-
-([Algorithm_Class90000] of  CloFunction
-
-	(title "do-wait [wait id]"))
+	(source "(apply merge (map get-global (map deref futs)))")
+	(title "wait-concurrent-pmap [futs]"))
 
 ([Algorithm_Class90005] of  CloFunction
 
-	(source "(do-trace conc bnd)\n(do-next (sv (sv conc \"wait\") \"next\")\n               id\n               (mapcat #(deref %) \n	    (loop [curs (svs conc \"currents\") futs []]\n	      (if (seq curs)\n	        (recur (rest curs) (conj futs (future (do-next (first curs) bnd))))\n	        futs))))")
-	(title "do-concurrent [conc id bnd]"))
+	(source "(loop [curs (svs conc \"currents\") futs []]\n  (if (seq curs)\n    (recur (rest curs) \n              (conj futs \n	(future (let [id2 (name (gensym id))]\n	             (set-global id2 (get-global id))\n	             (do-next (first curs) id2)))))\n    (do\n      (set-global id (wait-concurrent-pmap futs))\n      (do-next (sv (sv conc \"wait\") \"next\") id))))")
+	(title "do-concurrent [conc id]"))

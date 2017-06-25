@@ -1,7 +1,569 @@
-; Sat Jun 24 21:07:52 MSK 2017
+; Sun Jun 25 22:18:12 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([AlgorithmExamples_ProjectKB_Class1000] of  Map_Entry
+
+	(key "1")
+	(key_class "java.lang.String")
+	(value "267,400")
+	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
+
+([AlgorithmExamples_ProjectKB_Class1001] of  Map_Entry
+
+	(key "AlgorithmExamples_Class40000+AlgorithmExamples_Class60000")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class999")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1002] of  Map_Entry
+
+	(key "AlgorithmExamples_Class40000")
+	(key_class "java.lang.String")
+	(value "240 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1003] of  Map_Entry
+
+	(key "AlgorithmExamples_Class50018")
+	(key_class "java.lang.String")
+	(value "156 70 88 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1004] of  Map_Entry
+
+	(key "AlgorithmExamples_Class60000")
+	(key_class "java.lang.String")
+	(value "170 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1005] of  Map_Entry
+
+	(key "AlgorithmExamples_Class60001")
+	(key_class "java.lang.String")
+	(value "70 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1006] of  Map_Entry
+
+	(key "AlgorithmExamples_Class50020")
+	(key_class "java.lang.String")
+	(value "170 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1007] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class50017.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class998")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1008] of  Map
+
+	(entries
+		[AlgorithmExamples_ProjectKB_Class1009]
+		[AlgorithmExamples_ProjectKB_Class1010]
+		[AlgorithmExamples_ProjectKB_Class1011]
+		[AlgorithmExamples_ProjectKB_Class1012]
+		[AlgorithmExamples_ProjectKB_Class1013]
+		[AlgorithmExamples_ProjectKB_Class1014]
+		[AlgorithmExamples_ProjectKB_Class1015]))
+
+([AlgorithmExamples_ProjectKB_Class1009] of  Map_Entry
+
+	(key "AlgorithmExamples_Class70004")
+	(key_class "java.lang.String")
+	(value "200 500 79 79")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1010] of  Map_Entry
+
+	(key "AlgorithmExamples_Class70005")
+	(key_class "java.lang.String")
+	(value "80 500 83 79")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1011] of  Map_Entry
+
+	(key "AlgorithmExamples_Class120000")
+	(key_class "java.lang.String")
+	(value "340 500 78 79")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1012] of  Map_Entry
+
+	(key "AlgorithmExamples_Class70002")
+	(key_class "java.lang.String")
+	(value "200 200 80 78")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1013] of  Map_Entry
+
+	(key "AlgorithmExamples_Class70003")
+	(key_class "java.lang.String")
+	(value "200 340 83 80")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1014] of  Map_Entry
+
+	(key "AlgorithmExamples_Class100003")
+	(key_class "java.lang.String")
+	(value "340 640 79 81")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1015] of  Map_Entry
+
+	(key "AlgorithmExamples_Class70001")
+	(key_class "java.lang.String")
+	(value "180 40 120 64")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1016] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class70000.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1008")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1017] of  Map
+
+	(entries
+		[AlgorithmExamples_ProjectKB_Class1018]
+		[AlgorithmExamples_ProjectKB_Class1019]
+		[AlgorithmExamples_ProjectKB_Class1020]
+		[AlgorithmExamples_ProjectKB_Class1021]
+		[AlgorithmExamples_ProjectKB_Class1022]
+		[AlgorithmExamples_ProjectKB_Class1025]
+		[AlgorithmExamples_ProjectKB_Class1026]
+		[AlgorithmExamples_ProjectKB_Class1029]))
+
+([AlgorithmExamples_ProjectKB_Class1018] of  Map_Entry
+
+	(key "AlgorithmExamples_Class7")
+	(key_class "java.lang.String")
+	(value "70 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1019] of  Map_Entry
+
+	(key "AlgorithmExamples_Class8")
+	(key_class "java.lang.String")
+	(value "420 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1020] of  Map_Entry
+
+	(key "AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "220 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1021] of  Map_Entry
+
+	(key "AlgorithmExamples_Class6")
+	(key_class "java.lang.String")
+	(value "170 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1022] of  Map_Entry
+
+	(key "AlgorithmExamples_Class4")
+	(key_class "java.lang.String")
+	(value "220 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1023] of  Map
+
+	(entries [AlgorithmExamples_ProjectKB_Class1024]))
+
+([AlgorithmExamples_ProjectKB_Class1024] of  Map_Entry
+
+	(key "1")
+	(key_class "java.lang.String")
+	(value "450,400")
+	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
+
+([AlgorithmExamples_ProjectKB_Class1025] of  Map_Entry
+
+	(key "AlgorithmExamples_Class8+AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1023")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1026] of  Map_Entry
+
+	(key "AlgorithmExamples_Class9")
+	(key_class "java.lang.String")
+	(value "320 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1027] of  Map
+
+	(entries [AlgorithmExamples_ProjectKB_Class1028]))
+
+([AlgorithmExamples_ProjectKB_Class1028] of  Map_Entry
+
+	(key "1")
+	(key_class "java.lang.String")
+	(value "100,400")
+	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
+
+([AlgorithmExamples_ProjectKB_Class1029] of  Map_Entry
+
+	(key "AlgorithmExamples_Class7+AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1027")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1030] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class3.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1017")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1031] of  Map
+
+	(entries
+		[AlgorithmExamples_ProjectKB_Class1032]
+		[AlgorithmExamples_ProjectKB_Class1033]
+		[AlgorithmExamples_ProjectKB_Class1034]
+		[AlgorithmExamples_ProjectKB_Class1035]
+		[AlgorithmExamples_ProjectKB_Class1036]
+		[AlgorithmExamples_ProjectKB_Class1039]
+		[AlgorithmExamples_ProjectKB_Class1040]
+		[AlgorithmExamples_ProjectKB_Class1043]))
+
+([AlgorithmExamples_ProjectKB_Class1032] of  Map_Entry
+
+	(key "AlgorithmExamples_Class7")
+	(key_class "java.lang.String")
+	(value "70 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1033] of  Map_Entry
+
+	(key "AlgorithmExamples_Class8")
+	(key_class "java.lang.String")
+	(value "420 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1034] of  Map_Entry
+
+	(key "AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "220 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1035] of  Map_Entry
+
+	(key "AlgorithmExamples_Class6")
+	(key_class "java.lang.String")
+	(value "170 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1036] of  Map_Entry
+
+	(key "AlgorithmExamples_Class4")
+	(key_class "java.lang.String")
+	(value "220 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1037] of  Map
+
+	(entries [AlgorithmExamples_ProjectKB_Class1038]))
+
+([AlgorithmExamples_ProjectKB_Class1038] of  Map_Entry
+
+	(key "1")
+	(key_class "java.lang.String")
+	(value "450,400")
+	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
+
+([AlgorithmExamples_ProjectKB_Class1039] of  Map_Entry
+
+	(key "AlgorithmExamples_Class8+AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1037")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1040] of  Map_Entry
+
+	(key "AlgorithmExamples_Class9")
+	(key_class "java.lang.String")
+	(value "320 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1041] of  Map
+
+	(entries [AlgorithmExamples_ProjectKB_Class1042]))
+
+([AlgorithmExamples_ProjectKB_Class1042] of  Map_Entry
+
+	(key "1")
+	(key_class "java.lang.String")
+	(value "100,400")
+	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
+
+([AlgorithmExamples_ProjectKB_Class1043] of  Map_Entry
+
+	(key "AlgorithmExamples_Class7+AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1041")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1044] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class20001.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1031")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1045] of  Map
+
+	(entries
+		[AlgorithmExamples_ProjectKB_Class1046]
+		[AlgorithmExamples_ProjectKB_Class1047]
+		[AlgorithmExamples_ProjectKB_Class1048]))
+
+([AlgorithmExamples_ProjectKB_Class1046] of  Map_Entry
+
+	(key "AlgorithmExamples_Class2")
+	(key_class "java.lang.String")
+	(value "70 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1047] of  Map_Entry
+
+	(key "AlgorithmExamples_Class10")
+	(key_class "java.lang.String")
+	(value "70 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1048] of  Map_Entry
+
+	(key "AlgorithmExamples_Class11")
+	(key_class "java.lang.String")
+	(value "70 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1049] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class30000.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1045")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1050] of  Map
+
+	(entries
+		[AlgorithmExamples_ProjectKB_Class1051]
+		[AlgorithmExamples_ProjectKB_Class1052]
+		[AlgorithmExamples_ProjectKB_Class1053]
+		[AlgorithmExamples_ProjectKB_Class1054]
+		[AlgorithmExamples_ProjectKB_Class1055]
+		[AlgorithmExamples_ProjectKB_Class1058]
+		[AlgorithmExamples_ProjectKB_Class1059]
+		[AlgorithmExamples_ProjectKB_Class1062]))
+
+([AlgorithmExamples_ProjectKB_Class1051] of  Map_Entry
+
+	(key "AlgorithmExamples_Class7")
+	(key_class "java.lang.String")
+	(value "420 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1052] of  Map_Entry
+
+	(key "AlgorithmExamples_Class8")
+	(key_class "java.lang.String")
+	(value "70 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1053] of  Map_Entry
+
+	(key "AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "220 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1054] of  Map_Entry
+
+	(key "AlgorithmExamples_Class6")
+	(key_class "java.lang.String")
+	(value "170 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1055] of  Map_Entry
+
+	(key "AlgorithmExamples_Class4")
+	(key_class "java.lang.String")
+	(value "220 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1056] of  Map
+
+	(entries [AlgorithmExamples_ProjectKB_Class1057]))
+
+([AlgorithmExamples_ProjectKB_Class1057] of  Map_Entry
+
+	(key "1")
+	(key_class "java.lang.String")
+	(value "100,400")
+	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
+
+([AlgorithmExamples_ProjectKB_Class1058] of  Map_Entry
+
+	(key "AlgorithmExamples_Class8+AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1056")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1059] of  Map_Entry
+
+	(key "AlgorithmExamples_Class9")
+	(key_class "java.lang.String")
+	(value "320 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1060] of  Map
+
+	(entries [AlgorithmExamples_ProjectKB_Class1061]))
+
+([AlgorithmExamples_ProjectKB_Class1061] of  Map_Entry
+
+	(key "1")
+	(key_class "java.lang.String")
+	(value "450,400")
+	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
+
+([AlgorithmExamples_ProjectKB_Class1062] of  Map_Entry
+
+	(key "AlgorithmExamples_Class7+AlgorithmExamples_Class5")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1060")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1063] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class20002.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1050")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1064] of  Map
+
+	(entries
+		[AlgorithmExamples_ProjectKB_Class1065]
+		[AlgorithmExamples_ProjectKB_Class1066]
+		[AlgorithmExamples_ProjectKB_Class1067]))
+
+([AlgorithmExamples_ProjectKB_Class1065] of  Map_Entry
+
+	(key "AlgorithmExamples_Class2")
+	(key_class "java.lang.String")
+	(value "70 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1066] of  Map_Entry
+
+	(key "AlgorithmExamples_Class10")
+	(key_class "java.lang.String")
+	(value "70 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1067] of  Map_Entry
+
+	(key "AlgorithmExamples_Class11")
+	(key_class "java.lang.String")
+	(value "70 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1068] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class1.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1064")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1069] of  Map
+
+	(entries
+		[AlgorithmExamples_ProjectKB_Class1070]
+		[AlgorithmExamples_ProjectKB_Class1071]
+		[AlgorithmExamples_ProjectKB_Class1072]
+		[AlgorithmExamples_ProjectKB_Class1073]))
+
+([AlgorithmExamples_ProjectKB_Class1070] of  Map_Entry
+
+	(key "AlgorithmExamples_Class13")
+	(key_class "java.lang.String")
+	(value "120 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1071] of  Map_Entry
+
+	(key "AlgorithmExamples_Class14")
+	(key_class "java.lang.String")
+	(value "120 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1072] of  Map_Entry
+
+	(key "AlgorithmExamples_Class15")
+	(key_class "java.lang.String")
+	(value "70 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1073] of  Map_Entry
+
+	(key "AlgorithmExamples_Class16")
+	(key_class "java.lang.String")
+	(value "220 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1074] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class12.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1069")
+	(value_class "java.util.Map"))
+
+([AlgorithmExamples_ProjectKB_Class1075] of  Map
+
+	(entries
+		[AlgorithmExamples_ProjectKB_Class1076]
+		[AlgorithmExamples_ProjectKB_Class1077]
+		[AlgorithmExamples_ProjectKB_Class1078]))
+
+([AlgorithmExamples_ProjectKB_Class1076] of  Map_Entry
+
+	(key "AlgorithmExamples_Class2")
+	(key_class "java.lang.String")
+	(value "70 70 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1077] of  Map_Entry
+
+	(key "AlgorithmExamples_Class10")
+	(key_class "java.lang.String")
+	(value "70 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1078] of  Map_Entry
+
+	(key "AlgorithmExamples_Class11")
+	(key_class "java.lang.String")
+	(value "70 370 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class1079] of  Map_Entry
+
+	(key "InstanceGraphWidget.AlgorithmExamples_Class20000.flow-chart")
+	(key_class "java.lang.String")
+	(value "AlgorithmExamples_ProjectKB_Class1075")
+	(value_class "java.util.Map"))
 
 ([AlgorithmExamples_ProjectKB_Class35] of  String
 
@@ -50,776 +612,195 @@
 ([AlgorithmExamples_ProjectKB_Class784] of  Property_List
 )
 
-([AlgorithmExamples_ProjectKB_Class874] of  String
+([AlgorithmExamples_ProjectKB_Class974] of  Map
 
-	(name "Jets")
-	(string_value "title"))
+	(entries [AlgorithmExamples_ProjectKB_Class975]))
 
-([AlgorithmExamples_ProjectKB_Class875] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class876]))
-
-([AlgorithmExamples_ProjectKB_Class876] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class975] of  Map_Entry
 
 	(key "AlgorithmExamples_Class10002")
 	(key_class "edu.stanford.smi.protege.model.Frame")
 	(value "-6 339 224 146")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class877] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class976] of  Map_Entry
 
 	(key "InstanceDisplay.yellow_stickies")
 	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class875")
+	(value "AlgorithmExamples_ProjectKB_Class974")
 	(value_class "java.util.Map"))
 
-([AlgorithmExamples_ProjectKB_Class878] of  Map
+([AlgorithmExamples_ProjectKB_Class977] of  Map
 
 	(entries
-		[AlgorithmExamples_ProjectKB_Class879]
-		[AlgorithmExamples_ProjectKB_Class880]
-		[AlgorithmExamples_ProjectKB_Class881]
-		[AlgorithmExamples_ProjectKB_Class882]))
+		[AlgorithmExamples_ProjectKB_Class978]
+		[AlgorithmExamples_ProjectKB_Class979]
+		[AlgorithmExamples_ProjectKB_Class980]
+		[AlgorithmExamples_ProjectKB_Class981]
+		[AlgorithmExamples_ProjectKB_Class982]))
 
-([AlgorithmExamples_ProjectKB_Class879] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class978] of  Map_Entry
 
 	(key "AlgorithmExamples_Class13")
 	(key_class "java.lang.String")
 	(value "120 70 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class880] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class979] of  Map_Entry
 
 	(key "AlgorithmExamples_Class14")
 	(key_class "java.lang.String")
 	(value "120 370 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class881] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class980] of  Map_Entry
 
 	(key "AlgorithmExamples_Class15")
 	(key_class "java.lang.String")
 	(value "70 220 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class882] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class981] of  Map_Entry
 
 	(key "AlgorithmExamples_Class16")
 	(key_class "java.lang.String")
 	(value "220 220 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class883] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class982] of  Map_Entry
+
+	(key "AlgorithmExamples_Class90000")
+	(key_class "java.lang.String")
+	(value "120 520 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([AlgorithmExamples_ProjectKB_Class983] of  Map_Entry
 
 	(key "InstanceGraphWidget.AlgorithmExamples_Class20003.flow-chart")
 	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class878")
+	(value "AlgorithmExamples_ProjectKB_Class977")
 	(value_class "java.util.Map"))
 
-([AlgorithmExamples_ProjectKB_Class884] of  Map
+([AlgorithmExamples_ProjectKB_Class984] of  Map
 
 	(entries
-		[AlgorithmExamples_ProjectKB_Class885]
-		[AlgorithmExamples_ProjectKB_Class886]
-		[AlgorithmExamples_ProjectKB_Class887]
-		[AlgorithmExamples_ProjectKB_Class888]
-		[AlgorithmExamples_ProjectKB_Class889]
-		[AlgorithmExamples_ProjectKB_Class890]
-		[AlgorithmExamples_ProjectKB_Class891]
-		[AlgorithmExamples_ProjectKB_Class892]
-		[AlgorithmExamples_ProjectKB_Class893]
-		[AlgorithmExamples_ProjectKB_Class894]
-		[AlgorithmExamples_ProjectKB_Class895]
-		[AlgorithmExamples_ProjectKB_Class896]))
+		[AlgorithmExamples_ProjectKB_Class985]
+		[AlgorithmExamples_ProjectKB_Class986]
+		[AlgorithmExamples_ProjectKB_Class987]
+		[AlgorithmExamples_ProjectKB_Class988]
+		[AlgorithmExamples_ProjectKB_Class989]
+		[AlgorithmExamples_ProjectKB_Class990]
+		[AlgorithmExamples_ProjectKB_Class991]
+		[AlgorithmExamples_ProjectKB_Class992]
+		[AlgorithmExamples_ProjectKB_Class993]
+		[AlgorithmExamples_ProjectKB_Class994]
+		[AlgorithmExamples_ProjectKB_Class995]
+		[AlgorithmExamples_ProjectKB_Class996]))
 
-([AlgorithmExamples_ProjectKB_Class885] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class985] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80012")
 	(key_class "java.lang.String")
 	(value "520 520 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class886] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class986] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80013")
 	(key_class "java.lang.String")
 	(value "320 70 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class887] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class987] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80014")
 	(key_class "java.lang.String")
 	(value "271 670 158 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class888] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class988] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80015")
 	(key_class "java.lang.String")
 	(value "320 820 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class889] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class989] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80016")
 	(key_class "java.lang.String")
 	(value "70 370 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class890] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class990] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80017")
 	(key_class "java.lang.String")
 	(value "220 370 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class891] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class991] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80018")
 	(key_class "java.lang.String")
 	(value "370 370 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class892] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class992] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80008")
 	(key_class "java.lang.String")
 	(value "281 203 139 95")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class893] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class993] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80019")
 	(key_class "java.lang.String")
 	(value "520 370 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class894] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class994] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80009")
 	(key_class "java.lang.String")
 	(value "70 520 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class895] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class995] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80010")
 	(key_class "java.lang.String")
 	(value "220 520 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class896] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class996] of  Map_Entry
 
 	(key "AlgorithmExamples_Class80011")
 	(key_class "java.lang.String")
 	(value "370 520 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([AlgorithmExamples_ProjectKB_Class897] of  Map_Entry
+([AlgorithmExamples_ProjectKB_Class997] of  Map_Entry
 
 	(key "InstanceGraphWidget.AlgorithmExamples_Class80007.flow-chart")
 	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class884")
+	(value "AlgorithmExamples_ProjectKB_Class984")
 	(value_class "java.util.Map"))
 
-([AlgorithmExamples_ProjectKB_Class898] of  Map
+([AlgorithmExamples_ProjectKB_Class998] of  Map
 
 	(entries
-		[AlgorithmExamples_ProjectKB_Class901]
-		[AlgorithmExamples_ProjectKB_Class902]
-		[AlgorithmExamples_ProjectKB_Class903]
-		[AlgorithmExamples_ProjectKB_Class904]
-		[AlgorithmExamples_ProjectKB_Class905]
-		[AlgorithmExamples_ProjectKB_Class906]))
-
-([AlgorithmExamples_ProjectKB_Class899] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class900]))
-
-([AlgorithmExamples_ProjectKB_Class900] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "310,399")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class901] of  Map_Entry
-
-	(key "AlgorithmExamples_Class40000+AlgorithmExamples_Class60000")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class899")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class902] of  Map_Entry
-
-	(key "AlgorithmExamples_Class40000")
-	(key_class "java.lang.String")
-	(value "280 520 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class903] of  Map_Entry
-
-	(key "AlgorithmExamples_Class50018")
-	(key_class "java.lang.String")
-	(value "140 60 88 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class904] of  Map_Entry
-
-	(key "AlgorithmExamples_Class60000")
-	(key_class "java.lang.String")
-	(value "170 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class905] of  Map_Entry
-
-	(key "AlgorithmExamples_Class60001")
-	(key_class "java.lang.String")
-	(value "70 520 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class906] of  Map_Entry
-
-	(key "AlgorithmExamples_Class50020")
-	(key_class "java.lang.String")
-	(value "170 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class907] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class50017.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class898")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class908] of  Map
-
-	(entries
-		[AlgorithmExamples_ProjectKB_Class909]
-		[AlgorithmExamples_ProjectKB_Class910]
-		[AlgorithmExamples_ProjectKB_Class911]
-		[AlgorithmExamples_ProjectKB_Class912]
-		[AlgorithmExamples_ProjectKB_Class915]
-		[AlgorithmExamples_ProjectKB_Class918]
-		[AlgorithmExamples_ProjectKB_Class919]))
-
-([AlgorithmExamples_ProjectKB_Class909] of  Map_Entry
-
-	(key "AlgorithmExamples_Class70004")
-	(key_class "java.lang.String")
-	(value "89 648 122 105")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class910] of  Map_Entry
-
-	(key "AlgorithmExamples_Class70005")
-	(key_class "java.lang.String")
-	(value "380 640 111 114")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class911] of  Map_Entry
-
-	(key "AlgorithmExamples_Class70002")
-	(key_class "java.lang.String")
-	(value "240 240 114 111")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class912] of  Map_Entry
-
-	(key "AlgorithmExamples_Class70003")
-	(key_class "java.lang.String")
-	(value "270 470 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class913] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class914]))
-
-([AlgorithmExamples_ProjectKB_Class914] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "373,566")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class915] of  Map_Entry
-
-	(key "AlgorithmExamples_Class70005+AlgorithmExamples_Class70003")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class913")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class916] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class917]))
-
-([AlgorithmExamples_ProjectKB_Class917] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "355,576")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class918] of  Map_Entry
-
-	(key "AlgorithmExamples_Class70003+AlgorithmExamples_Class70005")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class916")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class919] of  Map_Entry
-
-	(key "AlgorithmExamples_Class70001")
-	(key_class "java.lang.String")
-	(value "230 58 141 84")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class920] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class70000.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class908")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class921] of  Map
-
-	(entries
-		[AlgorithmExamples_ProjectKB_Class922]
-		[AlgorithmExamples_ProjectKB_Class923]
-		[AlgorithmExamples_ProjectKB_Class924]
-		[AlgorithmExamples_ProjectKB_Class925]
-		[AlgorithmExamples_ProjectKB_Class926]
-		[AlgorithmExamples_ProjectKB_Class929]
-		[AlgorithmExamples_ProjectKB_Class930]
-		[AlgorithmExamples_ProjectKB_Class933]))
-
-([AlgorithmExamples_ProjectKB_Class922] of  Map_Entry
-
-	(key "AlgorithmExamples_Class7")
-	(key_class "java.lang.String")
-	(value "70 520 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class923] of  Map_Entry
-
-	(key "AlgorithmExamples_Class8")
-	(key_class "java.lang.String")
-	(value "420 520 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class924] of  Map_Entry
-
-	(key "AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "220 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class925] of  Map_Entry
-
-	(key "AlgorithmExamples_Class6")
-	(key_class "java.lang.String")
-	(value "170 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class926] of  Map_Entry
-
-	(key "AlgorithmExamples_Class4")
-	(key_class "java.lang.String")
-	(value "220 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class927] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class928]))
-
-([AlgorithmExamples_ProjectKB_Class928] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "450,400")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class929] of  Map_Entry
-
-	(key "AlgorithmExamples_Class8+AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class927")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class930] of  Map_Entry
-
-	(key "AlgorithmExamples_Class9")
-	(key_class "java.lang.String")
-	(value "320 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class931] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class932]))
-
-([AlgorithmExamples_ProjectKB_Class932] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "100,400")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class933] of  Map_Entry
-
-	(key "AlgorithmExamples_Class7+AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class931")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class934] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class3.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class921")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class935] of  Map
-
-	(entries
-		[AlgorithmExamples_ProjectKB_Class936]
-		[AlgorithmExamples_ProjectKB_Class937]
-		[AlgorithmExamples_ProjectKB_Class938]
-		[AlgorithmExamples_ProjectKB_Class939]
-		[AlgorithmExamples_ProjectKB_Class940]
-		[AlgorithmExamples_ProjectKB_Class943]
-		[AlgorithmExamples_ProjectKB_Class944]
-		[AlgorithmExamples_ProjectKB_Class947]))
-
-([AlgorithmExamples_ProjectKB_Class936] of  Map_Entry
-
-	(key "AlgorithmExamples_Class7")
-	(key_class "java.lang.String")
-	(value "70 520 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class937] of  Map_Entry
-
-	(key "AlgorithmExamples_Class8")
-	(key_class "java.lang.String")
-	(value "420 520 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class938] of  Map_Entry
-
-	(key "AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "220 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class939] of  Map_Entry
-
-	(key "AlgorithmExamples_Class6")
-	(key_class "java.lang.String")
-	(value "170 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class940] of  Map_Entry
-
-	(key "AlgorithmExamples_Class4")
-	(key_class "java.lang.String")
-	(value "220 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class941] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class942]))
-
-([AlgorithmExamples_ProjectKB_Class942] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "450,400")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class943] of  Map_Entry
-
-	(key "AlgorithmExamples_Class8+AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class941")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class944] of  Map_Entry
-
-	(key "AlgorithmExamples_Class9")
-	(key_class "java.lang.String")
-	(value "320 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class945] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class946]))
-
-([AlgorithmExamples_ProjectKB_Class946] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "100,400")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class947] of  Map_Entry
-
-	(key "AlgorithmExamples_Class7+AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class945")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class948] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class20001.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class935")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class949] of  Map
-
-	(entries
-		[AlgorithmExamples_ProjectKB_Class950]
-		[AlgorithmExamples_ProjectKB_Class951]
-		[AlgorithmExamples_ProjectKB_Class952]))
-
-([AlgorithmExamples_ProjectKB_Class950] of  Map_Entry
-
-	(key "AlgorithmExamples_Class2")
-	(key_class "java.lang.String")
-	(value "70 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class951] of  Map_Entry
-
-	(key "AlgorithmExamples_Class10")
-	(key_class "java.lang.String")
-	(value "70 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class952] of  Map_Entry
-
-	(key "AlgorithmExamples_Class11")
-	(key_class "java.lang.String")
-	(value "70 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class953] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class30000.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class949")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class954] of  Map
-
-	(entries
-		[AlgorithmExamples_ProjectKB_Class955]
-		[AlgorithmExamples_ProjectKB_Class956]
-		[AlgorithmExamples_ProjectKB_Class957]
-		[AlgorithmExamples_ProjectKB_Class958]
-		[AlgorithmExamples_ProjectKB_Class959]
-		[AlgorithmExamples_ProjectKB_Class962]
-		[AlgorithmExamples_ProjectKB_Class963]
-		[AlgorithmExamples_ProjectKB_Class966]))
-
-([AlgorithmExamples_ProjectKB_Class955] of  Map_Entry
-
-	(key "AlgorithmExamples_Class7")
-	(key_class "java.lang.String")
-	(value "420 520 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class956] of  Map_Entry
-
-	(key "AlgorithmExamples_Class8")
-	(key_class "java.lang.String")
-	(value "70 520 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class957] of  Map_Entry
-
-	(key "AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "220 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class958] of  Map_Entry
-
-	(key "AlgorithmExamples_Class6")
-	(key_class "java.lang.String")
-	(value "170 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class959] of  Map_Entry
-
-	(key "AlgorithmExamples_Class4")
-	(key_class "java.lang.String")
-	(value "220 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class960] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class961]))
-
-([AlgorithmExamples_ProjectKB_Class961] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "100,400")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class962] of  Map_Entry
-
-	(key "AlgorithmExamples_Class8+AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class960")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class963] of  Map_Entry
-
-	(key "AlgorithmExamples_Class9")
-	(key_class "java.lang.String")
-	(value "320 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class964] of  Map
-
-	(entries [AlgorithmExamples_ProjectKB_Class965]))
-
-([AlgorithmExamples_ProjectKB_Class965] of  Map_Entry
-
-	(key "1")
-	(key_class "java.lang.String")
-	(value "450,400")
-	(value_class "edu.stanford.smi.protegex.widget.graph.GraphPoint"))
-
-([AlgorithmExamples_ProjectKB_Class966] of  Map_Entry
-
-	(key "AlgorithmExamples_Class7+AlgorithmExamples_Class5")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class964")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class967] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class20002.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class954")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class968] of  Map
-
-	(entries
-		[AlgorithmExamples_ProjectKB_Class969]
-		[AlgorithmExamples_ProjectKB_Class970]
-		[AlgorithmExamples_ProjectKB_Class971]))
-
-([AlgorithmExamples_ProjectKB_Class969] of  Map_Entry
-
-	(key "AlgorithmExamples_Class2")
-	(key_class "java.lang.String")
-	(value "70 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class970] of  Map_Entry
-
-	(key "AlgorithmExamples_Class10")
-	(key_class "java.lang.String")
-	(value "70 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class971] of  Map_Entry
-
-	(key "AlgorithmExamples_Class11")
-	(key_class "java.lang.String")
-	(value "70 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class972] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class1.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class968")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class973] of  Map
-
-	(entries
-		[AlgorithmExamples_ProjectKB_Class974]
-		[AlgorithmExamples_ProjectKB_Class975]
-		[AlgorithmExamples_ProjectKB_Class976]
-		[AlgorithmExamples_ProjectKB_Class977]))
-
-([AlgorithmExamples_ProjectKB_Class974] of  Map_Entry
-
-	(key "AlgorithmExamples_Class13")
-	(key_class "java.lang.String")
-	(value "120 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class975] of  Map_Entry
-
-	(key "AlgorithmExamples_Class14")
-	(key_class "java.lang.String")
-	(value "120 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class976] of  Map_Entry
-
-	(key "AlgorithmExamples_Class15")
-	(key_class "java.lang.String")
-	(value "70 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class977] of  Map_Entry
-
-	(key "AlgorithmExamples_Class16")
-	(key_class "java.lang.String")
-	(value "220 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class978] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class12.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class973")
-	(value_class "java.util.Map"))
-
-([AlgorithmExamples_ProjectKB_Class979] of  Map
-
-	(entries
-		[AlgorithmExamples_ProjectKB_Class980]
-		[AlgorithmExamples_ProjectKB_Class981]
-		[AlgorithmExamples_ProjectKB_Class982]))
-
-([AlgorithmExamples_ProjectKB_Class980] of  Map_Entry
-
-	(key "AlgorithmExamples_Class2")
-	(key_class "java.lang.String")
-	(value "70 70 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class981] of  Map_Entry
-
-	(key "AlgorithmExamples_Class10")
-	(key_class "java.lang.String")
-	(value "70 220 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class982] of  Map_Entry
-
-	(key "AlgorithmExamples_Class11")
-	(key_class "java.lang.String")
-	(value "70 370 60 60")
-	(value_class "java.awt.Rectangle"))
-
-([AlgorithmExamples_ProjectKB_Class983] of  Map_Entry
-
-	(key "InstanceGraphWidget.AlgorithmExamples_Class20000.flow-chart")
-	(key_class "java.lang.String")
-	(value "AlgorithmExamples_ProjectKB_Class979")
-	(value_class "java.util.Map"))
+		[AlgorithmExamples_ProjectKB_Class1001]
+		[AlgorithmExamples_ProjectKB_Class1002]
+		[AlgorithmExamples_ProjectKB_Class1003]
+		[AlgorithmExamples_ProjectKB_Class1004]
+		[AlgorithmExamples_ProjectKB_Class1005]
+		[AlgorithmExamples_ProjectKB_Class1006]))
+
+([AlgorithmExamples_ProjectKB_Class999] of  Map
+
+	(entries [AlgorithmExamples_ProjectKB_Class1000]))
 
 ([ANNOTATED_INSTANCE_WIDGET] of  Widget
 
@@ -837,8 +818,7 @@
 	(y 0))
 
 ([BROWSER_SLOT_NAMES] of  Property_List
-
-	(properties [AlgorithmExamples_ProjectKB_Class874]))
+)
 
 ([CLSES_TAB] of  Widget
 
@@ -883,123 +863,123 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_046501_Class857] of  Map
+([KB_525315_Class851] of  Map
 
 	(entries
-		[KB_046501_Class858]
-		[KB_046501_Class860]
-		[KB_046501_Class865]
-		[KB_046501_Class866]
-		[KB_046501_Class872]
-		[KB_046501_Class873])
+		[KB_525315_Class852]
+		[KB_525315_Class854]
+		[KB_525315_Class859]
+		[KB_525315_Class860]
+		[KB_525315_Class866]
+		[KB_525315_Class867])
 	(referenced_maps
-		[KB_046501_Class859]
-		[KB_046501_Class867]
-		[KB_046501_Class861]))
+		[KB_525315_Class855]
+		[KB_525315_Class861]
+		[KB_525315_Class853]))
 
-([KB_046501_Class858] of  Map_Entry
+([KB_525315_Class852] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_046501_Class859] of  Map
+([KB_525315_Class853] of  Map
 )
 
-([KB_046501_Class860] of  Map_Entry
+([KB_525315_Class854] of  Map_Entry
 
 	(key "InstanceGraphWidget.Algorithm_Class0.flow-chart")
 	(key_class "java.lang.String")
-	(value "KB_046501_Class859")
+	(value "KB_525315_Class853")
 	(value_class "java.util.Map"))
 
-([KB_046501_Class861] of  Map
+([KB_525315_Class855] of  Map
 
 	(entries
-		[KB_046501_Class862]
-		[KB_046501_Class863]
-		[KB_046501_Class864]))
+		[KB_525315_Class856]
+		[KB_525315_Class857]
+		[KB_525315_Class858]))
 
-([KB_046501_Class862] of  Map_Entry
+([KB_525315_Class856] of  Map_Entry
 
 	(key "Algorithm_Class80012")
 	(key_class "java.lang.String")
 	(value "70 370 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([KB_046501_Class863] of  Map_Entry
+([KB_525315_Class857] of  Map_Entry
 
 	(key "Algorithm_Class80004")
 	(key_class "java.lang.String")
 	(value "70 70 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([KB_046501_Class864] of  Map_Entry
+([KB_525315_Class858] of  Map_Entry
 
 	(key "Algorithm_Class100003")
 	(key_class "java.lang.String")
 	(value "70 220 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([KB_046501_Class865] of  Map_Entry
+([KB_525315_Class859] of  Map_Entry
 
 	(key "InstanceGraphWidget.Algorithm_Class80003.flow-chart")
 	(key_class "java.lang.String")
-	(value "KB_046501_Class861")
+	(value "KB_525315_Class855")
 	(value_class "java.util.Map"))
 
-([KB_046501_Class866] of  Map_Entry
+([KB_525315_Class860] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([KB_046501_Class867] of  Map
+([KB_525315_Class861] of  Map
 
 	(entries
-		[KB_046501_Class868]
-		[KB_046501_Class869]
-		[KB_046501_Class870]
-		[KB_046501_Class871]))
+		[KB_525315_Class862]
+		[KB_525315_Class863]
+		[KB_525315_Class864]
+		[KB_525315_Class865]))
 
-([KB_046501_Class868] of  Map_Entry
+([KB_525315_Class862] of  Map_Entry
 
 	(key "Algorithm_Class80001")
 	(key_class "java.lang.String")
 	(value "120 70 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([KB_046501_Class869] of  Map_Entry
+([KB_525315_Class863] of  Map_Entry
 
 	(key "Algorithm_Class90003")
 	(key_class "java.lang.String")
 	(value "220 220 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([KB_046501_Class870] of  Map_Entry
+([KB_525315_Class864] of  Map_Entry
 
 	(key "Algorithm_Class90004")
 	(key_class "java.lang.String")
 	(value "120 370 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([KB_046501_Class871] of  Map_Entry
+([KB_525315_Class865] of  Map_Entry
 
 	(key "Algorithm_Class90002")
 	(key_class "java.lang.String")
 	(value "70 220 60 60")
 	(value_class "java.awt.Rectangle"))
 
-([KB_046501_Class872] of  Map_Entry
+([KB_525315_Class866] of  Map_Entry
 
 	(key "InstanceGraphWidget.Algorithm_Class80000.flow-chart")
 	(key_class "java.lang.String")
-	(value "KB_046501_Class867")
+	(value "KB_525315_Class861")
 	(value_class "java.util.Map"))
 
-([KB_046501_Class873] of  Map_Entry
+([KB_525315_Class867] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
@@ -1014,40 +994,38 @@
 ([KB_945933_Class1] of  Map
 
 	(entries
-		[AlgorithmExamples_ProjectKB_Class877]
-		[AlgorithmExamples_ProjectKB_Class883]
-		[AlgorithmExamples_ProjectKB_Class897]
-		[AlgorithmExamples_ProjectKB_Class907]
-		[AlgorithmExamples_ProjectKB_Class920]
-		[AlgorithmExamples_ProjectKB_Class934]
-		[AlgorithmExamples_ProjectKB_Class948]
-		[AlgorithmExamples_ProjectKB_Class953]
-		[AlgorithmExamples_ProjectKB_Class967]
-		[AlgorithmExamples_ProjectKB_Class972]
-		[AlgorithmExamples_ProjectKB_Class978]
-		[AlgorithmExamples_ProjectKB_Class983])
+		[AlgorithmExamples_ProjectKB_Class976]
+		[AlgorithmExamples_ProjectKB_Class983]
+		[AlgorithmExamples_ProjectKB_Class997]
+		[AlgorithmExamples_ProjectKB_Class1007]
+		[AlgorithmExamples_ProjectKB_Class1016]
+		[AlgorithmExamples_ProjectKB_Class1030]
+		[AlgorithmExamples_ProjectKB_Class1044]
+		[AlgorithmExamples_ProjectKB_Class1049]
+		[AlgorithmExamples_ProjectKB_Class1063]
+		[AlgorithmExamples_ProjectKB_Class1068]
+		[AlgorithmExamples_ProjectKB_Class1074]
+		[AlgorithmExamples_ProjectKB_Class1079])
 	(referenced_maps
-		[AlgorithmExamples_ProjectKB_Class960]
-		[AlgorithmExamples_ProjectKB_Class973]
-		[AlgorithmExamples_ProjectKB_Class884]
-		[AlgorithmExamples_ProjectKB_Class898]
-		[AlgorithmExamples_ProjectKB_Class931]
-		[AlgorithmExamples_ProjectKB_Class964]
-		[AlgorithmExamples_ProjectKB_Class875]
-		[AlgorithmExamples_ProjectKB_Class941]
-		[AlgorithmExamples_ProjectKB_Class878]
-		[AlgorithmExamples_ProjectKB_Class899]
-		[AlgorithmExamples_ProjectKB_Class921]
-		[AlgorithmExamples_ProjectKB_Class954]
-		[AlgorithmExamples_ProjectKB_Class913]
-		[AlgorithmExamples_ProjectKB_Class935]
-		[AlgorithmExamples_ProjectKB_Class968]
-		[AlgorithmExamples_ProjectKB_Class979]
-		[AlgorithmExamples_ProjectKB_Class945]
-		[AlgorithmExamples_ProjectKB_Class916]
-		[AlgorithmExamples_ProjectKB_Class927]
-		[AlgorithmExamples_ProjectKB_Class949]
-		[AlgorithmExamples_ProjectKB_Class908]))
+		[AlgorithmExamples_ProjectKB_Class1008]
+		[AlgorithmExamples_ProjectKB_Class1027]
+		[AlgorithmExamples_ProjectKB_Class1017]
+		[AlgorithmExamples_ProjectKB_Class1069]
+		[AlgorithmExamples_ProjectKB_Class1037]
+		[AlgorithmExamples_ProjectKB_Class1023]
+		[AlgorithmExamples_ProjectKB_Class1045]
+		[AlgorithmExamples_ProjectKB_Class1056]
+		[AlgorithmExamples_ProjectKB_Class1041]
+		[AlgorithmExamples_ProjectKB_Class1031]
+		[AlgorithmExamples_ProjectKB_Class1064]
+		[AlgorithmExamples_ProjectKB_Class1075]
+		[AlgorithmExamples_ProjectKB_Class984]
+		[AlgorithmExamples_ProjectKB_Class1050]
+		[AlgorithmExamples_ProjectKB_Class974]
+		[AlgorithmExamples_ProjectKB_Class1060]
+		[AlgorithmExamples_ProjectKB_Class977]
+		[AlgorithmExamples_ProjectKB_Class999]
+		[AlgorithmExamples_ProjectKB_Class998]))
 
 ([KB_945933_Class11] of  Property_List
 

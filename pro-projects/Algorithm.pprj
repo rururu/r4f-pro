@@ -1,4 +1,4 @@
-; Sat Jun 24 21:45:50 MSK 2017
+; Sun Jun 25 21:31:22 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -42,6 +42,11 @@
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
+
+([Algorithm_ProjectKB_Class20370] of  String
+
+	(name "Input")
+	(string_value "title"))
 
 ([Algorithm_ProjectKB_Class20371] of  Widget
 
@@ -173,8 +178,7 @@
 	(properties
 		[Algorithm_ProjectKB_Class20443]
 		[Algorithm_ProjectKB_Class20444]
-		[Algorithm_ProjectKB_Class20446]
-		[Algorithm_ProjectKB_Class20450]))
+		[Algorithm_ProjectKB_Class20446]))
 
 ([Algorithm_ProjectKB_Class20443] of  Property_List
 
@@ -203,13 +207,14 @@
 	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
 	(width 200)
 	(x 0)
-	(y 180))
+	(y 60))
 
 ([Algorithm_ProjectKB_Class20447] of  Property_List
 
 	(properties
 		[Algorithm_ProjectKB_Class20448]
-		[Algorithm_ProjectKB_Class20449]))
+		[Algorithm_ProjectKB_Class20449]
+		[Algorithm_ProjectKB_Class370]))
 
 ([Algorithm_ProjectKB_Class20448] of  Boolean
 
@@ -217,33 +222,6 @@
 	(name "ButtonDisplayed-View References to Value"))
 
 ([Algorithm_ProjectKB_Class20449] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
-
-([Algorithm_ProjectKB_Class20450] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "waiting")
-	(property_list [Algorithm_ProjectKB_Class20451])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 0)
-	(y 60))
-
-([Algorithm_ProjectKB_Class20451] of  Property_List
-
-	(properties
-		[Algorithm_ProjectKB_Class20452]
-		[Algorithm_ProjectKB_Class20453]))
-
-([Algorithm_ProjectKB_Class20452] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([Algorithm_ProjectKB_Class20453] of  Boolean
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Стереть Выделенный Экземпляр"))
@@ -643,10 +621,10 @@
 ([Algorithm_ProjectKB_Class364] of  Property_List
 )
 
-([Algorithm_ProjectKB_Class370] of  String
+([Algorithm_ProjectKB_Class370] of  Boolean
 
-	(name "Input")
-	(string_value "title"))
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
 
 ([Algorithm_ProjectKB_Class371] of  Boolean
 
@@ -1612,7 +1590,7 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Algorithm_ProjectKB_Class370]
+		[Algorithm_ProjectKB_Class20370]
 		[Algorithm_ProjectKB_Class30371]
 		[Algorithm_ProjectKB_Class30372]
 		[Algorithm_ProjectKB_Class30373]
@@ -1663,6 +1641,34 @@
 
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
+
+([KB_080480_Class366] of  Map
+
+	(entries
+		[KB_080480_Class367]
+		[KB_080480_Class368]
+		[KB_080480_Class369]))
+
+([KB_080480_Class367] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_080480_Class368] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_080480_Class369] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([KB_084192_Class0] of  String
 
@@ -1772,34 +1778,6 @@
 
 	(name "instances_file_name")
 	(string_value "Algorithm.pins"))
-
-([KB_882759_Class366] of  Map
-
-	(entries
-		[KB_882759_Class367]
-		[KB_882759_Class368]
-		[KB_882759_Class369]))
-
-([KB_882759_Class367] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([KB_882759_Class368] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([KB_882759_Class369] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
 
 ([LAYOUT_PROPERTIES] of  Property_List
 

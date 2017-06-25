@@ -1,4 +1,4 @@
-; Sat Jun 24 21:45:50 MSK 2017
+; Sun Jun 25 21:31:22 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -15,7 +15,6 @@
 	(multislot currents
 		(type INSTANCE)
 ;+		(allowed-classes Process Decision Input PredefinedProcess)
-;+		(inverse-slot waiting)
 		(create-accessor read-write))
 	(multislot flow-chart
 		(type INSTANCE)
@@ -47,7 +46,7 @@
 		(create-accessor read-write))
 	(multislot variants
 		(type INSTANCE)
-;+		(allowed-classes Process Decision)
+;+		(allowed-classes Process Decision Input Concurrent Wait PredefinedProcess)
 		(create-accessor read-write))
 	(single-slot begin
 		(type INSTANCE)
@@ -72,11 +71,6 @@
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(multislot waiting
-		(type INSTANCE)
-;+		(allowed-classes Decision Process Input PredefinedProcess)
-;+		(inverse-slot currents)
 		(create-accessor read-write)))
 
 (defclass Algorithm+Ontology
@@ -144,7 +138,7 @@
 		(create-accessor read-write))
 	(multislot variants
 		(type INSTANCE)
-;+		(allowed-classes Process Decision)
+;+		(allowed-classes Process Decision Input Concurrent Wait PredefinedProcess)
 		(create-accessor read-write)))
 
 (defclass Input
@@ -223,8 +217,4 @@
 	(multislot next
 		(type INSTANCE)
 ;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
-		(create-accessor read-write))
-	(multislot waiting
-		(type INSTANCE)
-;+		(allowed-classes Decision Process Input PredefinedProcess)
 		(create-accessor read-write)))

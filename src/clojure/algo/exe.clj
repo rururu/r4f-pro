@@ -18,13 +18,10 @@
 (defn uncomment [src]
   (rete.core/slurp-with-comments (java.io.StringReader. src)))
 
-(defn ob-to-code [ob]
-  `(.getInstance *kb*  ~(.getName ob)))
-
 (defn trans-obs [obs]
   (if (= (count obs) 1)
-  (ob-to-code (first obs))
-  (vec (map ob-to-code obs))))
+  (first obs)
+  (vec obs)))
 
 (defn destruct [lst]
   (mapcat #(if (symbol? %) [%] (destruct %)) lst))
@@ -34,23 +31,6 @@
       vars (destruct (map first p2))
       nams (map name vars)]
   (zipmap nams vars)))
-
-(defn val-to-code [val]
-  (cond
-  (vector? val) (vec (map val-to-code val))
-  (seq? val) (map val-to-code val)
-  (instance? Instance val) (ob-to-code val)
-  true val))
-
-(defn only1 [lst]
-  (loop [y lst z []]
-  (if (seq y)
-    (let [[h & t] y]
-      (recur t
-        (if (or (= h '_) (some #{h} z))
-          z
-          (conj z h))))
-    z)))
 
 (defn to-bnd [id]
   (if-let [pmap (get-global id)]
@@ -115,22 +95,27 @@
   (set-global id pmap)
   (do-next (sv algo "begin") id)))
 
-(defn do-preproc [prep bnd]
-  (do-trace prep bnd)
-(do-next (sv prep "next") (do-algorithm (sv prep "algorithm") bnd)))
+(defn do-preproc [prep id]
+  (if-let [pmap (get-global id)]
+  (if-let [pmap2 (if-let [id2 (do-algorithm (sv prep "algorithm") pmap)]
+	   (get-global id2))]
+    (set-global id (merge pmap pmap2))))
+(do-next (sv prep "next") id))
 
-(defn do-concurrent [conc id bnd]
-  (do-trace conc bnd)
-(do-next (sv (sv conc "wait") "next")
-               id
-               (mapcat #(deref %) 
-	    (loop [curs (svs conc "currents") futs []]
-	      (if (seq curs)
-	        (recur (rest curs) (conj futs (future (do-next (first curs) bnd))))
-	        futs)))))
+(defn wait-concurrent-pmap [futs]
+  (apply merge (map get-global (map deref futs))))
 
-(defn do-wait [wait id]
-)
+(defn do-concurrent [conc id]
+  (loop [curs (svs conc "currents") futs []]
+  (if (seq curs)
+    (recur (rest curs) 
+              (conj futs 
+	(future (let [id2 (name (gensym id))]
+	             (set-global id2 (get-global id))
+	             (do-next (first curs) id2)))))
+    (do
+      (set-global id (wait-concurrent-pmap futs))
+      (do-next (sv (sv conc "wait") "next") id)))))
 
 (defn do-next [inst id]
   (do-trace inst id)
@@ -141,7 +126,7 @@
     "PredefinedProcess" (do-preproc inst id)
     "Input" (do-input inst id)
     "Concurrent" (do-concurrent inst id)
-    "Wait" (do-wait inst id)
+    "Wait" id
     (do (println (str "Unknown type: " typ)) nil))
   id))
 

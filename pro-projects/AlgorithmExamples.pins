@@ -1,4 +1,4 @@
-; Sat Jun 24 21:07:52 MSK 2017
+; Sun Jun 25 22:18:12 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -25,6 +25,19 @@
 	(cloNamespace [Clojure_Class300001])
 	(title "Clojure Work"))
 
+([AlgorithmExamples_Class100000] of  CloFuncall
+
+	(source "(- 5)"))
+
+([AlgorithmExamples_Class100001] of  CloFuncall
+
+	(source "(- -5)"))
+
+([AlgorithmExamples_Class100003] of  Process
+
+	(code "_ (println (str \"Stop \" title))")
+	(title "pa3:End"))
+
 ([AlgorithmExamples_Class10001] of  WorkingPrograms
 
 	(cloPrograms
@@ -44,6 +57,40 @@
 	(algorithm [AlgorithmExamples_Class20002])
 	(title "E2"))
 
+([AlgorithmExamples_Class110000] of  CloFuncall
+
+	(source "(some #(> % 4) [1 2 3 4 5 6 7])"))
+
+([AlgorithmExamples_Class110001] of  CloFuncall
+
+	(source "(some #(if (> % 4) %) [1 2 3 4 5 6 7])"))
+
+([AlgorithmExamples_Class110002] of  CloFuncall
+
+	(source "(remove #(if (> % 4) %) [1 2 3 4 5 6 7])"))
+
+([AlgorithmExamples_Class110003] of  CloFuncall
+
+	(source "(remove #(if (= % 4) %) [1 2 3 4 5 6 7])"))
+
+([AlgorithmExamples_Class110004] of  CloFuncall
+
+	(source "(remove #{4} [1 2 3 4 5 6 7])"))
+
+([AlgorithmExamples_Class110005] of  CloFuncall
+
+	(source "(remove #(if (> % 14) %) [1 2 3 4 5 6 7])"))
+
+([AlgorithmExamples_Class110006] of  CloFuncall
+
+	(source "(some #(> % 14) [1 2 3 4 5 6 7])"))
+
+([AlgorithmExamples_Class120000] of  Process
+
+	(code "pmap (algo.exe/wait-concurrent-pmap futs)\n_ (println :RESULT pmap)")
+	(next [AlgorithmExamples_Class100003])
+	(title "pa3:Wait All Processes"))
+
 ([AlgorithmExamples_Class13] of  Concurrent
 
 	(currents
@@ -54,6 +101,7 @@
 
 ([AlgorithmExamples_Class14] of  Wait
 
+	(next [AlgorithmExamples_Class90000])
 	(title "W1"))
 
 ([AlgorithmExamples_Class15] of  Process
@@ -83,13 +131,13 @@
 		[AlgorithmExamples_Class11]
 		[AlgorithmExamples_Class10])
 	(title "A2")
-	(trace TRUE))
+	(trace FALSE))
 
 ([AlgorithmExamples_Class20002] of  Algorithm
 
 	(begin [AlgorithmExamples_Class4])
 	(but-start "Start/algo.exe/start-algorithm")
-	(debug TRUE)
+	(debug FALSE)
 	(flow-chart
 		[AlgorithmExamples_Class4]
 		[AlgorithmExamples_Class6]
@@ -98,7 +146,7 @@
 		[AlgorithmExamples_Class7]
 		[AlgorithmExamples_Class9])
 	(title "Euclid's GCD")
-	(trace TRUE))
+	(trace FALSE))
 
 ([AlgorithmExamples_Class20003] of  Algorithm
 
@@ -108,9 +156,10 @@
 		[AlgorithmExamples_Class13]
 		[AlgorithmExamples_Class15]
 		[AlgorithmExamples_Class16]
-		[AlgorithmExamples_Class14])
+		[AlgorithmExamples_Class14]
+		[AlgorithmExamples_Class90000])
 	(title "Paralgo1")
-	(trace TRUE))
+	(trace FALSE))
 
 ([AlgorithmExamples_Class30000] of  CloProgram
 
@@ -150,7 +199,7 @@
 
 ([AlgorithmExamples_Class40000] of  Process
 
-	(code "h (int (rand Hm))\ncd (int (rand Cm))\n[func red green blue] \n                   (let [r (func red cd)\n                          rgb [r (+ r Kg) (+ r Kb)]\n	  mxx (apply max rgb)\n	  mnn (apply min rgb)]\n	(cond\n	  (> mxx 255) [- red green blue]\n	  (< mnn 0) [+ red green blue]\n	  true (vec (cons func rgb))))\n_ (canvas/redraw-figure (str header round)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep timeout)")
+	(code "h (int (rand Hm))\ncd (int (rand Cm))\n[func red green blue] \n                   (let [trim-col (fn [c] (cond \n		(< c 0) (- c) \n		(> c 255) (- c 255)\n		true c))\n                          r (trim-col (func red cd))\n	  g (trim-col (+ Kg r))\n	  b (trim-col (+ Kb r))\n                          rgb [r g b]\n	  mxx (apply max rgb)\n	  mnn (apply min rgb)]\n	(cond\n	  (> mxx 255) [- red green blue]\n	  (< mnn 0) [+ red green blue]\n	  true (vec (cons func rgb))))\n_ (canvas/redraw-figure (str header round)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep timeout)")
 	(next [AlgorithmExamples_Class60000])
 	(title "wt:Progress"))
 
@@ -207,7 +256,7 @@
 
 ([AlgorithmExamples_Class50018] of  Input
 
-	(code "title \"Work Time\"\nx 10\ny 20\nw 5\nheader \"p1\"\ncolor [160 80 80]\nN 64\nHm 20\nCm 80\ntimeout 400")
+	(code "title \"Work Time\"\nx 10\ny 20\nw 5\nheader \"p1\"\ncolor [160 80 80]\nN 64\nHm 20\nCm 40\ntimeout 500")
 	(next [AlgorithmExamples_Class50020])
 	(title "wt:Input"))
 
@@ -254,41 +303,43 @@
 		[AlgorithmExamples_Class70002]
 		[AlgorithmExamples_Class70003]
 		[AlgorithmExamples_Class70004]
-		[AlgorithmExamples_Class70005])
+		[AlgorithmExamples_Class70005]
+		[AlgorithmExamples_Class100003]
+		[AlgorithmExamples_Class120000])
 	(title "Paralgo3")
-	(trace TRUE))
+	(trace FALSE))
 
 ([AlgorithmExamples_Class70001] of  Input
 
-	(code "x 4")
+	(code "Np 100\nstep 5")
 	(next [AlgorithmExamples_Class70002])
-	(object-rows
-		[AlgorithmExamples_Class80000]
-		[AlgorithmExamples_Class90004])
+	(object-rows [AlgorithmExamples_Class80000])
 	(title "pa3:Input Number of Processes"))
 
 ([AlgorithmExamples_Class70002] of  Process
 
-	(code "title \"Parallel Algorithm 3\"\nNp (protege.core/sv jets \"number\")\nstep (protege.core/sv jets \"step\")\npN 1\nXi 10\nw step\nx 0\n_ (canvas/canvas-frame \"Parallel Algorithm 2\" 500 800)\n_ (canvas/clear-figures)\n_ (println (str \"Start \" title))futs []")
+	(code "title \"Parallel Algorithm 3\"\ni 1\nXi step\nw step\nfuts []\n_ (canvas/canvas-frame title 500 800)\n_ (canvas/clear-figures)\n_ (println (str \"Start \" title))")
 	(next [AlgorithmExamples_Class70003])
 	(title "pa3:Init Start Loop"))
 
 ([AlgorithmExamples_Class70003] of  Decision
 
-	(code "variant (if (> pN Np) 1 2)")
+	(code "variant (if (> i Np) 2 1)")
 	(title "pa3:Loop done?")
 	(variants
-		[AlgorithmExamples_Class70004]
-		[AlgorithmExamples_Class70005]))
+		[AlgorithmExamples_Class70005]
+		[AlgorithmExamples_Class120000]))
 
 ([AlgorithmExamples_Class70004] of  Process
 
-	(title "pa3:Wait Completion of Processes"))
+	(code "i (inc i)\nXi (+ Xi step)")
+	(next [AlgorithmExamples_Class70003])
+	(title "pa3:Do Loop"))
 
 ([AlgorithmExamples_Class70005] of  Process
 
-	(code "futs (vec (protege.core/sv jets \"futures\"))\nfuts (conj futs\n                (future (algo.exe/do-algorithm algo (vector 'header (str \"A\" pN) 'x Xi))))\n_ (println :futs futs)\n_ (protege.core/ssv jets \"futures\" futs)\nXi (+ Xi step)")
-	(next [AlgorithmExamples_Class70003])
+	(code "color [(int (rand 255)) (int (rand 255)) (int (rand 255))]\nfuts (conj futs (future (algo.exe/do-algorithm algo\n	{\"x\" Xi \n	 \"header\" (str i)\n	 \"color\" color\n	 \"title\" title})))")
+	(next [AlgorithmExamples_Class70004])
 	(title "pa3:Start Single Process"))
 
 ([AlgorithmExamples_Class8] of  Process
@@ -401,13 +452,11 @@
 	(code "_ (println A)")
 	(title "PRINT A"))
 
-([AlgorithmExamples_Class90003] of  Jets
+([AlgorithmExamples_Class90000] of  Process
 
-	(number 4)
-	(step 5)
-	(title "Jets1"))
+	(code "_ (println :A A :B B)")
+	(title "S1"))
 
 ([AlgorithmExamples_Class90004] of  ObjectRow
 
-	(objects [AlgorithmExamples_Class90003])
 	(variable "jets"))

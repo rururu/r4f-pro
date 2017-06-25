@@ -1,4 +1,4 @@
-; Sat Jun 24 21:07:52 MSK 2017
+; Sun Jun 25 22:18:12 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,36 +6,4 @@
 
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
-	(role abstract)
-	(single-slot number
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot step
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot futures
-;+		(type ANY)
-;+		(cardinality 0 1)
-		(create-accessor read-write)))
-
-(defclass Jets
-	(is-a USER)
-	(role concrete)
-	(single-slot step
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot title
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot futures
-;+		(type ANY)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot number
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write)))
+	(role abstract))
