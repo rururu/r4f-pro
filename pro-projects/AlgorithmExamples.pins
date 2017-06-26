@@ -1,4 +1,4 @@
-; Sun Jun 25 22:18:12 MSK 2017
+; Mon Jun 26 18:53:48 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -25,14 +25,6 @@
 	(cloNamespace [Clojure_Class300001])
 	(title "Clojure Work"))
 
-([AlgorithmExamples_Class100000] of  CloFuncall
-
-	(source "(- 5)"))
-
-([AlgorithmExamples_Class100001] of  CloFuncall
-
-	(source "(- -5)"))
-
 ([AlgorithmExamples_Class100003] of  Process
 
 	(code "_ (println (str \"Stop \" title))")
@@ -57,37 +49,9 @@
 	(algorithm [AlgorithmExamples_Class20002])
 	(title "E2"))
 
-([AlgorithmExamples_Class110000] of  CloFuncall
-
-	(source "(some #(> % 4) [1 2 3 4 5 6 7])"))
-
-([AlgorithmExamples_Class110001] of  CloFuncall
-
-	(source "(some #(if (> % 4) %) [1 2 3 4 5 6 7])"))
-
-([AlgorithmExamples_Class110002] of  CloFuncall
-
-	(source "(remove #(if (> % 4) %) [1 2 3 4 5 6 7])"))
-
-([AlgorithmExamples_Class110003] of  CloFuncall
-
-	(source "(remove #(if (= % 4) %) [1 2 3 4 5 6 7])"))
-
-([AlgorithmExamples_Class110004] of  CloFuncall
-
-	(source "(remove #{4} [1 2 3 4 5 6 7])"))
-
-([AlgorithmExamples_Class110005] of  CloFuncall
-
-	(source "(remove #(if (> % 14) %) [1 2 3 4 5 6 7])"))
-
-([AlgorithmExamples_Class110006] of  CloFuncall
-
-	(source "(some #(> % 14) [1 2 3 4 5 6 7])"))
-
 ([AlgorithmExamples_Class120000] of  Process
 
-	(code "pmap (algo.exe/wait-concurrent-pmap futs)\n_ (println :RESULT pmap)")
+	(code "_ (println \"I am waiting..\")\npmap (algo.exe/wait-concurrent-pmap futs)\n_ (println :RESULT pmap)")
 	(next [AlgorithmExamples_Class100003])
 	(title "pa3:Wait All Processes"))
 
@@ -199,7 +163,7 @@
 
 ([AlgorithmExamples_Class40000] of  Process
 
-	(code "h (int (rand Hm))\ncd (int (rand Cm))\n[func red green blue] \n                   (let [trim-col (fn [c] (cond \n		(< c 0) (- c) \n		(> c 255) (- c 255)\n		true c))\n                          r (trim-col (func red cd))\n	  g (trim-col (+ Kg r))\n	  b (trim-col (+ Kb r))\n                          rgb [r g b]\n	  mxx (apply max rgb)\n	  mnn (apply min rgb)]\n	(cond\n	  (> mxx 255) [- red green blue]\n	  (< mnn 0) [+ red green blue]\n	  true (vec (cons func rgb))))\n_ (canvas/redraw-figure (str header round)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep timeout)")
+	(code "h (int (rand Hm))\ncd (int (rand Cm))\n[func red green blue] \n                   (let [trim-col (fn [c] (cond \n		(< c 0) (- c) \n		(> c 255) (- c 255)\n		true c))\n                          r (trim-col (func red cd))\n	  g (trim-col (+ Kg r))\n	  b (trim-col (+ Kb r))\n                          rgb [r g b]\n	  mxx (apply max rgb)\n	  mnn (apply min rgb)]\n	(cond\n	  (> mxx 255) [- red green blue]\n	  (< mnn 0) [+ red green blue]\n	  true (vec (cons func rgb))))\n_ (canvas/redraw-figure (gensym \"wt\")\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.fillRect g x y w h)))\ny (+ y h)\nround (+ round 1)\n_ (Thread/sleep timeout)")
 	(next [AlgorithmExamples_Class60000])
 	(title "wt:Progress"))
 
@@ -252,7 +216,7 @@
 		[AlgorithmExamples_Class60000]
 		[AlgorithmExamples_Class60001])
 	(title "Work Time")
-	(trace FALSE))
+	(trace TRUE))
 
 ([AlgorithmExamples_Class50018] of  Input
 
@@ -262,7 +226,7 @@
 
 ([AlgorithmExamples_Class50020] of  Process
 
-	(code "_ (if (= title \"Work Time\")\n     (canvas/canvas-frame title 800 800))\n_ (canvas/clear-figures header)\nround 1\nh Hm\n[red green blue] color\nKg (- green red)\nKb (- blue red)\nfunc +\n_ (canvas/redraw-figure (str header 0)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.drawString g header x y)))")
+	(code "round 1\nh Hm\n[red green blue] color\nKg (- green red)\nKb (- blue red)\nfunc +\n_ (when (= title \"Work Time\")\n     (canvas/canvas-frame title 800 800)\n     (canvas/clear-figures header)\n     (canvas/redraw-figure (str header 0)\n	(fn [g] \n	  (.setColor g (java.awt.Color. red green blue))\n	  (.drawString g header x y))))")
 	(next [AlgorithmExamples_Class60000])
 	(title "wt:Init Canvas"))
 
@@ -338,7 +302,7 @@
 
 ([AlgorithmExamples_Class70005] of  Process
 
-	(code "color [(int (rand 255)) (int (rand 255)) (int (rand 255))]\nfuts (conj futs (future (algo.exe/do-algorithm algo\n	{\"x\" Xi \n	 \"header\" (str i)\n	 \"color\" color\n	 \"title\" title})))")
+	(code "color [(int (rand 255)) (int (rand 255)) (int (rand 255))]\nfuts (conj futs (future (algo.exe/do-algorithm algo\n	{\"x\" Xi \n	 \"y\" 0\n	 \"header\" (str \"pa3\" i)\n	 \"color\" color\n	 \"title\" title})))")
 	(next [AlgorithmExamples_Class70004])
 	(title "pa3:Start Single Process"))
 
@@ -409,7 +373,7 @@
 
 ([AlgorithmExamples_Class80013] of  Process
 
-	(code "title \"Parallel Algorithm 2\"\n_ (canvas/canvas-frame \"Parallel Algorithm 2\" 500 800)\n_ (canvas/clear-figures)\n_ (println (str \"Start \" title))")
+	(code "title \"Parallel Algorithm 2\"\n_ (canvas/canvas-frame \"Parallel Algorithm 2\" 500 800)\n_ (canvas/clear-figures)\n_ (println (str \"Start \" title))\n_ (canvas/redraw-figure \"title\"\n	(fn [g] \n	  (.setColor g java.awt.Color/RED)\n	  (.drawString g \"P1\" 100 15)\n	  (.setColor g java.awt.Color/CYAN)\n	  (.drawString g \"P2\" 200 15)\n	  (.setColor g java.awt.Color/BLUE)\n	  (.drawString g \"P3\" 300 15)\n	  (.setColor g java.awt.Color/BLACK)\n	  (.drawString g \"P4\" 400 15)))")
 	(next [AlgorithmExamples_Class80008])
 	(title "pa2:Create canvas"))
 
