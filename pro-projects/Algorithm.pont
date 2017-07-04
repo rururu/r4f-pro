@@ -1,4 +1,4 @@
-; Sun Jun 25 21:31:22 MSK 2017
+; Tue Jul 04 17:00:45 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -36,9 +36,10 @@
 		(type INSTANCE)
 ;+		(allowed-classes %3ATHING)
 		(create-accessor read-write))
-	(multislot next
+	(single-slot next
 		(type INSTANCE)
 ;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot code
 		(type STRING)
@@ -120,9 +121,10 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot next
+	(single-slot next
 		(type INSTANCE)
 ;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Decision
@@ -152,9 +154,10 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot next
+	(single-slot next
 		(type INSTANCE)
 ;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot object-rows
 		(type INSTANCE)
@@ -173,9 +176,10 @@
 ;+		(allowed-classes Algorithm)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot next
+	(single-slot next
 		(type INSTANCE)
 ;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass ObjectRow
@@ -214,7 +218,8 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot next
+	(single-slot next
 		(type INSTANCE)
 ;+		(allowed-classes Process Decision Input PredefinedProcess Concurrent Wait)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))

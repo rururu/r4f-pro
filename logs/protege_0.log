@@ -499,3 +499,28 @@
 2017.06.26 17:46:53.093 MSK INFO: *** SYSTEM START ***
 2017.06.26 17:46:54.157 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
 2017.06.26 17:46:58.757 MSK INFO: Load time for file:/Users/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 0 sec (project) + 0 sec (ui) -- ProjectManager$3.run()
+2017.06.30 20:04:09.701 MSK INFO: *** SYSTEM START ***
+2017.06.30 20:04:09.728 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.06.30 20:04:10.210 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.06.30 20:04:38.605 MSK INFO: Project load time for file:/home/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj: 1 sec -- ProjectChooser.loadProject()
+2017.06.30 20:04:39.893 MSK INFO: UI display time = 1 sec -- ProjectManager$2.run()
+2017.07.03 13:26:18.976 MSK INFO: *** SYSTEM START ***
+2017.07.03 13:26:19.001 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.07.03 13:26:19.413 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.07.03 13:26:26.625 MSK INFO: Load time for file:/home/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()
+2017.07.03 15:12:02.176 MSK INFO: *** SYSTEM START ***
+2017.07.03 15:12:02.200 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.07.03 15:12:02.620 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.07.03 15:12:09.660 MSK INFO: Load time for file:/home/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()
+2017.07.04 15:54:26.816 MSK INFO: *** SYSTEM START ***
+2017.07.04 15:54:26.842 MSK WARNING: Look and feel not found: com.apple.laf.AquaLookAndFeel -- SystemUtilities.setLookAndFeel()
+2017.07.04 15:54:27.323 MSK WARNING: missing bundle: protege_text -- BundleHelper.<init>()
+2017.07.04 15:54:40.118 MSK INFO: Load time for file:/home/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj = 1 sec (project) + 1 sec (ui) -- ProjectManager$3.run()
+2017.07.04 16:56:34.146 MSK INFO: Project load time for file:/home/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.07.04 16:56:34.523 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.07.04 16:59:19.421 MSK INFO: Project load time for file:/home/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.07.04 16:59:19.776 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.07.04 17:00:06.238 MSK INFO: Project load time for file:/home/ru/clojure/r4f-pro/pro-projects/Algorithm.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.07.04 17:00:06.584 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()
+2017.07.04 17:00:53.264 MSK INFO: Project load time for file:/home/ru/clojure/r4f-pro/pro-projects/AlgorithmExamples.pprj: 0 sec -- ProjectChooser.loadProject()
+2017.07.04 17:00:53.642 MSK INFO: UI display time = 0 sec -- ProjectManager$2.run()

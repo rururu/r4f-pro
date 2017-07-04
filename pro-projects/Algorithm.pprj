@@ -1,4 +1,4 @@
-; Sun Jun 25 21:31:22 MSK 2017
+; Tue Jul 04 17:00:46 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -19,14 +19,14 @@
 
 ([Algorithm_ProjectKB_Class10370] of  Widget
 
-	(height 60)
+	(height 40)
 	(is_hidden FALSE)
 	(name "debug")
 	(property_list [Algorithm_ProjectKB_Class40371])
 	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
-	(width 130)
-	(x 520)
-	(y 60))
+	(width 90)
+	(x 370)
+	(y 80))
 
 ([Algorithm_ProjectKB_Class10371] of  Boolean
 
@@ -361,28 +361,28 @@
 
 ([Algorithm_ProjectKB_Class30392] of  Widget
 
-	(height 60)
+	(height 40)
 	(is_hidden FALSE)
 	(name "trace")
 	(property_list [Algorithm_ProjectKB_Class30393])
 	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
-	(width 110)
-	(x 400)
-	(y 60))
+	(width 80)
+	(x 290)
+	(y 80))
 
 ([Algorithm_ProjectKB_Class30393] of  Property_List
 )
 
 ([Algorithm_ProjectKB_Class30450] of  Widget
 
-	(height 60)
+	(height 40)
 	(is_hidden FALSE)
 	(name "but-start")
 	(property_list [Algorithm_ProjectKB_Class30451])
 	(widget_class_name "clojuretab.ClojureActionButton")
-	(width 200)
+	(width 90)
 	(x 200)
-	(y 60))
+	(y 80))
 
 ([Algorithm_ProjectKB_Class30451] of  Property_List
 )
@@ -1642,34 +1642,6 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_080480_Class366] of  Map
-
-	(entries
-		[KB_080480_Class367]
-		[KB_080480_Class368]
-		[KB_080480_Class369]))
-
-([KB_080480_Class367] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([KB_080480_Class368] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([KB_080480_Class369] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
 ([KB_084192_Class0] of  String
 
 	(name "factory_class_name")
@@ -1778,6 +1750,34 @@
 
 	(name "instances_file_name")
 	(string_value "Algorithm.pins"))
+
+([KB_699924_Class366] of  Map
+
+	(entries
+		[KB_699924_Class367]
+		[KB_699924_Class368]
+		[KB_699924_Class369]))
+
+([KB_699924_Class367] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_699924_Class368] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_699924_Class369] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([LAYOUT_PROPERTIES] of  Property_List
 
