@@ -41,6 +41,7 @@
 (doto (JFrame. title)
   (.add PANEL)
   (.pack)
+  (.setBackground java.awt.Color/WHITE)
   (.setVisible true)
   (.setDefaultCloseOperation JFrame/DISPOSE_ON_CLOSE)))
 

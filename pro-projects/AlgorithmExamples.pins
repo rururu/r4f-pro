@@ -1,4 +1,4 @@
-; Tue Jul 04 22:58:11 MSK 2017
+; Wed Jul 05 21:44:56 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -27,7 +27,7 @@
 
 ([AlgorithmExamples_Class100000] of  Process
 
-	(code "x2 (Math/round (* (- x Xmin) scale))\ny2 (- y0 (Math/round (* y scale)))\n_ (canvas/redraw-figure (gensym pfx)\n	(fn [g] \n	  (.drawLine g x1 y1 x2 y2)))\nx1 x2\ny1 y2\n_ (Thread/sleep timeout)")
+	(code "x2 (Math/round (* (- x Xmin) scale))\ny2 (- y0 (Math/round (* y scale)))\n_ (canvas/redraw-figure (gensym pfx)\n	(fn [g] \n	  (.setColor g \n	    (java.awt.Color. \n		(int red)\n		(int green)\n		(int blue)))\n 	  (.drawLine g x1 y1 x2 y2)\n	  (dotimes [i (dec line)]\n	    (.drawLine g x1 (+ y1 i) x2 (+ y2 i))\n	    (.drawLine g x1 (- y1 i) x2 (- y2 i))\n		)))\nx1 x2\ny1 y2\n_ (Thread/sleep timeout)")
 	(next [AlgorithmExamples_Class100001])
 	(title "fg:Draw Segment"))
 
@@ -71,7 +71,7 @@
 
 ([AlgorithmExamples_Class110000] of  Input
 
-	(code "title \"Function Graph\"\ncanvas nil\nfunc (fn [x] (Math/sin x))\nXmin 3\nXmax 11\nXstep 0.1\nsize [800 800]\ncolor [0 200 255]\ntimeout 0")
+	(code "title \"Function Graph\"\ncanvas nil\ngrid 0.5\nfunc (fn [x] (Math/tan x))\nXmin 3\nXmax 9\nXstep 0.1\nsize [800 800]\ncolor [255 0 0]\nline 6\ntimeout 0")
 	(next [AlgorithmExamples_Class120007])
 	(title "fg:Input Parameters"))
 
@@ -81,7 +81,7 @@
 	(title "fg:Is Canvas Given?")
 	(variants
 		[AlgorithmExamples_Class110006]
-		[AlgorithmExamples_Class100002]))
+		[AlgorithmExamples_Class130000]))
 
 ([AlgorithmExamples_Class110002] of  Algorithm
 
@@ -120,14 +120,16 @@
 		[AlgorithmExamples_Class110006]
 		[AlgorithmExamples_Class110000]
 		[AlgorithmExamples_Class110001]
-		[AlgorithmExamples_Class120007])
+		[AlgorithmExamples_Class120007]
+		[AlgorithmExamples_Class130000]
+		[AlgorithmExamples_Class130001])
 	(title "Function Graph")
-	(trace TRUE))
+	(trace FALSE))
 
 ([AlgorithmExamples_Class110006] of  Process
 
-	(code "pfx \"fg\"\n_ (canvas/canvas-frame title width height)\n_ (canvas/redraw-figure (gensym pfx)\n	(fn [g] \n	  (.setColor g (int red)\n		(int green)\n		(int blue))))\n_ (canvas/clear-figures)")
-	(next [AlgorithmExamples_Class100002])
+	(code "pfx \"fg\"\n_ (canvas/canvas-frame title width height)\n_ (canvas/clear-figures)")
+	(next [AlgorithmExamples_Class130000])
 	(title "fg:Create Canvas"))
 
 ([AlgorithmExamples_Class120000] of  Process
@@ -161,7 +163,7 @@
 
 ([AlgorithmExamples_Class120007] of  Process
 
-	(code "[red green blue] color\n[width height] size\n\nscale (float (/ width (- Xmax Xmin)))\n_ (println :SCALE scale)\n\nfunc (eval func)\nx Xmin\ny (func x)\n\ny0 (Math/round (float (/ height 2)))\nx1 (Math/round (* (- x Xmin) scale))\ny1 (- y0 (int (* y scale)))")
+	(code "[red green blue] color\n[width height] size\n\nscale (float (/ width (- Xmax Xmin)))\n\nfunc (eval func)\nx Xmin\ny (func x)\n\ny0 (Math/round (float (/ height 2)))\nx1 (Math/round (* (- x Xmin) scale))\ny1 (- y0 (int (* y scale)))")
 	(next [AlgorithmExamples_Class110001])
 	(title "fg:Initialize Process"))
 
@@ -172,6 +174,20 @@
 		[AlgorithmExamples_Class16])
 	(title "C1")
 	(wait [AlgorithmExamples_Class14]))
+
+([AlgorithmExamples_Class130000] of  Decision
+
+	(code "variant (if (nil? grid) 2 1)")
+	(title "fg:Is Greed Needed?")
+	(variants
+		[AlgorithmExamples_Class130001]
+		[AlgorithmExamples_Class100002]))
+
+([AlgorithmExamples_Class130001] of  Process
+
+	(code "Xcells (int (/ (- Xmax Xmin) grid))\nGstep (int (/ width Xcells))\nYcells (int (/ height Gstep))\n_ (canvas/redraw-figure \"Grid\"\n     (fn [g]\n       (.setColor g java.awt.Color/BLACK)\n       (dotimes [i Xcells]\n         (.drawLine g (* Gstep i) 0 (* Gstep i) height))\n       (dotimes [i (int (/ Ycells 2))]\n         (.drawLine g 0 (+ y0 (* Gstep i)) width (+ y0 (* Gstep i))))\n       (dotimes [i (int (/ Ycells 2))]\n         (.drawLine g 0 (- y0 (* Gstep i)) width (- y0 (* Gstep i))))\n       (dotimes [i Xcells]\n         (.drawString g (str (+ Xmin (* grid i))) (* Gstep i) y0))\n       (dotimes [i (int (/ Ycells 2))]\n         (.drawString g (str (- (* grid (inc i)))) 20 (+ y0 (* Gstep (inc i)))))\n       (dotimes [i (int (/ Ycells 2))]\n         (.drawString g (str (* grid (inc i))) 20 (- y0 (* Gstep (inc i)))))))")
+	(next [AlgorithmExamples_Class100002])
+	(title "fg:Create Grid"))
 
 ([AlgorithmExamples_Class14] of  Wait
 
@@ -262,7 +278,7 @@
 
 ([AlgorithmExamples_Class30006] of  CloFunction
 
-	(source "(def PANEL (canvas-panel width height))\n(doto (JFrame. title)\n  (.add PANEL)\n  (.pack)\n  (.setVisible true)\n  (.setDefaultCloseOperation JFrame/DISPOSE_ON_CLOSE))")
+	(source "(def PANEL (canvas-panel width height))\n(doto (JFrame. title)\n  (.add PANEL)\n  (.pack)\n  (.setBackground java.awt.Color/WHITE)\n  (.setVisible true)\n  (.setDefaultCloseOperation JFrame/DISPOSE_ON_CLOSE))")
 	(title "canvas-frame [title width height]"))
 
 ([AlgorithmExamples_Class4] of  Input
