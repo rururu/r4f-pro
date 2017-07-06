@@ -1,4 +1,4 @@
-; Wed Jul 05 21:44:56 MSK 2017
+; Thu Jul 06 13:10:45 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -85,15 +85,24 @@
 
 ([AlgorithmExamples_Class110002] of  Algorithm
 
-	(begin [AlgorithmExamples_Class120003])
+	(begin [AlgorithmExamples_Class120006])
 	(but-start "Start/algo.exe/start-algorithm")
 	(flow-chart
 		[AlgorithmExamples_Class120003]
 		[AlgorithmExamples_Class120004]
 		[AlgorithmExamples_Class120005]
-		[AlgorithmExamples_Class120006])
+		[AlgorithmExamples_Class120006]
+		[AlgorithmExamples_Class140000]
+		[AlgorithmExamples_Class140001]
+		[AlgorithmExamples_Class140002]
+		[AlgorithmExamples_Class140003]
+		[AlgorithmExamples_Class140004]
+		[AlgorithmExamples_Class140005]
+		[AlgorithmExamples_Class140006]
+		[AlgorithmExamples_Class140007]
+		[AlgorithmExamples_Class140008])
 	(title "Paralgo2a")
-	(trace TRUE))
+	(trace FALSE))
 
 ([AlgorithmExamples_Class110003] of  Process
 
@@ -140,26 +149,27 @@
 
 ([AlgorithmExamples_Class120003] of  Process
 
-	(code "canvas (canvas/canvas-frame \"Graph 1\" 600 400)\n_  (canvas/clear-figures)")
-	(next [AlgorithmExamples_Class120004])
+	(code "pfx \"fg4\"\n[width height] size\ncanvas (canvas/canvas-frame title width height)\n_ (canvas/clear-figures)\n_ (println (str \"Start \" title))")
+	(next [AlgorithmExamples_Class140000])
 	(title "pa2a:Create Canvas"))
 
 ([AlgorithmExamples_Class120004] of  Process
 
-	(code "d 0")
+	(code "grid 0.5\nfunc func1")
 	(next [AlgorithmExamples_Class120005])
 	(title "pa2a:Init Graph1"))
 
 ([AlgorithmExamples_Class120005] of  PredefinedProcess
 
 	(algorithm [AlgorithmExamples_Class110005])
+	(next [AlgorithmExamples_Class140001])
 	(title "pa2a:Start Graph1"))
 
 ([AlgorithmExamples_Class120006] of  Input
 
-	(code "func1 (fn [x] (Math/sin x))\n\nXmin 0\nXmax 10\nXstep 0.1\nwidth 800\nheight 400")
+	(code "title \"4 Function Graphs\"\nsize [800 600]\nXmin 0\nXmax 10\nXstep 0.1\nline 4\ntimeout 200\n\nfunc1 (fn [x] (Math/sin x))\nfunc2 (fn [x] (Math/tan x))\nfunc3 (fn [x] (+ (/ (Math/cos (* x 3)) 2) (Math/atan x)))\nfunc4 (fn [x] (Math/cos x))")
 	(next [AlgorithmExamples_Class120003])
-	(title "pa2a:Canvas and Functions"))
+	(title "pa2a:Parameters and Functions"))
 
 ([AlgorithmExamples_Class120007] of  Process
 
@@ -193,6 +203,62 @@
 
 	(next [AlgorithmExamples_Class90000])
 	(title "W1"))
+
+([AlgorithmExamples_Class140000] of  Concurrent
+
+	(currents
+		[AlgorithmExamples_Class120004]
+		[AlgorithmExamples_Class140003]
+		[AlgorithmExamples_Class140005]
+		[AlgorithmExamples_Class140006])
+	(title "pa2a:Spawn Function Processes")
+	(wait [AlgorithmExamples_Class140001]))
+
+([AlgorithmExamples_Class140001] of  Wait
+
+	(next [AlgorithmExamples_Class140002])
+	(title "pa2a:Wait Function Processes"))
+
+([AlgorithmExamples_Class140002] of  Process
+
+	(code "_ (println \"End Functions Graphs\")")
+	(title "pa2a:End Function Graphs"))
+
+([AlgorithmExamples_Class140003] of  Process
+
+	(code "grid nil\nfunc func2\ncolor [0 0 255]")
+	(next [AlgorithmExamples_Class140004])
+	(title "pa2a:Init Graph2"))
+
+([AlgorithmExamples_Class140004] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class110005])
+	(next [AlgorithmExamples_Class140001])
+	(title "pa2a:Start Graph2"))
+
+([AlgorithmExamples_Class140005] of  Process
+
+	(code "grid nil\nfunc func3\ncolor [0 128 0]")
+	(next [AlgorithmExamples_Class140007])
+	(title "pa2a:Init Graph3"))
+
+([AlgorithmExamples_Class140006] of  Process
+
+	(code "grid nil\nfunc func4\ncolor [0 128 128]")
+	(next [AlgorithmExamples_Class140008])
+	(title "pa2a:Init Graph4"))
+
+([AlgorithmExamples_Class140007] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class110005])
+	(next [AlgorithmExamples_Class140001])
+	(title "pa2a:Start Graph3"))
+
+([AlgorithmExamples_Class140008] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class110005])
+	(next [AlgorithmExamples_Class140001])
+	(title "pa2a:Start Graph4"))
 
 ([AlgorithmExamples_Class15] of  Process
 
