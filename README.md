@@ -26,13 +26,14 @@ rete.protege=> (-main)
 
 In a project Algorithm.pprj collected functionality for visual creation of algorithms. Algorithms are created using drag-and-drop of standard blocks from a palette on a canvas of a flow-chart and following connection them by stream lines. After that the standard blocks are filled with clojure code as of "let" macro body.  
 
-Important distinction of these algorithms from a common notion of algorithm in that they can represent parallel processes. For this purpose to standard blocks added two new ones: "Concurrent" and "Wait". Full list of blocks is following:
-..* Input
-..* Process
-..* Decision
-..* Predefined processes
-..* Concurrent
-..* Wait
+Important distinction of these algorithms from a common notion of algorithm in that they can represent **parallel processes**. For this purpose to standard blocks added two new ones: "Concurrent" and "Wait". Full list of blocks is following:
+
+  * Input
+  * Process
+  * Decision
+  * Predefined processes
+  * Concurrent
+  * Wait
 
 If you want to add this functionality to your own project you need to include Algorithm.pprj project into it. This can be done by "Project -> Manage Included Projects.." menu item.
 
