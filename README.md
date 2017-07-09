@@ -22,7 +22,7 @@ rete.protege=> (-main)
 
 3 minute IDE [screencast](https://www.youtube.com/watch?v=RZKKq6Pym44&feature=youtu.be).
 
-Creation of simplest algorithm [screencast] (https://youtu.be/oRCMw_rnLvg)
+Creation of simplest algorithm [screencast](https://youtu.be/oRCMw_rnLvg)
 
 ## License
 
