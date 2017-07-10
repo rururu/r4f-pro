@@ -24,6 +24,11 @@ This IDE gives possibility to
   * visually create rules for the simple CLIPS-like expert system shell on Clojure [rete4frames](https://github.com/rururu/rete4frames) and
   * process the ontology-based object-oriented knowledge created visually in the Protege environment.
 
+To create your own expert system you need to include RuleEngine.pprj project into your Protege project using a menu item "Project -> Manage Included Projects..".
+Then you have to create an instance of a class  "Run" and fill its slot "rule-sets" with previously created instances of the class "RuleSet". Respectively these instances must be filled with rules, i.e. instances of the class "Rule". Also, you have to fill the slot "facts" of the "Run" instance with instances of some class. These will be initial facts of a given session of your expert system. That's all. Start your expert system to work with a "Run" button.
+
+See details in Examples.pprj project.
+
 3 minute IDE [screencast1](https://www.youtube.com/watch?v=RZKKq6Pym44&feature=youtu.be).
 
 ## Algorithms
