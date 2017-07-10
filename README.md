@@ -1,9 +1,8 @@
 # r4f-pro
 
-Integrated Development Environment for [rete4frames] (https://github.com/rururu/rete4frames) rule engine and expert system shell based on [Protege-3.5 ontology editor] (http://protege.stanford.edu):
+Integrated Development Environment for [rete4frames](https://github.com/rururu/rete4frames) rule engine and expert system shell based on [Protege-3.5 ontology editor](http://protege.stanford.edu) supplemented with visual creation of algorithms. It combines two well-known paradigms of software development: algorithms for strictly defined processes and rules for fuzzy, fragmentarily defined processes and phenomenons.
 
 ![screenshot](screenshot.jpg)
-
 
 ## Usage
 
@@ -19,8 +18,13 @@ $ lein repl
 ...
 rete.protege=> (-main)
 ```
+## Expert System Shell
 
-3 minute IDE [screencast](https://www.youtube.com/watch?v=RZKKq6Pym44&feature=youtu.be).
+This IDE gives possibility to
+  * visually create rules for the simple CLIPS-like expert system shell on Clojure [rete4frames](https://github.com/rururu/rete4frames) and
+  * process the ontology-based object-oriented knowledge created visually in the Protege environment
+
+3 minute IDE [screencast1](https://www.youtube.com/watch?v=RZKKq6Pym44&feature=youtu.be).
 
 ## Algorithms
 
@@ -39,7 +43,8 @@ If you want to add this functionality to your own project you need to include Al
 
 Algorithm examples in AlgorithmExamples.pprj project.
 
-Creation of simplest algorithm [screencast](https://youtu.be/oRCMw_rnLvg)
+Creation of a simplest algorithm [screencast2](https://youtu.be/oRCMw_rnLvg) (7 min).
+Creation of a more complex parallel algorithm [screencast3](https://youtu.be/exca_ac2bj4) (29 min).
 
 ## License
 
