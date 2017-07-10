@@ -44,6 +44,8 @@ Important distinction of these algorithms from a common notion of algorithm in t
   * Concurrent
   * Wait
 
+![screenshot](Algorithm.png)  
+
 If you want to add this functionality to your own project you need to include Algorithm.pprj project into it. This can be done by "Project -> Manage Included Projects.." menu item.
 
 Algorithm examples in AlgorithmExamples.pprj project.
