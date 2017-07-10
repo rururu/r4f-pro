@@ -22,7 +22,7 @@ rete.protege=> (-main)
 
 This IDE gives possibility to
   * visually create rules for the simple CLIPS-like expert system shell on Clojure [rete4frames](https://github.com/rururu/rete4frames) and
-  * process the ontology-based object-oriented knowledge created visually in the Protege environment
+  * process the ontology-based object-oriented knowledge created visually in the Protege environment.
 
 3 minute IDE [screencast1](https://www.youtube.com/watch?v=RZKKq6Pym44&feature=youtu.be).
 
@@ -44,6 +44,7 @@ If you want to add this functionality to your own project you need to include Al
 Algorithm examples in AlgorithmExamples.pprj project.
 
 Creation of a simplest algorithm [screencast2](https://youtu.be/oRCMw_rnLvg) (7 min).
+
 Creation of a more complex parallel algorithm [screencast3](https://youtu.be/exca_ac2bj4) (29 min).
 
 ## License
