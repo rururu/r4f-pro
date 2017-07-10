@@ -1,4 +1,4 @@
-; Mon May 08 13:33:08 MSK 2017
+; Mon Jul 10 16:29:47 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -457,10 +457,6 @@
 	(salience 0)
 	(title "m:Unlock-chest-to-hold-object"))
 
-([Examples_Class20000] of  Display
-
-	(source "<html><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:45:00 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br><span style='color:red'>High fever diagnosed</span><br><br>Measles diagnosed<br><br>Penicillin prescribed<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:45:47 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br><span style='color:red'>High fever diagnosed</span><br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:46:36 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:47:54 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br><span style='color:red'>High fever diagnosed</span><br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 11:56:14 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br>The Engine Diagnosis Expert System. Date: Mon May 08 13:20:26 MSK 2017<br><br>Suggested Repair: <b>Replace the points.</b><br><br><br>The Engine Diagnosis Expert System. Date: Mon May 08 13:20:48 MSK 2017<br><br>Suggested Repair: <b>Clean the fuel line.</b><br><br><br>The Engine Diagnosis Expert System. Date: Mon May 08 13:21:04 MSK 2017<br><br>Suggested Repair: <b>Repair the distributor lead wire.</b><br>Monkey jumps off the green-couch onto the floor.<br>Monkey walks to t2-2.<br>Monkey climbs onto the red-couch.<br>Monkey climbs onto the big-pillow.<br>Monkey grabs the red-chest.<br>Monkey throws the red-chest off the big-pillow onto the floor.<br>Monkey jumps off the big-pillow onto the floor.<br>Monkey walks to t1-3.<br>Monkey grabs the red-key.<br>Monkey walks to t2-2 holding the red-key.<br>Monkey opens the red-chest with the red-key revealing the ladder.<br>Monkey drops the red-key.<br>Monkey climbs onto the red-chest.<br>Monkey grabs the ladder.<br>Monkey jumps off the red-chest onto the floor.<br>Monkey walks to t7-7 holding the ladder.<br>Monkey drops the ladder.<br>Monkey jumps off the green-couch onto the floor.<br>Monkey walks to t2-2.<br>Monkey climbs onto the red-couch.<br>Monkey climbs onto the big-pillow.<br>Monkey grabs the red-chest.<br>Monkey throws the red-chest off the big-pillow onto the floor.<br>Monkey jumps off the big-pillow onto the floor.<br>Monkey walks to t1-3.<br>Monkey grabs the red-key.<br>Monkey walks to t2-2 holding the red-key.<br>Monkey opens the red-chest with the red-key revealing the ladder.<br>Monkey drops the red-key.<br>Monkey climbs onto the red-chest.<br>Monkey grabs the ladder.<br>Monkey jumps off the red-chest onto the floor.<br>Monkey walks to t7-7 holding the ladder.<br>Monkey drops the ladder.<br>Monkey climbs onto the ladder.<br>Monkey grabs the blue-chest.<br>Monkey throws the blue-chest off the ladder onto the floor.<br>Monkey jumps off the ladder onto the floor.<br>Monkey grabs the ladder.<br>Monkey walks to t8-8 holding the ladder.<br>Monkey drops the ladder.<br>Monkey climbs onto the ladder.<br>Monkey grabs the green-chest.<br>Monkey throws the green-chest off the ladder onto the floor.<br>Monkey jumps off the ladder onto the floor.<br>Monkey walks to t2-2.<br>Monkey grabs the red-key.<br>Monkey walks to t8-8 holding the red-key.<br>Monkey opens the green-chest with the red-key revealing the blue-key.<br>Monkey drops the red-key.<br>Monkey climbs onto the green-chest.<br>Monkey grabs the blue-key.<br>Monkey jumps off the green-chest onto the floor.<br>Monkey walks to t7-7 holding the blue-key.<br>Monkey opens the blue-chest with the blue-key revealing the bananas.<br>Monkey drops the blue-key.<br>Monkey climbs onto the blue-chest.<br>Monkey grabs the bananas.<br>Monkey eats the bananas.<br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 13:31:14 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br><span style='color:red'>High fever diagnosed</span><br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Flu diagnosed<br><br>Bed rest prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br><br><br><b>The Patient Treatment Expert System.</b> Date: Mon May 08 13:31:46 MSK 2017<br><br>Allergy diagnosed from rash<br><br>Allergy shot prescribed<br><br>Allergy diagnosed from spots and lack of measles<br><br>Allergy shot prescribed<br><br>"))
-
 ([Examples_Class20001] of  RuleSet
 
 	(rules
@@ -654,6 +650,19 @@
 	(rhs "(modify ?p temperature (ru.rules/input \n	\"Enter patient temperature (Fahrenheit)\" \n	0 \n	#(and (number? %) (< 86 % 119))))")
 	(salience 2)
 	(title "s:GetTemperature"))
+
+([Examples_Class40001] of  History
+
+	(date "Mon Jul 10 16:21:11 MSK 2017")
+	(diagnosis flu)
+	(fever high)
+	(innoculated FALSE)
+	(name "Alice")
+	(rash FALSE)
+	(sore_throat TRUE)
+	(spots FALSE)
+	(temperature 104)
+	(treatment bed_rest))
 
 ([Examples_Class40011] of  Run
 
