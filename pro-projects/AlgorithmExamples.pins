@@ -1,4 +1,4 @@
-; Mon Jul 10 12:20:12 MSK 2017
+; Tue Jul 18 18:21:17 MSK 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -265,6 +265,150 @@
 	(code "_ (Thread/sleep 12000)\n_ (println :P1)\nA 1")
 	(next [AlgorithmExamples_Class14])
 	(title "P1"))
+
+([AlgorithmExamples_Class150000] of  Algorithm
+
+	(begin [AlgorithmExamples_Class150001])
+	(but-start "Start/algo.exe/start-algorithm")
+	(flow-chart
+		[AlgorithmExamples_Class150001]
+		[AlgorithmExamples_Class150002]
+		[AlgorithmExamples_Class150003]
+		[AlgorithmExamples_Class150004]
+		[AlgorithmExamples_Class150005]
+		[AlgorithmExamples_Class150006]
+		[AlgorithmExamples_Class150007]
+		[AlgorithmExamples_Class150008]
+		[AlgorithmExamples_Class150009]
+		[AlgorithmExamples_Class150010])
+	(title "Is Simple Number?")
+	(trace FALSE))
+
+([AlgorithmExamples_Class150001] of  Input
+
+	(code "N 8")
+	(next [AlgorithmExamples_Class150002])
+	(title "isn:Input N"))
+
+([AlgorithmExamples_Class150002] of  Process
+
+	(code "i 2")
+	(next [AlgorithmExamples_Class150005])
+	(title "isn: i = 2"))
+
+([AlgorithmExamples_Class150003] of  Decision
+
+	(code "variant (if (and (<= (* i i) N) (not= j 1)) 1 2)")
+	(title "isn: i*i <= N and j != 1 ?")
+	(variants
+		[AlgorithmExamples_Class150004]
+		[AlgorithmExamples_Class150008]))
+
+([AlgorithmExamples_Class150004] of  Decision
+
+	(code "variant (if (= (mod N i) 0) 1 2)")
+	(title "isn: N % i == 0")
+	(variants
+		[AlgorithmExamples_Class150006]
+		[AlgorithmExamples_Class150007]))
+
+([AlgorithmExamples_Class150005] of  Process
+
+	(code "j 0")
+	(next [AlgorithmExamples_Class150003])
+	(title "isn: j = 0"))
+
+([AlgorithmExamples_Class150006] of  Process
+
+	(code "j 1")
+	(next [AlgorithmExamples_Class150007])
+	(title "isn: j = 1"))
+
+([AlgorithmExamples_Class150007] of  Process
+
+	(code "i (+ i 1)")
+	(next [AlgorithmExamples_Class150003])
+	(title "isn: i = i + 1"))
+
+([AlgorithmExamples_Class150008] of  Decision
+
+	(code "variant (if (= j 1) 2 1)")
+	(title "isn: j == 1")
+	(variants
+		[AlgorithmExamples_Class150010]
+		[AlgorithmExamples_Class150009]))
+
+([AlgorithmExamples_Class150009] of  Process
+
+	(code "_ (println \"Compound number\" N)")
+	(title "isn: Print \"Compound number\""))
+
+([AlgorithmExamples_Class150010] of  Process
+
+	(code "_ (println \"Simple number\" N)")
+	(title "isn:Print \"Simple number\""))
+
+([AlgorithmExamples_Class150011] of  CloFuncall
+
+	(source "(mod 6 3)"))
+
+([AlgorithmExamples_Class150012] of  CloFuncall
+
+	(source "(mod 5 3)"))
+
+([AlgorithmExamples_Class150013] of  CloFuncall
+
+	(source "(mod 7 3)"))
+
+([AlgorithmExamples_Class150014] of  Algorithm
+
+	(begin [AlgorithmExamples_Class150015])
+	(but-start "Start/algo.exe/start-algorithm")
+	(flow-chart
+		[AlgorithmExamples_Class150015]
+		[AlgorithmExamples_Class150016]
+		[AlgorithmExamples_Class150017]
+		[AlgorithmExamples_Class150018]
+		[AlgorithmExamples_Class150019]
+		[AlgorithmExamples_Class150020])
+	(title "Eratosphen's Sieve")
+	(trace FALSE))
+
+([AlgorithmExamples_Class150015] of  Input
+
+	(code "Max 140")
+	(next [AlgorithmExamples_Class150016])
+	(title "es:Max number"))
+
+([AlgorithmExamples_Class150016] of  Process
+
+	(code "N 1")
+	(next [AlgorithmExamples_Class150017])
+	(title "es:First number"))
+
+([AlgorithmExamples_Class150017] of  Decision
+
+	(code "variant (if (<= N Max) 1 2)")
+	(title "es:Number <= Max?")
+	(variants
+		[AlgorithmExamples_Class150018]
+		[AlgorithmExamples_Class150019]))
+
+([AlgorithmExamples_Class150018] of  PredefinedProcess
+
+	(algorithm [AlgorithmExamples_Class150000])
+	(next [AlgorithmExamples_Class150020])
+	(title "es:What number?"))
+
+([AlgorithmExamples_Class150019] of  Process
+
+	(title "es:End"))
+
+([AlgorithmExamples_Class150020] of  Process
+
+	(code "N (+ N 1)")
+	(next [AlgorithmExamples_Class150017])
+	(title "es:Next number"))
 
 ([AlgorithmExamples_Class16] of  Process
 
