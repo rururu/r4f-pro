@@ -14,7 +14,7 @@
                  [protege/ClojureTab "1.5.0"]
                  [rete "5.3.0-SNAPSHOT"]]
   :javac-options ["-target" "1.7" "-source" "1.7" "-Xlint:-options"]
-  :repositories {"local" ~(str (.toURI (java.io.File. "repo")))}
+  :repositories {"local" {:url ~(str (.toURI (java.io.File. "repo"))) :checksum :warn}}
   :profiles {:uberjar {:aot :all}}
   :main r4f-pro.core)
 
